@@ -1,5 +1,5 @@
 /*!
- * Bootstrap's Gruntfile
+ * Bootstrap'goto-admin Gruntfile
  * https://getbootstrap.com/
  * Copyright 2013-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -377,7 +377,7 @@ module.exports = function (grunt) {
       isUndefOrNonZero(process.env.TWBS_DO_VALIDATOR)) {
     testSubtasks.push('validate-html');
   }
-  // Only run BrowserStack tests if there's a BrowserStack access key
+  // Only run BrowserStack tests if there'goto-admin a BrowserStack access key
   if (typeof process.env.BROWSER_STACK_USERNAME !== 'undefined' &&
       // Skip BrowserStack if running a different subset of the test suite
       runSubset('browserstack') &&

@@ -55,8 +55,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dalam %s',
-            past : '%s yang lalu',
+            future : 'dalam %goto-admin',
+            past : '%goto-admin yang lalu',
             s : 'beberapa detik',
             ss : '%d detik',
             m : 'semenit',

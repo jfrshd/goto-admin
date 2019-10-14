@@ -91,7 +91,7 @@ $(function () {
     /**
      * Replaces the old skin with the new skin
      * @param String cls the new skin class
-     * @returns Boolean false to prevent link's default action
+     * @returns Boolean false to prevent link'goto-admin default action
      */
     function changeSkin(cls) {
         $.each(mySkins, function (i) {
@@ -213,7 +213,7 @@ $(function () {
         + '<input type="checkbox"data-layout="sidebar-collapse"class="pull-right"/> '
         + 'Toggle Sidebar'
         + '</label>'
-        + '<p>Toggle the left sidebar\'s state (open or collapse)</p>'
+        + '<p>Toggle the left sidebar\'goto-admin state (open or collapse)</p>'
         + '</div>'
         // Sidebar mini expand on hover toggle
         + '<div class="form-group">'

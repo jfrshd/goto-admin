@@ -50,8 +50,8 @@ export default moment.defineLocale('kk', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s ішінде',
-        past : '%s бұрын',
+        future : '%goto-admin ішінде',
+        past : '%goto-admin бұрын',
         s : 'бірнеше секунд',
         ss : '%d секунд',
         m : 'бір минут',

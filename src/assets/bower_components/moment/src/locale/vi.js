@@ -44,8 +44,8 @@ export default moment.defineLocale('vi', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : '%s tới',
-        past : '%s trước',
+        future : '%goto-admin tới',
+        past : '%goto-admin trước',
         s : 'vài giây',
         ss : '%d giây' ,
         m : 'một phút',

@@ -30,7 +30,7 @@ define( [
  * querySelectorAll bug fixes (e.g., unreliable :focus on WebKit)
  *
  * If any of these are unacceptable tradeoffs, either use Sizzle or
- * customize this stub for the project's specific needs.
+ * customize this stub for the project'goto-admin specific needs.
  */
 
 var hasDuplicate, sortInput,

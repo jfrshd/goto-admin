@@ -56,8 +56,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'over %s',
-            past : '%s geleden',
+            future : 'over %goto-admin',
+            past : '%goto-admin geleden',
             s : 'een paar seconden',
             ss : '%d seconden',
             m : 'één minuut',

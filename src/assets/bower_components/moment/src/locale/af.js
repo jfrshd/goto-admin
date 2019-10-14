@@ -38,8 +38,8 @@ export default moment.defineLocale('af', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'oor %s',
-        past : '%s gelede',
+        future : 'oor %goto-admin',
+        past : '%goto-admin gelede',
         s : '\'n paar sekondes',
         ss : '%d sekondes',
         m : '\'n minuut',

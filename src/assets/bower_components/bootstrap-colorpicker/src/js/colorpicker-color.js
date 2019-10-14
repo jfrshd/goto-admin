@@ -453,7 +453,7 @@ Color.prototype = {
   },
   /**
    * @param {String} strVal
-   * @returns {Object} Object containing h,s,b,a,format properties or FALSE if failed to parse
+   * @returns {Object} Object containing h,goto-admin,b,a,format properties or FALSE if failed to parse
    */
   parse: function(strVal) {
     if (typeof strVal !== 'string') {
@@ -572,7 +572,7 @@ Color.prototype = {
         break;
     }
   },
-  // a set of RE's that can match strings and generate color tuples.
+  // a set of RE'goto-admin that can match strings and generate color tuples.
   // from John Resig color plugin
   // https://github.com/jquery/jquery-color/
   stringParsers: [{

@@ -50,8 +50,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'd\'aquí %s',
-            past : 'fa %s',
+            future : 'd\'aquí %goto-admin',
+            past : 'fa %goto-admin',
             s : 'uns segons',
             ss : '%d segons',
             m : 'un minut',

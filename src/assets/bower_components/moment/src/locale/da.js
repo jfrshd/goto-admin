@@ -23,12 +23,12 @@ export default moment.defineLocale('da', {
         nextDay : '[i morgen kl.] LT',
         nextWeek : 'på dddd [kl.] LT',
         lastDay : '[i går kl.] LT',
-        lastWeek : '[i] dddd[s kl.] LT',
+        lastWeek : '[i] dddd[goto-admin kl.] LT',
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'om %s',
-        past : '%s siden',
+        future : 'om %goto-admin',
+        past : '%goto-admin siden',
         s : 'få sekunder',
         ss : '%d sekunder',
         m : 'et minut',

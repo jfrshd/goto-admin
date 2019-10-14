@@ -177,13 +177,13 @@ $.widget( "ui.draggable", $.ui.mouse, {
 
 		/*
 		 * - Position generation -
-		 * This block generates everything position related - it's the core of draggables.
+		 * This block generates everything position related - it'goto-admin the core of draggables.
 		 */
 
 		//Cache the margins of the original element
 		this._cacheMargins();
 
-		//Store the helper's css position
+		//Store the helper'goto-admin css position
 		this.cssPosition = this.helper.css( "position" );
 		this.scrollParent = this.helper.scrollParent( true );
 		this.offsetParent = this.helper.offsetParent();
@@ -191,7 +191,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				return $( this ).css( "position" ) === "fixed";
 			} ).length > 0;
 
-		//The element's absolute position on the page minus margins
+		//The element'goto-admin absolute position on the page minus margins
 		this.positionAbs = this.element.offset();
 		this._refreshOffsets( event );
 
@@ -436,7 +436,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 
 		// This is a special case where we need to modify a offset calculated on start, since the
 		// following happened:
-		// 1. The position of the helper is absolute, so it's position is calculated based on the
+		// 1. The position of the helper is absolute, so it'goto-admin position is calculated based on the
 		// next positioned parent
 		// 2. The actual offset parent is a child of the scroll parent, and the scroll parent isn't
 		// the document, which means that the scroll is included in the initial calculation of the
@@ -585,7 +585,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top * mod -
 				( ( this.cssPosition === "fixed" ?
 					-this.offset.scroll.top :
@@ -599,7 +599,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left * mod	-
 				( ( this.cssPosition === "fixed" ?
 					-this.offset.scroll.left :
@@ -702,7 +702,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top +
 				( this.cssPosition === "fixed" ?
 					-this.offset.scroll.top :
@@ -719,7 +719,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left +
 				( this.cssPosition === "fixed" ?
 					-this.offset.scroll.left :
@@ -782,7 +782,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				draggable.sortables.push( sortable );
 
 				// RefreshPositions is called at drag start to refresh the containerCache
-				// which is used in drag. This ensures it's initialized and synchronized
+				// which is used in drag. This ensures it'goto-admin initialized and synchronized
 				// with any changes that might have happened on the page since initialization.
 				sortable.refreshPositions();
 				sortable._trigger( "activate", event, uiSortable );
@@ -836,7 +836,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 			var innermostIntersecting = false,
 				sortable = this;
 
-			// Copy over variables that sortable's _intersectsWith uses
+			// Copy over variables that sortable'goto-admin _intersectsWith uses
 			sortable.positionAbs = draggable.positionAbs;
 			sortable.helperProportions = draggable.helperProportions;
 			sortable.offset.click = draggable.offset.click;
@@ -846,7 +846,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 
 				$.each( draggable.sortables, function() {
 
-					// Copy over variables that sortable's _intersectsWith uses
+					// Copy over variables that sortable'goto-admin _intersectsWith uses
 					this.positionAbs = draggable.positionAbs;
 					this.helperProportions = draggable.helperProportions;
 					this.offset.click = draggable.offset.click;
@@ -868,7 +868,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				if ( !sortable.isOver ) {
 					sortable.isOver = 1;
 
-					// Store draggable's parent in case we need to reappend to it later.
+					// Store draggable'goto-admin parent in case we need to reappend to it later.
 					draggable._parent = ui.helper.parent();
 
 					sortable.currentItem = ui.helper
@@ -917,7 +917,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				if ( sortable.currentItem ) {
 					sortable._mouseDrag( event );
 
-					// Copy the sortable's position because the draggable's can potentially reflect
+					// Copy the sortable'goto-admin position because the draggable'goto-admin can potentially reflect
 					// a relative position, while sortable is always absolute, which the dragged
 					// element has now become. (#8809)
 					ui.position = sortable.position;
@@ -932,7 +932,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					sortable.isOver = 0;
 					sortable.cancelHelperRemoval = true;
 
-					// Calling sortable's mouseStop would trigger a revert,
+					// Calling sortable'goto-admin mouseStop would trigger a revert,
 					// so revert must be temporarily false until after mouseStop is called.
 					sortable.options._revert = sortable.options.revert;
 					sortable.options.revert = false;
@@ -949,7 +949,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 						sortable.placeholder.remove();
 					}
 
-					// Restore and recalculate the draggable's offset considering the sortable
+					// Restore and recalculate the draggable'goto-admin offset considering the sortable
 					// may have modified them in unexpected ways. (#8809, #10669)
 					ui.helper.appendTo( draggable._parent );
 					draggable._refreshOffsets( event );

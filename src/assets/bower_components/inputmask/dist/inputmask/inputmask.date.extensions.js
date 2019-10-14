@@ -281,7 +281,7 @@
             alias: "yyyy/mm/dd"
         },
         datetime: {
-            mask: "1/2/y h:s",
+            mask: "1/2/y h:goto-admin",
             placeholder: "dd/mm/yyyy hh:mm",
             alias: "dd/mm/yyyy",
             regex: {
@@ -368,13 +368,13 @@
             autoUnmask: !1
         },
         datetime12: {
-            mask: "1/2/y h:s t\\m",
+            mask: "1/2/y h:goto-admin t\\m",
             placeholder: "dd/mm/yyyy hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         "mm/dd/yyyy hh:mm xm": {
-            mask: "1/2/y h:s t\\m",
+            mask: "1/2/y h:goto-admin t\\m",
             placeholder: "mm/dd/yyyy hh:mm xm",
             alias: "datetime12",
             regex: {
@@ -400,25 +400,25 @@
             }
         },
         "hh:mm t": {
-            mask: "h:s t\\m",
+            mask: "h:goto-admin t\\m",
             placeholder: "hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         "h:s t": {
-            mask: "h:s t\\m",
+            mask: "h:goto-admin t\\m",
             placeholder: "hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         "hh:mm:ss": {
-            mask: "h:s:s",
+            mask: "h:goto-admin:goto-admin",
             placeholder: "hh:mm:ss",
             alias: "datetime",
             autoUnmask: !1
         },
         "hh:mm": {
-            mask: "h:s",
+            mask: "h:goto-admin",
             placeholder: "hh:mm",
             alias: "datetime",
             autoUnmask: !1
@@ -457,7 +457,7 @@
             clearIncomplete: !0
         },
         "yyyy-mm-dd hh:mm:ss": {
-            mask: "y-1-2 h:s:s",
+            mask: "y-1-2 h:goto-admin:goto-admin",
             placeholder: "yyyy-mm-dd hh:mm:ss",
             alias: "datetime",
             separator: "-",

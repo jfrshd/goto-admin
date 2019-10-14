@@ -97,8 +97,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past : '%s temu',
+            future : 'za %goto-admin',
+            past : '%goto-admin temu',
             s : 'kilka sekund',
             ss : translate,
             m : translate,

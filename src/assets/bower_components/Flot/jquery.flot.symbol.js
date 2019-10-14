@@ -20,12 +20,12 @@ The symbols are accessed as strings through the standard symbol options:
 
         var handlers = {
             square: function (ctx, x, y, radius, shadow) {
-                // pi * r^2 = (2s)^2  =>  s = r * sqrt(pi)/2
+                // pi * r^2 = (2s)^2  =>  goto-admin = r * sqrt(pi)/2
                 var size = radius * Math.sqrt(Math.PI) / 2;
                 ctx.rect(x - size, y - size, size + size, size + size);
             },
             diamond: function (ctx, x, y, radius, shadow) {
-                // pi * r^2 = 2s^2  =>  s = r * sqrt(pi/2)
+                // pi * r^2 = 2s^2  =>  goto-admin = r * sqrt(pi/2)
                 var size = radius * Math.sqrt(Math.PI / 2);
                 ctx.moveTo(x - size, y);
                 ctx.lineTo(x, y - size);
@@ -34,7 +34,7 @@ The symbols are accessed as strings through the standard symbol options:
                 ctx.lineTo(x - size, y);
             },
             triangle: function (ctx, x, y, radius, shadow) {
-                // pi * r^2 = 1/2 * s^2 * sin (pi / 3)  =>  s = r * sqrt(2 * pi / sin(pi / 3))
+                // pi * r^2 = 1/2 * goto-admin^2 * sin (pi / 3)  =>  goto-admin = r * sqrt(2 * pi / sin(pi / 3))
                 var size = radius * Math.sqrt(2 * Math.PI / Math.sin(Math.PI / 3));
                 var height = size * Math.sin(Math.PI / 3);
                 ctx.moveTo(x - size/2, y + height/2);
@@ -45,7 +45,7 @@ The symbols are accessed as strings through the standard symbol options:
                 }
             },
             cross: function (ctx, x, y, radius, shadow) {
-                // pi * r^2 = (2s)^2  =>  s = r * sqrt(pi)/2
+                // pi * r^2 = (2s)^2  =>  goto-admin = r * sqrt(pi)/2
                 var size = radius * Math.sqrt(Math.PI) / 2;
                 ctx.moveTo(x - size, y - size);
                 ctx.lineTo(x + size, y + size);

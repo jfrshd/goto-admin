@@ -41,8 +41,8 @@ export default moment.defineLocale('tzl', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'osprei %s',
-        past : 'ja%s',
+        future : 'osprei %goto-admin',
+        past : 'ja%goto-admin',
         s : processRelativeTime,
         ss : processRelativeTime,
         m : processRelativeTime,

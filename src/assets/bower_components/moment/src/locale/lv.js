@@ -65,8 +65,8 @@ export default moment.defineLocale('lv', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'pēc %s',
-        past : 'pirms %s',
+        future : 'pēc %goto-admin',
+        past : 'pirms %goto-admin',
         s : relativeSeconds,
         ss : relativeTimeWithPlural,
         m : relativeTimeWithSingular,

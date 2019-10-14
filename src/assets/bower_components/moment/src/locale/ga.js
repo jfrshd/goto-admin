@@ -41,8 +41,8 @@ export default moment.defineLocale('ga', {
         sameElse: 'L'
     },
     relativeTime: {
-        future: 'i %s',
-        past: '%s ó shin',
+        future: 'i %goto-admin',
+        past: '%goto-admin ó shin',
         s: 'cúpla soicind',
         ss: '%d soicind',
         m: 'nóiméad',

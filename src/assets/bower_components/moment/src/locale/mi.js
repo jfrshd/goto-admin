@@ -31,8 +31,8 @@ export default moment.defineLocale('mi', {
         sameElse: 'L'
     },
     relativeTime: {
-        future: 'i roto i %s',
-        past: '%s i mua',
+        future: 'i roto i %goto-admin',
+        past: '%goto-admin i mua',
         s: 'te hēkona ruarua',
         ss: '%d hēkona',
         m: 'he meneti',

@@ -41,7 +41,7 @@
             future : function (s) {
                 return ((/^[0-9].+$/).test(s) ? 'tra' : 'in') + ' ' + s;
             },
-            past : '%s fa',
+            past : '%goto-admin fa',
             s : 'alcuni secondi',
             ss : '%d secondi',
             m : 'un minuto',

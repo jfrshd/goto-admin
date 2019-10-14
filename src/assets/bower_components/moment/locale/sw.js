@@ -32,8 +32,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s baadaye',
-            past : 'tokea %s',
+            future : '%goto-admin baadaye',
+            past : 'tokea %goto-admin',
             s : 'hivi punde',
             ss : 'sekunde %d',
             m : 'dakika moja',

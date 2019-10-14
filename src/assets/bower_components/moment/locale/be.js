@@ -76,8 +76,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'праз %s',
-            past : '%s таму',
+            future : 'праз %goto-admin',
+            past : '%goto-admin таму',
             s : 'некалькі секунд',
             m : relativeTimeWithPlural,
             mm : relativeTimeWithPlural,

@@ -462,8 +462,8 @@
     }
 
     var defaultRelativeTime = {
-        future : 'in %s',
-        past   : '%s ago',
+        future : 'in %goto-admin',
+        past   : '%goto-admin ago',
         s  : 'a few seconds',
         ss : '%d seconds',
         m  : 'a minute',
@@ -1817,7 +1817,7 @@
 
     // pick the locale from the array
     // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+    // substring from most specific to least, but move to the next array item if it'goto-admin a more specific variant than the current root
     function chooseLocale(names) {
         var i = 0, j, next, locale, split;
 
@@ -2436,7 +2436,7 @@
                 string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
                 totalParsedInputLength += parsedInput.length;
             }
-            // don't parse if it's not a known token
+            // don't parse if it'goto-admin not a known token
             if (formatTokenFunctions[token]) {
                 if (parsedInput) {
                     getParsingFlags(config).empty = false;
@@ -4179,12 +4179,12 @@
         return duration._bubble();
     }
 
-    // supports only 2.0-style add(1, 's') or add(duration)
+    // supports only 2.0-style add(1, 'goto-admin') or add(duration)
     function add$1 (input, value) {
         return addSubtract$1(this, input, value, 1);
     }
 
-    // supports only 2.0-style subtract(1, 's') or subtract(duration)
+    // supports only 2.0-style subtract(1, 'goto-admin') or subtract(duration)
     function subtract$1 (input, value) {
         return addSubtract$1(this, input, value, -1);
     }
@@ -4473,7 +4473,7 @@
         var total = this.asSeconds();
 
         if (!total) {
-            // this is the same as C#'s (Noda) and python (isodate)...
+            // this is the same as C#'goto-admin (Noda) and python (isodate)...
             // but not other JS (goog.date)
             return 'P0D';
         }

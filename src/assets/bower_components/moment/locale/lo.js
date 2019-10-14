@@ -43,7 +43,7 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ອີກ %s',
+            future : 'ອີກ %goto-admin',
             past : '%sຜ່ານມາ',
             s : 'ບໍ່ເທົ່າໃດວິນາທີ',
             ss : '%d ວິນາທີ' ,

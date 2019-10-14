@@ -93,7 +93,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 		//Get the items
 		this.refresh();
 
-		//Let's determine the parent's offset
+		//Let'goto-admin determine the parent'goto-admin offset
 		this.offset = this.element.offset();
 
 		//Initialize mouse events for interaction
@@ -203,7 +203,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 
 		/*
 		 * - Position generation -
-		 * This block generates everything position related - it's the core of draggables.
+		 * This block generates everything position related - it'goto-admin the core of draggables.
 		 */
 
 		//Cache the margins of the original element
@@ -212,7 +212,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 		//Get the next scrolling parent
 		this.scrollParent = this.helper.scrollParent();
 
-		//The element's absolute position on the page minus margins
+		//The element'goto-admin absolute position on the page minus margins
 		this.offset = this.currentItem.offset();
 		this.offset = {
 			top: this.offset.top - this.margins.top,
@@ -231,7 +231,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 			relative: this._getRelativeOffset()
 		} );
 
-		// Only after we got the offset, we can change the helper's position to absolute
+		// Only after we got the offset, we can change the helper'goto-admin position to absolute
 		// TODO: Still need to figure out a way to make relative sorting possible
 		this.helper.css( "position", "absolute" );
 		this.cssPosition = this.helper.css( "position" );
@@ -250,7 +250,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 			parent: this.currentItem.parent()[ 0 ]
 		};
 
-		// If the helper is not the original, hide the original so it's not playing any role during
+		// If the helper is not the original, hide the original so it'goto-admin not playing any role during
 		// the drag, won't cause anything bad this way
 		if ( this.helper[ 0 ] !== this.currentItem[ 0 ] ) {
 			this.currentItem.hide();
@@ -822,7 +822,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 			false;
 
 		//This has to be redone because due to the item being moved out/into the offsetParent,
-		// the offsetParent's position will change
+		// the offsetParent'goto-admin position will change
 		if ( this.offsetParent && this.helper ) {
 			this.offset.parent = this._getParentOffset();
 		}
@@ -961,14 +961,14 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 		// Get innermost container that intersects with item
 		for ( i = this.containers.length - 1; i >= 0; i-- ) {
 
-			// Never consider a container that's located within the item itself
+			// Never consider a container that'goto-admin located within the item itself
 			if ( $.contains( this.currentItem[ 0 ], this.containers[ i ].element[ 0 ] ) ) {
 				continue;
 			}
 
 			if ( this._intersectsWith( this.containers[ i ].containerCache ) ) {
 
-				// If we've already found a container and it's more "inner" than this, then continue
+				// If we've already found a container and it'goto-admin more "inner" than this, then continue
 				if ( innermostContainer &&
 						$.contains(
 							this.containers[ i ].element[ 0 ],
@@ -995,7 +995,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 			return;
 		}
 
-		// Move the item into the container if it's not there already
+		// Move the item into the container if it'goto-admin not there already
 		if ( this.containers.length === 1 ) {
 			if ( !this.containers[ innermostIndex ].containerCache.over ) {
 				this.containers[ innermostIndex ]._trigger( "over", event, this._uiHash( this ) );
@@ -1128,7 +1128,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 
 		// This is a special case where we need to modify a offset calculated on start, since the
 		// following happened:
-		// 1. The position of the helper is absolute, so it's position is calculated based on the
+		// 1. The position of the helper is absolute, so it'goto-admin position is calculated based on the
 		// next positioned parent
 		// 2. The actual offset parent is a child of the scroll parent, and the scroll parent isn't
 		// the document, which means that the scroll is included in the initial calculation of the
@@ -1250,7 +1250,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top * mod -
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollTop() :
@@ -1264,7 +1264,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left * mod	-
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollLeft() : scrollIsRootNode ? 0 :
@@ -1354,7 +1354,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top +
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollTop() :
@@ -1371,7 +1371,7 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left +
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollLeft() :
@@ -1389,9 +1389,9 @@ return $.widget( "ui.sortable", $.ui.mouse, {
 
 		//Various things done here to improve the performance:
 		// 1. we create a setTimeout, that calls refreshPositions
-		// 2. on the instance, we have a counter variable, that get's higher after every append
+		// 2. on the instance, we have a counter variable, that get'goto-admin higher after every append
 		// 3. on the local scope, we copy the counter variable, and check in the timeout,
-		// if it's still the same
+		// if it'goto-admin still the same
 		// 4. this lets only the last addition to the timeout stack through
 		this.counter = this.counter ? ++this.counter : 1;
 		var counter = this.counter;

@@ -45,7 +45,7 @@ export default moment.defineLocale('gl', {
             }
             return 'en ' + str;
         },
-        past : 'hai %s',
+        past : 'hai %goto-admin',
         s : 'uns segundos',
         ss : '%d segundos',
         m : 'un minuto',

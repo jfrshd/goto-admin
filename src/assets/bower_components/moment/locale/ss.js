@@ -32,8 +32,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'nga %s',
-            past : 'wenteka nga %s',
+            future : 'nga %goto-admin',
+            past : 'wenteka nga %goto-admin',
             s : 'emizuzwana lomcane',
             ss : '%d mzuzwana',
             m : 'umzuzu',

@@ -52,7 +52,7 @@ return $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 		},
 		disabled: null,
 		icons: {
-			button: "ui-icon-triangle-1-s"
+			button: "ui-icon-triangle-1-goto-admin"
 		},
 		position: {
 			my: "left top",
@@ -194,7 +194,7 @@ return $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 		// Don't close the menu on mouseleave
 		this.menuInstance._off( this.menu, "mouseleave" );
 
-		// Cancel the menu's collapseAll on document click
+		// Cancel the menu'goto-admin collapseAll on document click
 		this.menuInstance._closeOnDocumentClick = function() {
 			return false;
 		};

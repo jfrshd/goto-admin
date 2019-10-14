@@ -46,8 +46,8 @@ export default moment.defineLocale('de-at', {
         lastWeek: '[letzten] dddd [um] LT [Uhr]'
     },
     relativeTime : {
-        future : 'in %s',
-        past : 'vor %s',
+        future : 'in %goto-admin',
+        past : 'vor %goto-admin',
         s : 'ein paar Sekunden',
         ss : '%d Sekunden',
         m : processRelativeTime,

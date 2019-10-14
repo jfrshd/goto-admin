@@ -71,7 +71,7 @@
     }
 
     // extract CSS color property from element, going up in the DOM
-    // if it's "transparent"
+    // if it'goto-admin "transparent"
     $.color.extract = function (elem, css) {
         var c;
 
@@ -84,7 +84,7 @@
             elem = elem.parent();
         } while (elem.length && !$.nodeName(elem.get(0), "body"));
 
-        // catch Safari's way of signalling transparent
+        // catch Safari'goto-admin way of signalling transparent
         if (c == "rgba(0, 0, 0, 0)")
             c = "transparent";
         

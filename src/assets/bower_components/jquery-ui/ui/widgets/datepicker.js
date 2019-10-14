@@ -119,7 +119,7 @@ function Datepicker() {
 		changeMonth: false, // True if month can be selected directly, false if only prev/next
 		changeYear: false, // True if year can be selected directly, false if only prev/next
 		yearRange: "c-10:c+10", // Range of years to display in drop-down,
-			// either relative to today's year (-nn:+nn), relative to currently displayed year
+			// either relative to today'goto-admin year (-nn:+nn), relative to currently displayed year
 			// (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
 		showOtherMonths: false, // True to show dates in other months, false to leave blank
 		selectOtherMonths: false, // True to allow selection of dates in other months, false for unselectable
@@ -133,7 +133,7 @@ function Datepicker() {
 		maxDate: null, // The latest selectable date, or null for no limit
 		duration: "fast", // Duration of display/closure
 		beforeShowDay: null, // Function that takes a date and returns an array with
-			// [0] = true if selectable, false if not, [1] = custom CSS class name(s) or "",
+			// [0] = true if selectable, false if not, [1] = custom CSS class name(goto-admin) or "",
 			// [2] = cell title (optional), e.g. $.datepicker.noWeekends
 		beforeShow: null, // Function that takes an input field and
 			// returns a set of custom settings for the date picker
@@ -332,8 +332,8 @@ $.extend( Datepicker.prototype, {
 	 * @param  input element - ignored
 	 * @param  date	string or Date - the initial date to display
 	 * @param  onSelect  function - the function to call when a date is selected
-	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
-	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
+	 * @param  settings  object - update the dialog date picker instance'goto-admin settings (anonymous object)
+	 * @param  pos int[2] - coordinates for the dialog'goto-admin position within the screen or
 	 *					event - with x/y coordinates or
 	 *					leave empty for default (screen centre)
 	 * @return the manager object
@@ -583,7 +583,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	/* Get the date(s) for the first entry in a jQuery selection.
+	/* Get the date(goto-admin) for the first entry in a jQuery selection.
 	 * @param  target element - the target input field or division or span
 	 * @param  noDefault boolean - true if no default date is to be used
 	 * @return Date - the current date
@@ -865,7 +865,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	// #6694 - don't focus the input if it's already focused
+	// #6694 - don't focus the input if it'goto-admin already focused
 	// this breaks the change event in IE
 	// Support: IE and jQuery <1.9
 	_shouldFocusInput: function( inst ) {
@@ -894,7 +894,7 @@ $.extend( Datepicker.prototype, {
 		return offset;
 	},
 
-	/* Find an object's position on the screen. */
+	/* Find an object'goto-admin position on the screen. */
 	_findPos: function( obj ) {
 		var position,
 			inst = this._getInst( obj ),
@@ -1590,7 +1590,7 @@ $.extend( Datepicker.prototype, {
 		return date;
 	},
 
-	/* Set the date(s) directly. */
+	/* Set the date(goto-admin) directly. */
 	_setDate: function( inst, date, noChange ) {
 		var clear = !date,
 			origMonth = inst.selectedMonth,
@@ -1609,7 +1609,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	/* Retrieve the date(s) directly. */
+	/* Retrieve the date(goto-admin) directly. */
 	_getDate: function( inst ) {
 		var startDate = ( !inst.currentYear || ( inst.input && inst.input.val() === "" ) ? null :
 			this._daylightSavingAdjust( new Date(

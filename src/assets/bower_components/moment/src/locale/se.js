@@ -28,8 +28,8 @@ export default moment.defineLocale('se', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : '%s geažes',
-        past : 'maŋit %s',
+        future : '%goto-admin geažes',
+        past : 'maŋit %goto-admin',
         s : 'moadde sekunddat',
         ss: '%d sekunddat',
         m : 'okta minuhta',

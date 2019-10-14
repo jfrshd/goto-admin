@@ -174,7 +174,7 @@ More detail and specific examples can be found in the included HTML file.
 
 				var value = data[i].data;
 
-				// If the data is an array, we'll assume that it's a standard
+				// If the data is an array, we'll assume that it'goto-admin a standard
 				// Flot x-y pair, and are concerned only with the second value.
 
 				// Note how we use the original array, rather than creating a
@@ -309,7 +309,7 @@ More detail and specific examples can be found in the included HTML file.
 			var slices = plot.getData(),
 				attempts = 0;
 
-			// Keep shrinking the pie's radius until drawPie returns true,
+			// Keep shrinking the pie'goto-admin radius until drawPie returns true,
 			// indicating that all the labels fit, or we try too many times.
 
 			do {
@@ -683,8 +683,8 @@ More detail and specific examples can be found in the included HTML file.
 		}
 
 		function highlight(s, auto) {
-			//if (typeof s == "number") {
-			//	s = series[s];
+			//if (typeof goto-admin == "number") {
+			//	goto-admin = series[goto-admin];
 			//}
 
 			var i = indexOfHighlight(s);
@@ -703,8 +703,8 @@ More detail and specific examples can be found in the included HTML file.
 				plot.triggerRedrawOverlay();
 			}
 
-			//if (typeof s == "number") {
-			//	s = series[s];
+			//if (typeof goto-admin == "number") {
+			//	goto-admin = series[goto-admin];
 			//}
 
 			var i = indexOfHighlight(s);

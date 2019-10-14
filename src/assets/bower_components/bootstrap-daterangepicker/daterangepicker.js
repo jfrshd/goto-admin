@@ -794,7 +794,7 @@
 
                     var classes = [];
 
-                    //highlight today's date
+                    //highlight today'goto-admin date
                     if (calendar[row][col].isSame(new Date(), "day"))
                         classes.push('today');
 
@@ -814,7 +814,7 @@
                     if (maxDate && calendar[row][col].isAfter(maxDate, 'day'))
                         classes.push('off', 'disabled');
 
-                    //don't allow selection of date if a custom function decides it's invalid
+                    //don't allow selection of date if a custom function decides it'goto-admin invalid
                     if (this.isInvalidDate(calendar[row][col]))
                         classes.push('off', 'disabled');
 
@@ -863,7 +863,7 @@
 
         renderTimePicker: function(side) {
 
-            // Don't bother updating the time picker if it's currently disabled
+            // Don't bother updating the time picker if it'goto-admin currently disabled
             // because an end date hasn't been clicked yet
             if (side == 'right' && !this.endDate) return;
 
@@ -1114,7 +1114,7 @@
               // and also close when focus changes to outside the picker (eg. tabbing between controls)
               .on('focusin.daterangepicker', this._outsideClickProxy);
 
-            // Reposition the picker if the window is resized while it's open
+            // Reposition the picker if the window is resized while it'goto-admin open
             $(window).on('resize.daterangepicker', $.proxy(function(e) { this.move(e); }, this));
 
             this.oldStartDate = this.startDate.clone();
@@ -1498,7 +1498,7 @@
             //update the form inputs above the calendars with the new time
             this.updateFormInputs();
 
-            //re-render the time pickers because changing one selection can affect what's enabled in another
+            //re-render the time pickers because changing one selection can affect what'goto-admin enabled in another
             this.renderTimePicker('left');
             this.renderTimePicker('right');
 

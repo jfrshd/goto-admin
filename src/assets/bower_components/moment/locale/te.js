@@ -32,8 +32,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s లో',
-            past : '%s క్రితం',
+            future : '%goto-admin లో',
+            past : '%goto-admin క్రితం',
             s : 'కొన్ని క్షణాలు',
             ss : '%d సెకన్లు',
             m : 'ఒక నిమిషం',

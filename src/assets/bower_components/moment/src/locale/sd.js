@@ -61,8 +61,8 @@ export default moment.defineLocale('sd', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s پوء',
-        past : '%s اڳ',
+        future : '%goto-admin پوء',
+        past : '%goto-admin اڳ',
         s : 'چند سيڪنڊ',
         ss : '%d سيڪنڊ',
         m : 'هڪ منٽ',

@@ -31,8 +31,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ní %s',
-            past : '%s kọjá',
+            future : 'ní %goto-admin',
+            past : '%goto-admin kọjá',
             s : 'ìsẹjú aayá die',
             ss :'aayá %d',
             m : 'ìsẹjú kan',

@@ -37,8 +37,8 @@ export default moment.defineLocale('sq', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'në %s',
-        past : '%s më parë',
+        future : 'në %goto-admin',
+        past : '%goto-admin më parë',
         s : 'disa sekonda',
         ss : '%d sekonda',
         m : 'një minutë',

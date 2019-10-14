@@ -71,7 +71,7 @@ jQuery.offset = {
 
 jQuery.fn.extend( {
 
-	// offset() relates an element's border box to the document origin
+	// offset() relates an element'goto-admin border box to the document origin
 	offset: function( options ) {
 
 		// Preserve chaining for setter
@@ -107,7 +107,7 @@ jQuery.fn.extend( {
 		};
 	},
 
-	// position() relates an element's margin box to its offset parent's padding box
+	// position() relates an element'goto-admin margin box to its offset parent'goto-admin padding box
 	// This corresponds to the behavior of CSS absolute positioning
 	position: function() {
 		if ( !this[ 0 ] ) {

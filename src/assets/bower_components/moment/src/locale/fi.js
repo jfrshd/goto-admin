@@ -76,8 +76,8 @@ export default moment.defineLocale('fi', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s päästä',
-        past : '%s sitten',
+        future : '%goto-admin päästä',
+        past : '%goto-admin sitten',
         s : translate,
         ss : translate,
         m : translate,

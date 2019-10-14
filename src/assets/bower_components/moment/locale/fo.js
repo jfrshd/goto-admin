@@ -31,8 +31,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'um %s',
-            past : '%s síðani',
+            future : 'um %goto-admin',
+            past : '%goto-admin síðani',
             s : 'fá sekund',
             ss : '%d sekundir',
             m : 'ein minuttur',

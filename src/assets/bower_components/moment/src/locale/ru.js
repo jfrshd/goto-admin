@@ -122,8 +122,8 @@ export default moment.defineLocale('ru', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'через %s',
-        past : '%s назад',
+        future : 'через %goto-admin',
+        past : '%goto-admin назад',
         s : 'несколько секунд',
         ss : relativeTimeWithPlural,
         m : relativeTimeWithPlural,

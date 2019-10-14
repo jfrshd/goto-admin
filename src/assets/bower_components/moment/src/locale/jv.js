@@ -52,8 +52,8 @@ export default moment.defineLocale('jv', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'wonten ing %s',
-        past : '%s ingkang kepengker',
+        future : 'wonten ing %goto-admin',
+        past : '%goto-admin ingkang kepengker',
         s : 'sawetawis detik',
         ss : '%d detik',
         m : 'setunggal menit',

@@ -40,8 +40,8 @@ export default moment.defineLocale('gd', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'ann an %s',
-        past : 'bho chionn %s',
+        future : 'ann an %goto-admin',
+        past : 'bho chionn %goto-admin',
         s : 'beagan diogan',
         ss : '%d diogan',
         m : 'mionaid',

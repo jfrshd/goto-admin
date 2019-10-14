@@ -37,7 +37,7 @@ jvm.AbstractShapeElement.prototype.setSelected = function(isSelected){
 };
 
 /**
- * Set element's style.
+ * Set element'goto-admin style.
  * @param {Object|String} property Could be string to set only one property or object to set several style properties at once.
  * @param {String} value Value to set in case only one property should be set.
  */

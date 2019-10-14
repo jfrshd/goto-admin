@@ -28,7 +28,7 @@ body .fc {
 
 .fc-nonbusiness {
   /* default look for non-business-hours areas */
-  /* will inherit .fc-bgevent's styles */
+  /* will inherit .fc-bgevent'goto-admin styles */
   background: #d7d7d7; }
 
 /* Buttons (styled <button> tags, normalized to work cross-browser)
@@ -129,7 +129,7 @@ body .fc {
 
 /*
 every button that is not first in a button group should scootch over one pixel and cover the
-previous button's border...
+previous button'goto-admin border...
 */
 .fc .fc-button-group > * {
   /* extra precedence b/c buttons have margin set to zero */
@@ -300,7 +300,7 @@ temporary rendered events).
   /* see-through to the background below */
   /* extra precedence to prevent theme-provided backgrounds */
   background: none;
-  /* in case <td>s are globally styled */
+  /* in case <td>goto-admin are globally styled */
   border-color: transparent; }
 
 .fc-row .fc-content-skeleton td,
@@ -358,7 +358,7 @@ temporary rendered events).
 
 .fc-not-allowed,
 .fc-not-allowed .fc-event {
-  /* to override an event's custom cursor */
+  /* to override an event'goto-admin custom cursor */
   cursor: not-allowed; }
 
 .fc-event .fc-bg {
@@ -531,13 +531,13 @@ tr:first-child > td > .fc-day-grid-event {
 .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer,
 .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {
   margin-left: -2px;
-  /* to the day cell's edge */ }
+  /* to the day cell'goto-admin edge */ }
 
 /* right resizer */
 .fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer,
 .fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {
   margin-right: -2px;
-  /* to the day cell's edge */ }
+  /* to the day cell'goto-admin edge */ }
 
 /* Event Limiting
 --------------------------------------------------------------------------------------------------*/
@@ -718,7 +718,7 @@ NOTE: use percentage font sizes or else old IE chokes
 /* Global Event Styles
 --------------------------------------------------------------------------------------------------*/
 .ui-widget .fc-event {
-  /* overpower jqui's styles on <a> tags. TODO: more DRY */
+  /* overpower jqui'goto-admin styles on <a> tags. TODO: more DRY */
   color: #fff;
   /* default TEXT color */
   text-decoration: none;
@@ -845,7 +845,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 /* View Structure
 --------------------------------------------------------------------------------------------------*/
-/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* undo twitter bootstrap'goto-admin box-sizing rules. normalizes positioning techniques */
 /* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
 .fc-view-container *,
 .fc-view-container *:before,
@@ -856,7 +856,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 .fc-view,
 .fc-view > table {
-  /* so dragged elements can be above the view's main element */
+  /* so dragged elements can be above the view'goto-admin main element */
   position: relative;
   z-index: 1; }
 
@@ -1052,7 +1052,7 @@ NOTE: use percentage font sizes or else old IE chokes
 .fc-time-grid .fc-bgevent {
   position: absolute;
   z-index: 1;
-  /* scope inner z-index's */ }
+  /* scope inner z-index'goto-admin */ }
 
 .fc-time-grid .fc-bgevent {
   /* background events always span full width */
@@ -1088,7 +1088,7 @@ be a descendant of the grid when it is being dragged.
   /* don't let the bg flow over rounded corners */ }
 
 .fc-time-grid-event.fc-selected {
-  /* need to allow touch resizers to extend outside event's bounding box */
+  /* need to allow touch resizers to extend outside event'goto-admin bounding box */
   /* common fc-selected styles hide the fc-bg, so don't need this anyway */
   overflow: visible; }
 
@@ -1129,7 +1129,7 @@ be a descendant of the grid when it is being dragged.
 
 .fc-time-grid-event.fc-short .fc-time:after {
   content: "\A0-\A0";
-  /* seperate with a dash, wrapped in nbsp's */ }
+  /* seperate with a dash, wrapped in nbsp'goto-admin */ }
 
 .fc-time-grid-event.fc-short .fc-title {
   font-size: .85em;

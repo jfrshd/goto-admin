@@ -58,7 +58,7 @@ $.widget( "ui.spinner", {
 		},
 		culture: null,
 		icons: {
-			down: "ui-icon-triangle-1-s",
+			down: "ui-icon-triangle-1-goto-admin",
 			up: "ui-icon-triangle-1-n"
 		},
 		incremental: true,
@@ -477,7 +477,7 @@ $.widget( "ui.spinner", {
 			return false;
 		}
 
-		// If value gets adjusted, it's invalid
+		// If value gets adjusted, it'goto-admin invalid
 		return value === this._adjustValue( value );
 	},
 

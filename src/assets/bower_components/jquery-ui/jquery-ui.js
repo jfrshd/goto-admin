@@ -1345,7 +1345,7 @@ $.effects = {
 	// Plusequals test for += 100 -= 100
 	rplusequals = /^([\-+])=\s*(\d+\.?\d*)/,
 
-	// A set of RE's that can match strings and generate color tuples.
+	// A set of RE'goto-admin that can match strings and generate color tuples.
 	stringParsers = [ {
 			re: /rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d?(?:\.\d+)?)\s*)?\)/,
 			parse: function( execResult ) {
@@ -1368,7 +1368,7 @@ $.effects = {
 			}
 		}, {
 
-			// This regex ignores A-F because it's compared against an already lowercased string
+			// This regex ignores A-F because it'goto-admin compared against an already lowercased string
 			re: /#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})/,
 			parse: function( execResult ) {
 				return [
@@ -1379,7 +1379,7 @@ $.effects = {
 			}
 		}, {
 
-			// This regex ignores A-F because it's compared against an already lowercased string
+			// This regex ignores A-F because it'goto-admin compared against an already lowercased string
 			re: /#([a-f0-9])([a-f0-9])([a-f0-9])/,
 			parse: function( execResult ) {
 				return [
@@ -3907,7 +3907,7 @@ $.ui.focusable = function( element, hasTabindex ) {
 		if ( focusableIfVisible ) {
 
 			// Form controls within a disabled fieldset are disabled.
-			// However, controls within the fieldset's legend do not get disabled.
+			// However, controls within the fieldset'goto-admin legend do not get disabled.
 			// Since controls generally aren't placed inside legends, we skip
 			// this portion of the check.
 			fieldset = $( element ).closest( "fieldset" )[ 0 ];
@@ -4265,7 +4265,7 @@ var tabbable = $.extend( $.expr[ ":" ], {
 
 //>>label: uniqueId
 //>>group: Core
-//>>description: Functions to generate and remove uniqueId's
+//>>description: Functions to generate and remove uniqueId'goto-admin
 //>>docs: http://api.jqueryui.com/uniqueId/
 
 
@@ -4330,7 +4330,7 @@ var widgetsAccordion = $.widget( "ui.accordion", {
 		header: "> li > :first-child, > :not(li):even",
 		heightStyle: "auto",
 		icons: {
-			activeHeader: "ui-icon-triangle-1-s",
+			activeHeader: "ui-icon-triangle-1-goto-admin",
 			header: "ui-icon-triangle-1-e"
 		},
 
@@ -5038,7 +5038,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 			"mouseleave .ui-menu": "collapseAll",
 			focus: function( event, keepActiveItem ) {
 
-				// If there's already an active item, keep it active
+				// If there'goto-admin already an active item, keep it active
 				// If not, activate the first item
 				var item = this.active || this.element.find( this.options.items ).eq( 0 );
 
@@ -5288,7 +5288,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 		focused = this.active.children( ".ui-menu-item-wrapper" );
 		this._addClass( focused, null, "ui-state-active" );
 
-		// Only update aria-activedescendant if there's a role
+		// Only update aria-activedescendant if there'goto-admin a role
 		// otherwise we assume focus is managed elsewhere
 		if ( this.options.role ) {
 			this.element.attr( "aria-activedescendant", focused.attr( "id" ) );
@@ -5798,7 +5798,7 @@ $.widget( "ui.autocomplete", {
 					// Right clicking a menu item or selecting text from the menu items will
 					// result in focus moving out of the input. However, we've already received
 					// and ignored the blur event because of the cancelBlur flag set above. So
-					// we restore focus to ensure that the menu closes properly based on the user's
+					// we restore focus to ensure that the menu closes properly based on the user'goto-admin
 					// next actions.
 					if ( this.element[ 0 ] !== $.ui.safeActiveElement( this.document[ 0 ] ) ) {
 						this.element.trigger( "focus" );
@@ -7267,7 +7267,7 @@ function Datepicker() {
 		changeMonth: false, // True if month can be selected directly, false if only prev/next
 		changeYear: false, // True if year can be selected directly, false if only prev/next
 		yearRange: "c-10:c+10", // Range of years to display in drop-down,
-			// either relative to today's year (-nn:+nn), relative to currently displayed year
+			// either relative to today'goto-admin year (-nn:+nn), relative to currently displayed year
 			// (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
 		showOtherMonths: false, // True to show dates in other months, false to leave blank
 		selectOtherMonths: false, // True to allow selection of dates in other months, false for unselectable
@@ -7281,7 +7281,7 @@ function Datepicker() {
 		maxDate: null, // The latest selectable date, or null for no limit
 		duration: "fast", // Duration of display/closure
 		beforeShowDay: null, // Function that takes a date and returns an array with
-			// [0] = true if selectable, false if not, [1] = custom CSS class name(s) or "",
+			// [0] = true if selectable, false if not, [1] = custom CSS class name(goto-admin) or "",
 			// [2] = cell title (optional), e.g. $.datepicker.noWeekends
 		beforeShow: null, // Function that takes an input field and
 			// returns a set of custom settings for the date picker
@@ -7480,8 +7480,8 @@ $.extend( Datepicker.prototype, {
 	 * @param  input element - ignored
 	 * @param  date	string or Date - the initial date to display
 	 * @param  onSelect  function - the function to call when a date is selected
-	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
-	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
+	 * @param  settings  object - update the dialog date picker instance'goto-admin settings (anonymous object)
+	 * @param  pos int[2] - coordinates for the dialog'goto-admin position within the screen or
 	 *					event - with x/y coordinates or
 	 *					leave empty for default (screen centre)
 	 * @return the manager object
@@ -7731,7 +7731,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	/* Get the date(s) for the first entry in a jQuery selection.
+	/* Get the date(goto-admin) for the first entry in a jQuery selection.
 	 * @param  target element - the target input field or division or span
 	 * @param  noDefault boolean - true if no default date is to be used
 	 * @return Date - the current date
@@ -8013,7 +8013,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	// #6694 - don't focus the input if it's already focused
+	// #6694 - don't focus the input if it'goto-admin already focused
 	// this breaks the change event in IE
 	// Support: IE and jQuery <1.9
 	_shouldFocusInput: function( inst ) {
@@ -8042,7 +8042,7 @@ $.extend( Datepicker.prototype, {
 		return offset;
 	},
 
-	/* Find an object's position on the screen. */
+	/* Find an object'goto-admin position on the screen. */
 	_findPos: function( obj ) {
 		var position,
 			inst = this._getInst( obj ),
@@ -8738,7 +8738,7 @@ $.extend( Datepicker.prototype, {
 		return date;
 	},
 
-	/* Set the date(s) directly. */
+	/* Set the date(goto-admin) directly. */
 	_setDate: function( inst, date, noChange ) {
 		var clear = !date,
 			origMonth = inst.selectedMonth,
@@ -8757,7 +8757,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	/* Retrieve the date(s) directly. */
+	/* Retrieve the date(goto-admin) directly. */
 	_getDate: function( inst ) {
 		var startDate = ( !inst.currentYear || ( inst.input && inst.input.val() === "" ) ? null :
 			this._daylightSavingAdjust( new Date(
@@ -9686,13 +9686,13 @@ $.widget( "ui.draggable", $.ui.mouse, {
 
 		/*
 		 * - Position generation -
-		 * This block generates everything position related - it's the core of draggables.
+		 * This block generates everything position related - it'goto-admin the core of draggables.
 		 */
 
 		//Cache the margins of the original element
 		this._cacheMargins();
 
-		//Store the helper's css position
+		//Store the helper'goto-admin css position
 		this.cssPosition = this.helper.css( "position" );
 		this.scrollParent = this.helper.scrollParent( true );
 		this.offsetParent = this.helper.offsetParent();
@@ -9700,7 +9700,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				return $( this ).css( "position" ) === "fixed";
 			} ).length > 0;
 
-		//The element's absolute position on the page minus margins
+		//The element'goto-admin absolute position on the page minus margins
 		this.positionAbs = this.element.offset();
 		this._refreshOffsets( event );
 
@@ -9945,7 +9945,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 
 		// This is a special case where we need to modify a offset calculated on start, since the
 		// following happened:
-		// 1. The position of the helper is absolute, so it's position is calculated based on the
+		// 1. The position of the helper is absolute, so it'goto-admin position is calculated based on the
 		// next positioned parent
 		// 2. The actual offset parent is a child of the scroll parent, and the scroll parent isn't
 		// the document, which means that the scroll is included in the initial calculation of the
@@ -10094,7 +10094,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top * mod -
 				( ( this.cssPosition === "fixed" ?
 					-this.offset.scroll.top :
@@ -10108,7 +10108,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left * mod	-
 				( ( this.cssPosition === "fixed" ?
 					-this.offset.scroll.left :
@@ -10211,7 +10211,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top +
 				( this.cssPosition === "fixed" ?
 					-this.offset.scroll.top :
@@ -10228,7 +10228,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left +
 				( this.cssPosition === "fixed" ?
 					-this.offset.scroll.left :
@@ -10291,7 +10291,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				draggable.sortables.push( sortable );
 
 				// RefreshPositions is called at drag start to refresh the containerCache
-				// which is used in drag. This ensures it's initialized and synchronized
+				// which is used in drag. This ensures it'goto-admin initialized and synchronized
 				// with any changes that might have happened on the page since initialization.
 				sortable.refreshPositions();
 				sortable._trigger( "activate", event, uiSortable );
@@ -10345,7 +10345,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 			var innermostIntersecting = false,
 				sortable = this;
 
-			// Copy over variables that sortable's _intersectsWith uses
+			// Copy over variables that sortable'goto-admin _intersectsWith uses
 			sortable.positionAbs = draggable.positionAbs;
 			sortable.helperProportions = draggable.helperProportions;
 			sortable.offset.click = draggable.offset.click;
@@ -10355,7 +10355,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 
 				$.each( draggable.sortables, function() {
 
-					// Copy over variables that sortable's _intersectsWith uses
+					// Copy over variables that sortable'goto-admin _intersectsWith uses
 					this.positionAbs = draggable.positionAbs;
 					this.helperProportions = draggable.helperProportions;
 					this.offset.click = draggable.offset.click;
@@ -10377,7 +10377,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				if ( !sortable.isOver ) {
 					sortable.isOver = 1;
 
-					// Store draggable's parent in case we need to reappend to it later.
+					// Store draggable'goto-admin parent in case we need to reappend to it later.
 					draggable._parent = ui.helper.parent();
 
 					sortable.currentItem = ui.helper
@@ -10426,7 +10426,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				if ( sortable.currentItem ) {
 					sortable._mouseDrag( event );
 
-					// Copy the sortable's position because the draggable's can potentially reflect
+					// Copy the sortable'goto-admin position because the draggable'goto-admin can potentially reflect
 					// a relative position, while sortable is always absolute, which the dragged
 					// element has now become. (#8809)
 					ui.position = sortable.position;
@@ -10441,7 +10441,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					sortable.isOver = 0;
 					sortable.cancelHelperRemoval = true;
 
-					// Calling sortable's mouseStop would trigger a revert,
+					// Calling sortable'goto-admin mouseStop would trigger a revert,
 					// so revert must be temporarily false until after mouseStop is called.
 					sortable.options._revert = sortable.options.revert;
 					sortable.options.revert = false;
@@ -10458,7 +10458,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 						sortable.placeholder.remove();
 					}
 
-					// Restore and recalculate the draggable's offset considering the sortable
+					// Restore and recalculate the draggable'goto-admin offset considering the sortable
 					// may have modified them in unexpected ways. (#8809, #10669)
 					ui.helper.appendTo( draggable._parent );
 					draggable._refreshOffsets( event );
@@ -10793,7 +10793,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		containment: false,
 		ghost: false,
 		grid: false,
-		handles: "e,s,se",
+		handles: "e,goto-admin,se",
 		helper: false,
 		maxHeight: null,
 		maxWidth: null,
@@ -10831,7 +10831,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		}
 
 		// TODO: determine which cases actually cause this to happen
-		// if the element doesn't have the scroll set, see if it's possible to
+		// if the element doesn't have the scroll set, see if it'goto-admin possible to
 		// set the scroll
 		el[ scroll ] = 1;
 		has = ( el[ scroll ] > 0 );
@@ -10977,10 +10977,10 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		var o = this.options, handle, i, n, hname, axis, that = this;
 		this.handles = o.handles ||
 			( !$( ".ui-resizable-handle", this.element ).length ?
-				"e,s,se" : {
+				"e,goto-admin,se" : {
 					n: ".ui-resizable-n",
 					e: ".ui-resizable-e",
-					s: ".ui-resizable-s",
+					s: ".ui-resizable-goto-admin",
 					w: ".ui-resizable-w",
 					se: ".ui-resizable-se",
 					sw: ".ui-resizable-sw",
@@ -10992,7 +10992,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		if ( this.handles.constructor === String ) {
 
 			if ( this.handles === "all" ) {
-				this.handles = "n,e,s,w,se,sw,ne,nw";
+				this.handles = "n,e,goto-admin,w,se,sw,ne,nw";
 			}
 
 			n = this.handles.split( "," );
@@ -12497,7 +12497,7 @@ $.widget( "ui.dialog", {
 			position = this.uiDialog.css( "position" ),
 			resizeHandles = typeof handles === "string" ?
 				handles :
-				"n,e,s,w,se,sw,ne,nw";
+				"n,e,goto-admin,w,se,sw,ne,nw";
 
 		function filteredUi( ui ) {
 			return {
@@ -12906,11 +12906,11 @@ $.widget( "ui.droppable", {
 		this.proportions = function( /* valueToWrite */ ) {
 			if ( arguments.length ) {
 
-				// Store the droppable's proportions
+				// Store the droppable'goto-admin proportions
 				proportions = arguments[ 0 ];
 			} else {
 
-				// Retrieve or derive the droppable's proportions
+				// Retrieve or derive the droppable'goto-admin proportions
 				return proportions ?
 					proportions :
 					proportions = {
@@ -13829,7 +13829,7 @@ var widgetsSelectmenu = $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 		},
 		disabled: null,
 		icons: {
-			button: "ui-icon-triangle-1-s"
+			button: "ui-icon-triangle-1-goto-admin"
 		},
 		position: {
 			my: "left top",
@@ -13971,7 +13971,7 @@ var widgetsSelectmenu = $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 		// Don't close the menu on mouseleave
 		this.menuInstance._off( this.menu, "mouseleave" );
 
-		// Cancel the menu's collapseAll on document click
+		// Cancel the menu'goto-admin collapseAll on document click
 		this.menuInstance._closeOnDocumentClick = function() {
 			return false;
 		};
@@ -15275,7 +15275,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 		//Get the items
 		this.refresh();
 
-		//Let's determine the parent's offset
+		//Let'goto-admin determine the parent'goto-admin offset
 		this.offset = this.element.offset();
 
 		//Initialize mouse events for interaction
@@ -15385,7 +15385,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 
 		/*
 		 * - Position generation -
-		 * This block generates everything position related - it's the core of draggables.
+		 * This block generates everything position related - it'goto-admin the core of draggables.
 		 */
 
 		//Cache the margins of the original element
@@ -15394,7 +15394,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 		//Get the next scrolling parent
 		this.scrollParent = this.helper.scrollParent();
 
-		//The element's absolute position on the page minus margins
+		//The element'goto-admin absolute position on the page minus margins
 		this.offset = this.currentItem.offset();
 		this.offset = {
 			top: this.offset.top - this.margins.top,
@@ -15413,7 +15413,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 			relative: this._getRelativeOffset()
 		} );
 
-		// Only after we got the offset, we can change the helper's position to absolute
+		// Only after we got the offset, we can change the helper'goto-admin position to absolute
 		// TODO: Still need to figure out a way to make relative sorting possible
 		this.helper.css( "position", "absolute" );
 		this.cssPosition = this.helper.css( "position" );
@@ -15432,7 +15432,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 			parent: this.currentItem.parent()[ 0 ]
 		};
 
-		// If the helper is not the original, hide the original so it's not playing any role during
+		// If the helper is not the original, hide the original so it'goto-admin not playing any role during
 		// the drag, won't cause anything bad this way
 		if ( this.helper[ 0 ] !== this.currentItem[ 0 ] ) {
 			this.currentItem.hide();
@@ -16004,7 +16004,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 			false;
 
 		//This has to be redone because due to the item being moved out/into the offsetParent,
-		// the offsetParent's position will change
+		// the offsetParent'goto-admin position will change
 		if ( this.offsetParent && this.helper ) {
 			this.offset.parent = this._getParentOffset();
 		}
@@ -16143,14 +16143,14 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 		// Get innermost container that intersects with item
 		for ( i = this.containers.length - 1; i >= 0; i-- ) {
 
-			// Never consider a container that's located within the item itself
+			// Never consider a container that'goto-admin located within the item itself
 			if ( $.contains( this.currentItem[ 0 ], this.containers[ i ].element[ 0 ] ) ) {
 				continue;
 			}
 
 			if ( this._intersectsWith( this.containers[ i ].containerCache ) ) {
 
-				// If we've already found a container and it's more "inner" than this, then continue
+				// If we've already found a container and it'goto-admin more "inner" than this, then continue
 				if ( innermostContainer &&
 						$.contains(
 							this.containers[ i ].element[ 0 ],
@@ -16177,7 +16177,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 			return;
 		}
 
-		// Move the item into the container if it's not there already
+		// Move the item into the container if it'goto-admin not there already
 		if ( this.containers.length === 1 ) {
 			if ( !this.containers[ innermostIndex ].containerCache.over ) {
 				this.containers[ innermostIndex ]._trigger( "over", event, this._uiHash( this ) );
@@ -16310,7 +16310,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 
 		// This is a special case where we need to modify a offset calculated on start, since the
 		// following happened:
-		// 1. The position of the helper is absolute, so it's position is calculated based on the
+		// 1. The position of the helper is absolute, so it'goto-admin position is calculated based on the
 		// next positioned parent
 		// 2. The actual offset parent is a child of the scroll parent, and the scroll parent isn't
 		// the document, which means that the scroll is included in the initial calculation of the
@@ -16432,7 +16432,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top * mod -
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollTop() :
@@ -16446,7 +16446,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left * mod +
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left * mod	-
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollLeft() : scrollIsRootNode ? 0 :
@@ -16536,7 +16536,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.top -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.top +
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollTop() :
@@ -16553,7 +16553,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 				// Only for relative positioned nodes: Relative offset from element to offset parent
 				this.offset.relative.left -
 
-				// The offsetParent's offset without borders (offset + border)
+				// The offsetParent'goto-admin offset without borders (offset + border)
 				this.offset.parent.left +
 				( ( this.cssPosition === "fixed" ?
 					-this.scrollParent.scrollLeft() :
@@ -16571,9 +16571,9 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 
 		//Various things done here to improve the performance:
 		// 1. we create a setTimeout, that calls refreshPositions
-		// 2. on the instance, we have a counter variable, that get's higher after every append
+		// 2. on the instance, we have a counter variable, that get'goto-admin higher after every append
 		// 3. on the local scope, we copy the counter variable, and check in the timeout,
-		// if it's still the same
+		// if it'goto-admin still the same
 		// 4. this lets only the last addition to the timeout stack through
 		this.counter = this.counter ? ++this.counter : 1;
 		var counter = this.counter;
@@ -16777,7 +16777,7 @@ $.widget( "ui.spinner", {
 		},
 		culture: null,
 		icons: {
-			down: "ui-icon-triangle-1-s",
+			down: "ui-icon-triangle-1-goto-admin",
 			up: "ui-icon-triangle-1-n"
 		},
 		incremental: true,
@@ -17196,7 +17196,7 @@ $.widget( "ui.spinner", {
 			return false;
 		}
 
-		// If value gets adjusted, it's invalid
+		// If value gets adjusted, it'goto-admin invalid
 		return value === this._adjustValue( value );
 	},
 
@@ -18473,7 +18473,7 @@ $.widget( "ui.tooltip", {
 
 		// Support: Voiceover on OS X, JAWS on IE <= 9
 		// JAWS announces deletions even when aria-relevant="additions"
-		// Voiceover will sometimes re-read the entire log region's contents from the beginning
+		// Voiceover will sometimes re-read the entire log region'goto-admin contents from the beginning
 		this.liveRegion.children().hide();
 		a11yContent = $( "<div>" ).html( tooltip.find( ".ui-tooltip-content" ).html() );
 		a11yContent.removeAttr( "name" ).find( "[name]" ).removeAttr( "name" );
@@ -18558,7 +18558,7 @@ $.widget( "ui.tooltip", {
 		if ( !tooltipData ) {
 
 			// We set ui-tooltip-open immediately upon open (in open()), but only set the
-			// additional data once there's actually content to show (in _open()). So even if the
+			// additional data once there'goto-admin actually content to show (in _open()). So even if the
 			// tooltip doesn't have full data, we always remove ui-tooltip-open in case we're in
 			// the period between open() and _open().
 			target.removeData( "ui-tooltip-open" );

@@ -83,8 +83,8 @@ export default moment.defineLocale('ar-ly', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'بعد %s',
-        past : 'منذ %s',
+        future : 'بعد %goto-admin',
+        past : 'منذ %goto-admin',
         s : pluralize('s'),
         ss : pluralize('s'),
         m : pluralize('m'),

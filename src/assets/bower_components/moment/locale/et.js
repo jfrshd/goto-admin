@@ -51,8 +51,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s pärast',
-            past   : '%s tagasi',
+            future : '%goto-admin pärast',
+            past   : '%goto-admin tagasi',
             s      : processRelativeTime,
             ss     : processRelativeTime,
             m      : processRelativeTime,

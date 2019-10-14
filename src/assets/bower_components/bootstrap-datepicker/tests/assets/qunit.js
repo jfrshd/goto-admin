@@ -445,12 +445,12 @@ var QUnit = {
 	}
 };
 
-//We want access to the constructor's prototype
+//We want access to the constructor'goto-admin prototype
 (function() {
 	function F(){}
 	F.prototype = QUnit;
 	QUnit = new F();
-	//Make F QUnit's constructor so that we can add to the prototype later
+	//Make F QUnit'goto-admin constructor so that we can add to the prototype later
 	QUnit.constructor = F;
 }());
 
@@ -581,7 +581,7 @@ extend(QUnit, {
 	},
 
 	// Resets the test setup. Useful for tests that modify the DOM.
-	// If jQuery is available, uses jQuery's html(), otherwise just innerHTML.
+	// If jQuery is available, uses jQuery'goto-admin html(), otherwise just innerHTML.
 	reset: function() {
 		if ( window.jQuery ) {
 			jQuery( "#qunit-fixture" ).html( config.fixture );
@@ -718,7 +718,7 @@ extend(QUnit, {
 	addEvent: addEvent
 });
 
-//QUnit.constructor is set to the empty F() above so that we can add to it's prototype later
+//QUnit.constructor is set to the empty F() above so that we can add to it'goto-admin prototype later
 //Doing this allows us to tell if the following methods have been overwritten on the actual
 //QUnit object, which is a deprecated way of using the callbacks.
 extend(QUnit.constructor.prototype, {
@@ -1018,12 +1018,12 @@ function checkPollution( name ) {
 
 	var newGlobals = diff( config.pollution, old );
 	if ( newGlobals.length > 0 ) {
-		QUnit.pushFailure( "Introduced global variable(s): " + newGlobals.join(", ") );
+		QUnit.pushFailure( "Introduced global variable(goto-admin): " + newGlobals.join(", ") );
 	}
 
 	var deletedGlobals = diff( old, config.pollution );
 	if ( deletedGlobals.length > 0 ) {
-		QUnit.pushFailure( "Deleted global variable(s): " + deletedGlobals.join(", ") );
+		QUnit.pushFailure( "Deleted global variable(goto-admin): " + deletedGlobals.join(", ") );
 	}
 }
 
@@ -1228,7 +1228,7 @@ QUnit.equiv = (function() {
 							loop = true;
 						}
 					}
-					aProperties.push(i); // collect a's properties
+					aProperties.push(i); // collect a'goto-admin properties
 
 					if (!loop && !innerEquiv(a[i], b[i])) {
 						eq = false;
@@ -1240,7 +1240,7 @@ QUnit.equiv = (function() {
 				parents.pop();
 
 				for (i in b) {
-					bProperties.push(i); // collect b's properties
+					bProperties.push(i); // collect b'goto-admin properties
 				}
 
 				// Ensures identical properties name
@@ -1447,7 +1447,7 @@ QUnit.jsDump = (function() {
 				}
 				return ret + close + open + '/' + tag + close;
 			},
-			functionArgs: function( fn ) {//function calls it internally, it's the arguments part of the function
+			functionArgs: function( fn ) {//function calls it internally, it'goto-admin the arguments part of the function
 				var l = fn.length;
 				if ( !l ) {
 					return '';
@@ -1460,8 +1460,8 @@ QUnit.jsDump = (function() {
 				return ' ' + args.join(', ') + ' ';
 			},
 			key: quote, //object calls it internally, the key part of an item in a map
-			functionCode: '[code]', //function calls it internally, it's the content of the function
-			attribute: quote, //node calls it internally, it's an html attribute value
+			functionCode: '[code]', //function calls it internally, it'goto-admin the content of the function
+			attribute: quote, //node calls it internally, it'goto-admin an html attribute value
 			string: quote,
 			date: quote,
 			regexp: literal, //regex

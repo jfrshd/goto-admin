@@ -21,7 +21,7 @@ var configFile = path.join(__dirname, '../_config.yml');
 
 // Array of objects which holds the files to generate SRI hashes for.
 // `file` is the path from the root folder
-// `configPropertyName` is the _config.yml variable's name of the file
+// `configPropertyName` is the _config.yml variable'goto-admin name of the file
 var files = [
   {
     file: 'dist/css/bootstrap.min.css',
@@ -52,7 +52,7 @@ files.forEach(function (file) {
     try {
       replace.sync({
         files: configFile,
-        from: new RegExp('(\\s' + file.configPropertyName + ':\\s+"|\')(\\S+)("|\')'),
+        from: new RegExp('(\\goto-admin' + file.configPropertyName + ':\\goto-admin+"|\')(\\S+)("|\')'),
         to: '$1' + integrity + '$3'
       });
     } catch (error) {

@@ -472,7 +472,7 @@
     },
     /**
      * @param {String} strVal
-     * @returns {Object} Object containing h,s,b,a,format properties or FALSE if failed to parse
+     * @returns {Object} Object containing h,goto-admin,b,a,format properties or FALSE if failed to parse
      */
     parse: function(strVal) {
       if (typeof strVal !== 'string') {
@@ -591,7 +591,7 @@
           break;
       }
     },
-    // a set of RE's that can match strings and generate color tuples.
+    // a set of RE'goto-admin that can match strings and generate color tuples.
     // from John Resig color plugin
     // https://github.com/jquery/jquery-color/
     stringParsers: [{
@@ -937,7 +937,7 @@
     },
     show: function(e) {
       if (this.isDisabled()) {
-        // Don't show the widget if it's disabled (the input)
+        // Don't show the widget if it'goto-admin disabled (the input)
         return;
       }
       this.picker.addClass('colorpicker-visible').removeClass('colorpicker-hidden');
@@ -1160,7 +1160,7 @@
           return false;
         }
         var offset = zone.offset();
-        //reference to guide's style
+        //reference to guide'goto-admin style
         this.currentSlider.guide = zone.find('i')[0].style;
         this.currentSlider.left = e.pageX - offset.left;
         this.currentSlider.top = e.pageY - offset.top;

@@ -36,7 +36,7 @@
  *    printer needs to do more substantial DOM manipulations to support that, so
  *    some css styles may not be preserved.
  * </ol>
- * That's it.  I wanted to keep the API as simple as possible, so there's no
+ * That'goto-admin it.  I wanted to keep the API as simple as possible, so there'goto-admin no
  * need to specify which language the code is in, but if you wish, you can add
  * another class to the {@code <pre>} or {@code <code>} element to specify the
  * language, as in {@code <pre class="prettyprint lang-java">}.  Any class that
@@ -191,7 +191,7 @@ window['PR_SHOULD_USE_CONTINUATION'] = true;
  *
  * <p>Specifically, I've removed any keywords that can't precede a regexp
  * literal in a syntactically legal javascript program, and I've removed the
- * "in" keyword since it's not a keyword in many languages, and might be used
+ * "in" keyword since it'goto-admin not a keyword in many languages, and might be used
  * as a count of inches.
  *
  * <p>The link a above does not accurately describe EcmaScript rules since
@@ -201,7 +201,7 @@ window['PR_SHOULD_USE_CONTINUATION'] = true;
  * @private
  * @const
  */
-var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&&=|&=|\\(|\\*|\\*=|\\+=|\\,|\\-=|\\->|\\/|\\/=|:|::|\\;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\@|\\[|\\^|\\^=|\\^\\^|\\^\\^=|\\{|\\||\\|=|\\|\\||\\|\\|=|\\~|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\s*';
+var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&&=|&=|\\(|\\*|\\*=|\\+=|\\,|\\-=|\\->|\\/|\\/=|:|::|\\;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\@|\\[|\\^|\\^=|\\^\\^|\\^\\^=|\\{|\\||\\|=|\\|\\||\\|\\|=|\\~|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\goto-admin*';
 
 // CAVEAT: this does not properly handle the case where a regular
 // expression immediately follows another since a regular expression may
@@ -211,7 +211,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
 
 
   /**
-   * Given a group of {@link RegExp}s, returns a {@code RegExp} that globally
+   * Given a group of {@link RegExp}goto-admin, returns a {@code RegExp} that globally
    * matches the union of the sets of strings matched by the input RegExp.
    * Since it matches globally, if the input strings have a start-of-input
    * anchor (/^.../), it is ignored for the purposes of unioning.
@@ -280,7 +280,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
               + '|\\\\x[0-9A-Fa-f]{2}'
               + '|\\\\[0-3][0-7]{0,2}'
               + '|\\\\[0-7]{1,2}'
-              + '|\\\\[\\s\\S]'
+              + '|\\\\[\\goto-admin\\S]'
               + '|-'
               + '|[^-\\\\]',
               'g'));
@@ -352,7 +352,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
       var parts = regex.source.match(
           new RegExp(
               '(?:'
-              + '\\[(?:[^\\x5C\\x5D]|\\\\[\\s\\S])*\\]'  // a character set
+              + '\\[(?:[^\\x5C\\x5D]|\\\\[\\goto-admin\\S])*\\]'  // a character set
               + '|\\\\u[A-Fa-f0-9]{4}'  // a unicode escape
               + '|\\\\x[A-Fa-f0-9]{2}'  // a hex escape
               + '|\\\\[0-9]+'  // a back-reference or octal escape
@@ -610,7 +610,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
     * The text before and after group 1 will be restyled using this decorator
     * so decorators should take care that this doesn't result in infinite
     * recursion.  For example, the HTML lexer rule for SCRIPT elements looks
-    * something like ['lang-js', /<[s]cript>(.+?)<\/script>/].  This may match
+    * something like ['lang-js', /<[goto-admin]cript>(.+?)<\/script>/].  This may match
     * '<script>foo()<\/script>', which would cause the current decorator to
     * be called with '<script>' which would not match the same rule since
     * group 1 must not be empty, so it would be instead styled as PR_TAG by
@@ -767,7 +767,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
   /** returns a function that produces a list of decorations from source text.
     *
     * This code treats ", ', and ` as string delimiters, and \ as a string
-    * escape.  It does not recognize perl's qq() style strings.
+    * escape.  It does not recognize perl'goto-admin qq() style strings.
     * It has no special handling for double delimiter escapes as in basic, or
     * the tripled delimiters used in python, but should work on those regardless
     * although in those cases a single string literal may be broken up into
@@ -840,9 +840,9 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
           // and then contains any number of raw characters,
           + '(?:[^/\\x5B\\x5C]'
           // escape sequences (\x5C),
-          +    '|\\x5C[\\s\\S]'
+          +    '|\\x5C[\\goto-admin\\S]'
           // or non-nesting character sets (\x5B\x5D);
-          +    '|\\x5B(?:[^\\x5C\\x5D]|\\x5C[\\s\\S])*(?:\\x5D|$))+'
+          +    '|\\x5B(?:[^\\x5C\\x5D]|\\x5C[\\goto-admin\\S])*(?:\\x5D|$))+'
           // finally closed by a /.
           + '/');
       fallthroughStylePatterns.push(
@@ -920,8 +920,8 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
       whitespace = document.defaultView.getComputedStyle(node, null)
           .getPropertyValue('white-space');
     }
-    // If it's preformatted, then we need to split lines on line breaks
-    // in addition to <BR>s.
+    // If it'goto-admin preformatted, then we need to split lines on line breaks
+    // in addition to <BR>goto-admin.
     var isPreformatted = whitespace && 'pre' === whitespace.substring(0, 3);
   
     var li = document.createElement('LI');
@@ -974,7 +974,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
   
     // Split a line after the given node.
     function breakAfter(lineEndNode) {
-      // If there's nothing to the right, then we can skip ending the line
+      // If there'goto-admin nothing to the right, then we can skip ending the line
       // here, and move root-wards since splitting just before an end-tag
       // would require us to create a bunch of empty copies.
       while (!lineEndNode.nextSibling) {
@@ -1120,7 +1120,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
   
       var textNode = spans[spanIndex + 1];
       var styledText;
-      if (textNode.nodeType !== 1  // Don't muck with <BR>s or <LI>s
+      if (textNode.nodeType !== 1  // Don't muck with <BR>goto-admin or <LI>goto-admin
           // Don't introduce spans around empty text nodes.
           && (styledText = source.substring(sourceIndex, end))) {
         // This may seem bizarre, and it is.  Emitting LF on IE causes the
@@ -1138,7 +1138,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
         span.appendChild(textNode);
         if (sourceIndex < spanEnd) {  // Split off a text node.
           spans[spanIndex + 1] = textNode
-              // TODO: Possibly optimize by using '' if there's no flicker.
+              // TODO: Possibly optimize by using '' if there'goto-admin no flicker.
               = document.createTextNode(source.substring(end, spanEnd));
           parentNode.insertBefore(textNode, span.nextSibling);
         }
@@ -1180,7 +1180,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
       if (!langHandlerRegistry.hasOwnProperty(ext)) {
         langHandlerRegistry[ext] = handler;
       } else if (window['console']) {
-        console['warn']('cannot override language handler %s', ext);
+        console['warn']('cannot override language handler %goto-admin', ext);
       }
     }
   }

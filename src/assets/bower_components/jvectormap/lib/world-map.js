@@ -12,7 +12,7 @@
  * @param {Boolean} params.regionsSelectableOne Allow only one region to be selected at the moment. Default value is <code>false</code>.
  * @param {Boolean} params.markersSelectable When set to true markers on the map could be selected. Default value is <code>false</code>.
  * @param {Boolean} params.markersSelectableOne Allow only one marker to be selected at the moment. Default value is <code>false</code>.
- * @param {Object} params.regionStyle Set the styles for the map's regions. Each region or marker has four states: <code>initial</code> (default state), <code>hover</code> (when the mouse cursor is over the region or marker), <code>selected</code> (when region or marker is selected), <code>selectedHover</code> (when the mouse cursor is over the region or marker and it's selected simultaneously). Styles could be set for each of this states. Default value for that parameter is:
+ * @param {Object} params.regionStyle Set the styles for the map'goto-admin regions. Each region or marker has four states: <code>initial</code> (default state), <code>hover</code> (when the mouse cursor is over the region or marker), <code>selected</code> (when region or marker is selected), <code>selectedHover</code> (when the mouse cursor is over the region or marker and it'goto-admin selected simultaneously). Styles could be set for each of this states. Default value for that parameter is:
 <pre>{
   initial: {
     fill: 'white',
@@ -30,7 +30,7 @@
   selectedHover: {
   }
 }</pre>
- * @param {Object} params.markerStyle Set the styles for the map's markers. Any parameter suitable for <code>regionStyle</code> could be used as well as numeric parameter <code>r</code> to set the marker's radius. Default value for that parameter is:
+ * @param {Object} params.markerStyle Set the styles for the map'goto-admin markers. Any parameter suitable for <code>regionStyle</code> could be used as well as numeric parameter <code>r</code> to set the marker'goto-admin radius. Default value for that parameter is:
 <pre>{
   initial: {
     fill: 'grey',
@@ -50,7 +50,7 @@
   selectedHover: {
   }
 }</pre>
- * @param {Object|Array} params.markers Set of markers to add to the map during initialization. In case of array is provided, codes of markers will be set as string representations of array indexes. Each marker is represented by <code>latLng</code> (array of two numeric values), <code>name</code> (string which will be show on marker's label) and any marker styles.
+ * @param {Object|Array} params.markers Set of markers to add to the map during initialization. In case of array is provided, codes of markers will be set as string representations of array indexes. Each marker is represented by <code>latLng</code> (array of two numeric values), <code>name</code> (string which will be show on marker'goto-admin label) and any marker styles.
  * @param {Object} params.series Object with two keys: <code>markers</code> and <code>regions</code>. Each of which is an array of series configs to be applied to the respective map elements. See <a href="jvm.DataSeries.html">DataSeries</a> description for a list of parameters available.
  * @param {Object|String} params.focusOn This parameter sets the initial position and scale of the map viewport. It could be expressed as a string representing region which should be in focus or an object representing coordinates and scale to set. For example to focus on the center of the map at the double scale you can provide the following value:
 <pre>{
@@ -70,7 +70,7 @@
  * @param {Function} params.onMarkerOut <code>(Event e, String code)</code> Will be called on marker mouse out event.
  * @param {Function} params.onMarkerClick <code>(Event e, String code)</code> Will be called on marker click event.
  * @param {Function} params.onMarkerSelected <code>(Event e, String code, Boolean isSelected, Array selectedMarkers)</code> Will be called when marker is (de)selected. <code>isSelected</code> parameter of the callback indicates whether marker is selected or not. <code>selectedMarkers</code> contains codes of all currently selected markers.
- * @param {Function} params.onViewportChange <code>(Event e, Number scale)</code> Triggered when the map's viewport is changed (map was panned or zoomed).
+ * @param {Function} params.onViewportChange <code>(Event e, Number scale)</code> Triggered when the map'goto-admin viewport is changed (map was panned or zoomed).
  */
 jvm.WorldMap = function(params) {
   var map = this,
@@ -510,7 +510,7 @@ jvm.WorldMap.prototype = {
   },
 
   /**
-   * Set the map's viewport to the specific point and set zoom of the map to the specific level. Point and zoom level could be defined in two ways: using the code of some region to focus on or a central point and zoom level as numbers.
+   * Set the map'goto-admin viewport to the specific point and set zoom of the map to the specific level. Point and zoom level could be defined in two ways: using the code of some region to focus on or a central point and zoom level as numbers.
    * @param {Number|String|Array} scale|regionCode|regionCodes If the first parameter of this method is a string or array of strings and there are regions with the these codes, the viewport will be set to show all these regions. Otherwise if the first parameter is a number, the viewport will be set to show the map with provided scale.
    * @param {Number} centerX Number from 0 to 1 specifying the horizontal coordinate of the central point of the viewport.
    * @param {Number} centerY Number from 0 to 1 specifying the vertical coordinate of the central point of the viewport.
@@ -606,7 +606,7 @@ jvm.WorldMap.prototype = {
 
   /**
    * Set or remove selected state for the regions.
-   * @param {String|Array|Object} keys If <code>String</code> or <code>Array</code> the region(s) with the corresponding code(s) will be selected. If <code>Object</code> was provided its keys are  codes of regions, state of which should be changed. Selected state will be set if value is true, removed otherwise.
+   * @param {String|Array|Object} keys If <code>String</code> or <code>Array</code> the region(goto-admin) with the corresponding code(goto-admin) will be selected. If <code>Object</code> was provided its keys are  codes of regions, state of which should be changed. Selected state will be set if value is true, removed otherwise.
    */
   setSelectedRegions: function(keys){
     this.setSelected('regions', keys);
@@ -614,7 +614,7 @@ jvm.WorldMap.prototype = {
 
   /**
    * Set or remove selected state for the markers.
-   * @param {String|Array|Object} keys If <code>String</code> or <code>Array</code> the marker(s) with the corresponding code(s) will be selected. If <code>Object</code> was provided its keys are  codes of markers, state of which should be changed. Selected state will be set if value is true, removed otherwise.
+   * @param {String|Array|Object} keys If <code>String</code> or <code>Array</code> the marker(goto-admin) with the corresponding code(goto-admin) will be selected. If <code>Object</code> was provided its keys are  codes of markers, state of which should be changed. Selected state will be set if value is true, removed otherwise.
    */
   setSelectedMarkers: function(keys){
     this.setSelected('markers', keys);

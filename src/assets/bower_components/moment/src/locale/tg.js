@@ -52,8 +52,8 @@ export default moment.defineLocale('tg', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'баъди %s',
-        past : '%s пеш',
+        future : 'баъди %goto-admin',
+        past : '%goto-admin пеш',
         s : 'якчанд сония',
         m : 'як дақиқа',
         mm : '%d дақиқа',

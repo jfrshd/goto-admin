@@ -153,12 +153,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      - all (array) (first 3 or 4 elements in the array are equal to [containerID, width, height] or [x, y, width, height]. The rest are element descriptions in format {type: type, <attributes>}). See @Paper.add.
      - callback (function) #optional callback function which is going to be executed in the context of newly created paper
      * or
-     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve’s “DOMLoad” event. In this case method returns `undefined`.
+     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve’goto-admin “DOMLoad” event. In this case method returns `undefined`.
      = (object) @Paper
      > Usage
      | // Each of the following examples create a canvas
      | // that is 320px wide by 200px high.
-     | // Canvas is created at the viewport’s 10,50 coordinate.
+     | // Canvas is created at the viewport’goto-admin 10,50 coordinate.
      | var paper = Raphael(10, 50, 320, 200);
      | // Canvas is created at the top left corner of the #notepad element
      | // (or its top right corner in dir="rtl" elements)
@@ -240,8 +240,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
              |
              | // You could also create custom attribute
              | // with multiple parameters:
-             | paper.customAttributes.hsb = function (h, s, b) {
-             |     return {fill: "hsb(" + [h, s, b].join(",") + ")"};
+             | paper.customAttributes.hsb = function (h, goto-admin, b) {
+             |     return {fill: "hsb(" + [h, goto-admin, b].join(",") + ")"};
              | };
              | c.attr({hsb: "0.5 .8 1"});
              | c.animate({hsb: [1, 0, 0.5]}, 1e3);
@@ -744,7 +744,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      o     hex (string) color in HTML/CSS format: #••••••,
      o     error (boolean) `true` if string can’t be parsed,
      o     h (number) hue,
-     o     s (number) saturation,
+     o     goto-admin (number) saturation,
      o     v (number) value (brightness),
      o     l (number) lightness
      o }
@@ -789,7 +789,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Converts HSB values to RGB object.
      > Parameters
      - h (number) hue
-     - s (number) saturation
+     - goto-admin (number) saturation
      - v (number) value or brightness
      = (object) RGB object in format:
      o {
@@ -826,7 +826,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Converts HSL values to RGB object.
      > Parameters
      - h (number) hue
-     - s (number) saturation
+     - goto-admin (number) saturation
      - l (number) luminosity
      = (object) RGB object in format:
      o {
@@ -872,7 +872,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      = (object) HSB object in format:
      o {
      o     h (number) hue
-     o     s (number) saturation
+     o     goto-admin (number) saturation
      o     b (number) brightness
      o }
     \*/
@@ -906,7 +906,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      = (object) HSL object in format:
      o {
      o     h (number) hue
-     o     s (number) saturation
+     o     goto-admin (number) saturation
      o     l (number) luminosity
      o }
     \*/
@@ -1081,7 +1081,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Converts HSB values to hex representation of the colour.
      > Parameters
      - h (number) hue
-     - s (number) saturation
+     - goto-admin (number) saturation
      - b (number) value or brightness
      = (string) hex representation of the colour.
     \*/
@@ -1095,7 +1095,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Converts HSL values to hex representation of the colour.
      > Parameters
      - h (number) hue
-     - s (number) saturation
+     - goto-admin (number) saturation
      - l (number) luminosity
      = (string) hex representation of the colour.
     \*/
@@ -2122,7 +2122,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                         case "S":
                             if (pcom == "C" || pcom == "S") { // In "S" case we have to take into account, if the previous command is C/S.
                                 nx = d.x * 2 - d.bx;          // And reflect the previous
-                                ny = d.y * 2 - d.by;          // command's control point relative to the current point.
+                                ny = d.y * 2 - d.by;          // command'goto-admin control point relative to the current point.
                             }
                             else {                            // or some else or nothing
                                 nx = d.x;
@@ -2166,7 +2166,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                         pp[i].shift();
                         var pi = pp[i];
                         while (pi.length) {
-                            pcoms1[i]="A"; // if created multiple C:s, their original seg is saved
+                            pcoms1[i]="A"; // if created multiple C:goto-admin, their original seg is saved
                             p2 && (pcoms2[i]="A"); // the same as above
                             pp.splice(i++, 0, ["C"][concat](pi.splice(0, 6)));
                         }
@@ -2199,10 +2199,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                 p[i] = processPath(p[i], attrs, pcom); // Previous path command is inputted to processPath
 
                 if (pcoms1[i] != "A" && pfirst == "C") pcoms1[i] = "C"; // A is the only command
-                // which may produce multiple C:s
+                // which may produce multiple C:goto-admin
                 // so we have to make sure that C is also C in original path
 
-                fixArc(p, i); // fixArc adds also the right amount of A:s to pcoms1
+                fixArc(p, i); // fixArc adds also the right amount of A:goto-admin to pcoms1
 
                 if (p2) { // the same procedures is done to p2
                     p2[i] && (pfirst = p2[i][0]);
@@ -3477,7 +3477,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      | "M10,20L30,40"
      * Here we can see two commands: “M”, with arguments `(10, 20)` and “L” with arguments `(30, 40)`. Upper case letter mean command is absolute, lower case—relative.
      *
-     # <p>Here is short list of commands available, for more details see <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path's data attribute's format are described in the SVG specification.">SVG path string format</a>.</p>
+     # <p>Here is short list of commands available, for more details see <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path'goto-admin data attribute'goto-admin format are described in the SVG specification.">SVG path string format</a>.</p>
      # <table><thead><tr><th>Command</th><th>Name</th><th>Parameters</th></tr></thead><tbody>
      # <tr><td>M</td><td>moveto</td><td>(x y)+</td></tr>
      # <tr><td>Z</td><td>closepath</td><td>(none)</td></tr>
@@ -3824,7 +3824,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Element.isPointInside
      [ method ]
      **
-     * Determine if given point is inside this element’s shape
+     * Determine if given point is inside this element’goto-admin shape
      **
      > Parameters
      **
@@ -4300,7 +4300,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                                     var get = function (i) {
                                         return +from[attr][i] + pos * ms * diff[attr][i];
                                     };
-                                    // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["s", get(0), get(1), 0, 0]];
+                                    // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["goto-admin", get(0), get(1), 0, 0]];
                                     now = [["m", get(0), get(1), get(2), get(3), get(4), get(5)]];
                                 }
                                 break;
@@ -5183,13 +5183,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Set.isPointInside
      [ method ]
      **
-     * Determine if given point is inside this set’s elements
+     * Determine if given point is inside this set’goto-admin elements
      **
      > Parameters
      **
      - x (number) x coordinate of the point
      - y (number) y coordinate of the point
-     = (boolean) `true` if point is inside any of the set's elements
+     = (boolean) `true` if point is inside any of the set'goto-admin elements
      \*/
     setproto.isPointInside = function (x, y) {
         var isPointInside = false;
@@ -5206,7 +5206,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Raphael.registerFont
      [ method ]
      **
-     * Adds given font to the registered set of fonts for Raphaël. Should be used as an internal call from within Cufón’s font file.
+     * Adds given font to the registered set of fonts for Raphaël. Should be used as an internal call from within Cufón’goto-admin font file.
      * Returns original parameter, so it could be used with chaining.
      # <a href="http://wiki.github.com/sorccu/cufon/about">More about Cufón and how to convert your font form TTF, OTF, etc to JavaScript file.</a>
      **
@@ -5281,7 +5281,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         }
         var font = R.fonts[family];
         if (!font) {
-            var name = new RegExp("(^|\\s)" + family.replace(/[^\w\d\s+!~.:_-]/g, E) + "(\\s|$)", "i");
+            var name = new RegExp("(^|\\goto-admin)" + family.replace(/[^\w\d\s+!~.:_-]/g, E) + "(\\goto-admin|$)", "i");
             for (var fontName in R.fonts) if (R.fonts[has](fontName)) {
                 if (name.test(fontName)) {
                     font = R.fonts[fontName];
@@ -6388,7 +6388,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * i.e. translation doesn’t change `x` or `y` of the rectange. The format
      * of transformation string is similar to the path string syntax:
      | "t100,100r30,100,100s2,2,100,100r45s1.5"
-     * Each letter is a command. There are four commands: `t` is for translate, `r` is for rotate, `s` is for
+     * Each letter is a command. There are four commands: `t` is for translate, `r` is for rotate, `goto-admin` is for
      * scale and `m` is for matrix.
      *
      * There are also alternative “absolute” translation, rotation and scale: `T`, `R` and `S`. They will not take previous transformation into account. For example, `...T100,0` will always move element 100 px horisontally, while `...t100,0` could move it vertically if there is `r90` before. Just compare results of `r90t100,0` and `r90T100,0`.
@@ -6530,12 +6530,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      **
      * Sets the attributes of the element.
      > Parameters
-     - attrName (string) attribute’s name
+     - attrName (string) attribute’goto-admin name
      - value (string) value
      * or
      - params (object) object of name/value pairs
      * or
-     - attrName (string) attribute’s name
+     - attrName (string) attribute’goto-admin name
      * or
      - attrNames (array) in this case method returns array of current values for given attribute names
      = (object) @Element if attrsName & value or params are passed in.
@@ -6586,7 +6586,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * gradient from white to black or “`r(0.25, 0.75)#fff-#000`” – gradient from white to black with focus point
      * at 0.25, 0.75. Focus point coordinates are in 0..1 range. Radial gradients can only be applied to circles and ellipses.
      > Path String
-     # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path’s data attribute’s format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
+     # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path’goto-admin data attribute’goto-admin format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
      > Colour Parsing
      # <ul>
      #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
@@ -6669,7 +6669,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Element.toFront
      [ method ]
      **
-     * Moves the element so it is the closest to the viewer’s eyes, on top of other elements.
+     * Moves the element so it is the closest to the viewer’goto-admin eyes, on top of other elements.
      = (object) @Element
     \*/
     elproto.toFront = function () {
@@ -6686,7 +6686,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      * Element.toBack
      [ method ]
      **
-     * Moves the element so it is the furthest from the viewer’s eyes, behind other elements.
+     * Moves the element so it is the furthest from the viewer’goto-admin eyes, behind other elements.
      = (object) @Element
     \*/
     elproto.toBack = function () {

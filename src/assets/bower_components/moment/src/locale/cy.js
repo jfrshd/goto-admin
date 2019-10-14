@@ -30,8 +30,8 @@ export default moment.defineLocale('cy', {
         sameElse: 'L'
     },
     relativeTime: {
-        future: 'mewn %s',
-        past: '%s yn ôl',
+        future: 'mewn %goto-admin',
+        past: '%goto-admin yn ôl',
         s: 'ychydig eiliadau',
         ss: '%d eiliad',
         m: 'munud',

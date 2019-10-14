@@ -30,8 +30,8 @@ export default moment.defineLocale('nb', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'om %s',
-        past : '%s siden',
+        future : 'om %goto-admin',
+        past : '%goto-admin siden',
         s : 'noen sekunder',
         ss : '%d sekunder',
         m : 'ett minutt',

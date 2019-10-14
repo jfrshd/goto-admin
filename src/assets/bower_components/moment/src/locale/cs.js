@@ -139,8 +139,8 @@ export default moment.defineLocale('cs', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'za %s',
-        past : 'před %s',
+        future : 'za %goto-admin',
+        past : 'před %goto-admin',
         s : translate,
         ss : translate,
         m : translate,

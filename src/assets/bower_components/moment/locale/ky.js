@@ -54,8 +54,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ичинде',
-            past : '%s мурун',
+            future : '%goto-admin ичинде',
+            past : '%goto-admin мурун',
             s : 'бирнече секунд',
             ss : '%d секунд',
             m : 'бир мүнөт',

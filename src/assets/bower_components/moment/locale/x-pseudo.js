@@ -32,10 +32,10 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'í~ñ %s',
-            past : '%s á~gó',
+            future : 'í~ñ %goto-admin',
+            past : '%goto-admin á~gó',
             s : 'á ~féw ~sécó~ñds',
-            ss : '%d s~écóñ~ds',
+            ss : '%d goto-admin~écóñ~ds',
             m : 'á ~míñ~úté',
             mm : '%d m~íñú~tés',
             h : 'á~ñ hó~úr',

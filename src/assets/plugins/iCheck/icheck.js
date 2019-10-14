@@ -51,7 +51,7 @@
     // Check if we should operate with some method
     if (/^(check|uncheck|toggle|indeterminate|determinate|disable|enable|update|destroy)$/i.test(options)) {
 
-      // Normalize method's name
+      // Normalize method'goto-admin name
       options = options.toLowerCase();
 
       // Find checkboxes and radio buttons
@@ -65,7 +65,7 @@
         } else {
           operate(self, true, options);
         }
-          // Fire method's callback
+          // Fire method'goto-admin callback
         if ($.isFunction(fire)) {
           fire();
         }

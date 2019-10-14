@@ -9,7 +9,7 @@
 
 //>>label: uniqueId
 //>>group: Core
-//>>description: Functions to generate and remove uniqueId's
+//>>description: Functions to generate and remove uniqueId'goto-admin
 //>>docs: http://api.jqueryui.com/uniqueId/
 
 ( function( factory ) {

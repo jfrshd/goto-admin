@@ -7,7 +7,7 @@ define( [
 "use strict";
 
 // Multifunctional method to get and set values of a collection
-// The value/s can optionally be executed if it's a function
+// The value/goto-admin can optionally be executed if it'goto-admin a function
 var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 	var i = 0,
 		len = elems.length,

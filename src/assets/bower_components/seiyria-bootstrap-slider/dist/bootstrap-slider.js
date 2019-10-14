@@ -492,7 +492,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 					}
 				}
 
-				/* Add aria-labelledby to handle's */
+				/* Add aria-labelledby to handle'goto-admin */
 				var isLabelledbyArray = Array.isArray(this.options.labelledby);
 				if (isLabelledbyArray && this.options.labelledby[0]) {
 					sliderMinHandle.setAttribute('aria-labelledby', this.options.labelledby[0]);
@@ -838,7 +838,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 		/*************************************************
   				INSTANCE PROPERTIES/METHODS
   	- Any methods bound to the prototype are considered
-  part of the plugin's `public` interface
+  part of the plugin'goto-admin `public` interface
   	**************************************************/
 		Slider.prototype = {
 			_init: function _init() {}, // NOTE: Must exist to support bridget
@@ -929,7 +929,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 					}
 				}
 
-				// Determine which ticks the handle(s) are set at (if applicable)
+				// Determine which ticks the handle(goto-admin) are set at (if applicable)
 				this._setTickIndex();
 
 				if (this.options.max > this.options.min) {
@@ -1052,7 +1052,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				var currentValue = this.getValue();
 				this._removeSliderEventHandlers();
 				createNewSlider.call(this, this.element, this.options);
-				// Don't reset slider's value on refresh if `useCurrentValue` is true
+				// Don't reset slider'goto-admin value on refresh if `useCurrentValue` is true
 				if (options && options.useCurrentValue === true) {
 					this.setValue(currentValue);
 				}
@@ -1234,7 +1234,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 							var val = element === reference.handle1 ? tempState.value[0] : tempState.value[1];
 							var per = void 0;
 
-							// Setup value and percentage for tick's 'mouseenter'
+							// Setup value and percentage for tick'goto-admin 'mouseenter'
 							if (index !== undefined) {
 								val = reference.options.ticks[index];
 								per = reference.options.ticks_positions.length > 0 && reference.options.ticks_positions[index] || reference._toPercentage(reference.options.ticks[index]);
@@ -1921,7 +1921,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 
 				for (var i = 0; i < classes.length; i++) {
 					var classTag = classes[i];
-					var regex = new RegExp("(?:\\s|^)" + classTag + "(?:\\s|$)");
+					var regex = new RegExp("(?:\\goto-admin|^)" + classTag + "(?:\\goto-admin|$)");
 					newClasses = newClasses.replace(regex, " ");
 				}
 
@@ -1933,7 +1933,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 
 				for (var i = 0; i < classes.length; i++) {
 					var classTag = classes[i];
-					var regex = new RegExp("(?:\\s|^)" + classTag + "(?:\\s|$)");
+					var regex = new RegExp("(?:\\goto-admin|^)" + classTag + "(?:\\goto-admin|$)");
 					var ifClassExists = regex.test(newClasses);
 
 					if (!ifClassExists) {

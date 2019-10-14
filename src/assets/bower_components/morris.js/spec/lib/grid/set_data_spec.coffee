@@ -91,7 +91,7 @@ describe 'Morris.Grid#setData', ->
       line.xmin.should == 1
       line.xmax.should == 4
 
-    it "should pad the range if there's only one data point", ->
+    it "should pad the range if there'goto-admin only one data point", ->
       line = Morris.Line
         element: 'graph'
         data: [{x: 2, y: 2}]

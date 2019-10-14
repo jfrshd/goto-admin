@@ -54,8 +54,8 @@ export default moment.defineLocale('my', {
         sameElse: 'L'
     },
     relativeTime: {
-        future: 'လာမည့် %s မှာ',
-        past: 'လွန်ခဲ့သော %s က',
+        future: 'လာမည့် %goto-admin မှာ',
+        past: 'လွန်ခဲ့သော %goto-admin က',
         s: 'စက္ကန်.အနည်းငယ်',
         ss : '%d စက္ကန့်',
         m: 'တစ်မိနစ်',

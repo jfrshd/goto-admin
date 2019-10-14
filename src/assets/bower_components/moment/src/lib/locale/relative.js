@@ -1,6 +1,6 @@
 export var defaultRelativeTime = {
-    future : 'in %s',
-    past   : '%s ago',
+    future : 'in %goto-admin',
+    past   : '%goto-admin ago',
     s  : 'a few seconds',
     ss : '%d seconds',
     m  : 'a minute',

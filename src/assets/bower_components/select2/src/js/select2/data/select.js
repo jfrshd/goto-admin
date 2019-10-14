@@ -191,7 +191,7 @@ define([
     var normalizedData = this._normalizeItem(data);
     normalizedData.element = option;
 
-    // Override the option's data with the combined data
+    // Override the option'goto-admin data with the combined data
     Utils.StoreData(option, 'data', normalizedData);
 
     return $option;

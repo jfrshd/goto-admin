@@ -93,8 +93,8 @@ export default moment.defineLocale('uk', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'за %s',
-        past : '%s тому',
+        future : 'за %goto-admin',
+        past : '%goto-admin тому',
         s : 'декілька секунд',
         ss : relativeTimeWithPlural,
         m : relativeTimeWithPlural,

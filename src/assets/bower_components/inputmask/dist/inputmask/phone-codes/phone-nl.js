@@ -777,7 +777,7 @@
                 mask: "+31-73-###-####",
                 cc: "NL",
                 cd: "Netherlands",
-                city: "'s-Hertogenbosch"
+                city: "'goto-admin-Hertogenbosch"
             }, {
                 mask: "+31-74-###-####",
                 cc: "NL",

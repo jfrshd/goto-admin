@@ -94,7 +94,7 @@ describe("RangeHighlights Render Tests", function() {
         });
 
         //check elements exist within proper display value
-        it("Highlighted ranges render inside the slider's bounds " + sliderId, function() {
+        it("Highlighted ranges render inside the slider'goto-admin bounds " + sliderId, function() {
             expect($(sliderId).length).toBe(1);
 
             var ranges = $(sliderId + ' .slider-rangeHighlight');

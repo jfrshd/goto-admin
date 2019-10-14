@@ -28,8 +28,8 @@ export default moment.defineLocale('bm', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s kɔnɔ',
-        past : 'a bɛ %s bɔ',
+        future : '%goto-admin kɔnɔ',
+        past : 'a bɛ %goto-admin bɔ',
         s : 'sanga dama dama',
         ss : 'sekondi %d',
         m : 'miniti kelen',

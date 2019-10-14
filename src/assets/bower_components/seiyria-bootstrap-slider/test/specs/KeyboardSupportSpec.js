@@ -46,7 +46,7 @@ describe("Keyboard Support Tests", function() {
 
   describe("When slider handle has TAB focus", function() {
 
-    it("should display it's tooltip if 'tooltip' option is set to 'show'", function() {
+    it("should display it'goto-admin tooltip if 'tooltip' option is set to 'show'", function() {
       testSlider = $("#testSlider1").slider({
         id: 'testSlider',
         tooltip: 'show'
@@ -64,7 +64,7 @@ describe("Keyboard Support Tests", function() {
       expect(tooltipIsShown).toBeTruthy();
     });
 
-    it("should not display it's tooltip if 'tooltip' option is set to 'hide'", function() {
+    it("should not display it'goto-admin tooltip if 'tooltip' option is set to 'hide'", function() {
       testSlider = $("#testSlider1").slider({
         id: 'testSlider',
         tooltip: 'hide'
@@ -358,7 +358,7 @@ describe("Keyboard Support Tests", function() {
         handle1[0].dispatchEvent(keyboardEvent);
       });
 
-      it("handle1's value remains unchanged", function(done) {
+      it("handle1'goto-admin value remains unchanged", function(done) {
         var sliderValue = testSlider.slider('getValue');
 
         handle1.on("keydown", function() {
@@ -402,7 +402,7 @@ describe("Keyboard Support Tests", function() {
         handle2[0].dispatchEvent(keyboardEvent);
       });
 
-      it("handle2's value remains unchanged", function(done) {
+      it("handle2'goto-admin value remains unchanged", function(done) {
         var sliderValue = testSlider.slider('getValue');
 
         handle2.on("keydown", function() {

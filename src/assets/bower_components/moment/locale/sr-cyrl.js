@@ -82,8 +82,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'за %s',
-            past   : 'пре %s',
+            future : 'за %goto-admin',
+            past   : 'пре %goto-admin',
             s      : 'неколико секунди',
             ss     : translator.translate,
             m      : translator.translate,

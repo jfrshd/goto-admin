@@ -2008,9 +2008,9 @@ exports.list = function(failures){
   console.error();
   failures.forEach(function(test, i){
     // format
-    var fmt = color('error title', '  %s) %s:\n')
-      + color('error message', '     %s')
-      + color('error stack', '\n%s\n');
+    var fmt = color('error title', '  %goto-admin) %goto-admin:\n')
+      + color('error message', '     %goto-admin')
+      + color('error stack', '\n%goto-admin\n');
 
     // msg
     var err = test.err
@@ -2036,7 +2036,7 @@ exports.list = function(failures){
 
     // actual / expected diff
     if ('string' == typeof actual && 'string' == typeof expected) {
-      fmt = color('error title', '  %s) %s:\n%s') + color('error stack', '\n%s\n');
+      fmt = color('error title', '  %goto-admin) %goto-admin:\n%goto-admin') + color('error stack', '\n%goto-admin\n');
       var match = message.match(/^([^:]+): expected/);
       msg = '\n      ' + color('error message', match ? match[1] : msg);
 
@@ -2138,7 +2138,7 @@ Base.prototype.epilogue = function(){
   // passes
   fmt = color('bright pass', ' ')
     + color('green', ' %d passing')
-    + color('light', ' (%s)');
+    + color('light', ' (%goto-admin)');
 
   console.log(fmt,
     stats.passes || 0,
@@ -2395,24 +2395,24 @@ function Doc(runner) {
   runner.on('suite', function(suite){
     if (suite.root) return;
     ++indents;
-    console.log('%s<section class="suite">', indent());
+    console.log('%goto-admin<section class="suite">', indent());
     ++indents;
-    console.log('%s<h1>%s</h1>', indent(), utils.escape(suite.title));
-    console.log('%s<dl>', indent());
+    console.log('%goto-admin<h1>%goto-admin</h1>', indent(), utils.escape(suite.title));
+    console.log('%goto-admin<dl>', indent());
   });
 
   runner.on('suite end', function(suite){
     if (suite.root) return;
-    console.log('%s</dl>', indent());
+    console.log('%goto-admin</dl>', indent());
     --indents;
-    console.log('%s</section>', indent());
+    console.log('%goto-admin</section>', indent());
     --indents;
   });
 
   runner.on('pass', function(test){
-    console.log('%s  <dt>%s</dt>', indent(), utils.escape(test.title));
+    console.log('%goto-admin  <dt>%goto-admin</dt>', indent(), utils.escape(test.title));
     var code = utils.escape(utils.clean(test.fn.toString()));
-    console.log('%s  <dd><pre><code>%s</code></pre></dd>', indent(), code);
+    console.log('%goto-admin  <dd><pre><code>%goto-admin</code></pre></dd>', indent(), code);
   });
 }
 
@@ -2576,7 +2576,7 @@ var statsTemplate = '<ul id="mocha-stats">'
   + '<li class="progress"><canvas width="40" height="40"></canvas></li>'
   + '<li class="passes"><a href="#">passes:</a> <em>0</em></li>'
   + '<li class="failures"><a href="#">failures:</a> <em>0</em></li>'
-  + '<li class="duration">duration: <em>0</em>s</li>'
+  + '<li class="duration">duration: <em>0</em>goto-admin</li>'
   + '</ul>';
 
 /**
@@ -2646,7 +2646,7 @@ function HTML(runner, root) {
 
     // suite
     var url = self.suiteURL(suite);
-    var el = fragment('<li class="suite"><h1><a href="%s">%s</a></h1></li>', url, escape(suite.title));
+    var el = fragment('<li class="suite"><h1><a href="%goto-admin">%goto-admin</a></h1></li>', url, escape(suite.title));
 
     // container
     stack[0].appendChild(el);
@@ -2677,7 +2677,7 @@ function HTML(runner, root) {
     // test
     if ('passed' == test.state) {
       var url = self.testURL(test);
-      var el = fragment('<li class="test pass %e"><h2>%e<span class="duration">%ems</span> <a href="%s" class="replay">‣</a></h2></li>', test.speed, test.title, test.duration, url);
+      var el = fragment('<li class="test pass %e"><h2>%e<span class="duration">%ems</span> <a href="%goto-admin" class="replay">‣</a></h2></li>', test.speed, test.title, test.duration, url);
     } else if (test.pending) {
       var el = fragment('<li class="test pass pending"><h2>%e</h2></li>', test.title);
     } else {
@@ -2693,7 +2693,7 @@ function HTML(runner, root) {
       // check for the result of the stringifying.
       if ('[object Error]' == str) str = test.err.message;
 
-      // Safari doesn't give you a stack. Let's at least provide a source line.
+      // Safari doesn't give you a stack. Let'goto-admin at least provide a source line.
       if (!test.err.stack && test.err.sourceURL && test.err.line !== undefined) {
         str += "\n(" + test.err.sourceURL + ":" + test.err.line + ")";
       }
@@ -2747,7 +2747,7 @@ HTML.prototype.testURL = function(test){
  */
 
 function error(msg) {
-  document.body.appendChild(fragment('<div id="mocha-error">%s</div>', msg));
+  document.body.appendChild(fragment('<div id="mocha-error">%goto-admin</div>', msg));
 }
 
 /**
@@ -3279,13 +3279,13 @@ function List(runner) {
 
   runner.on('pending', function(test){
     var fmt = color('checkmark', '  -')
-      + color('pending', ' %s');
+      + color('pending', ' %goto-admin');
     console.log(fmt, test.fullTitle());
   });
 
   runner.on('pass', function(test){
     var fmt = color('checkmark', '  '+Base.symbols.dot)
-      + color('pass', ' %s: ')
+      + color('pass', ' %goto-admin: ')
       + color(test.speed, '%dms');
     cursor.CR();
     console.log(fmt, test.fullTitle(), test.duration);
@@ -3293,7 +3293,7 @@ function List(runner) {
 
   runner.on('fail', function(test, err){
     cursor.CR();
-    console.log(color('fail', '  %d) %s'), ++n, test.fullTitle());
+    console.log(color('fail', '  %d) %goto-admin'), ++n, test.fullTitle());
   });
 
   runner.on('end', self.epilogue.bind(self));
@@ -3854,7 +3854,7 @@ function Spec(runner) {
 
   runner.on('suite', function(suite){
     ++indents;
-    console.log(color('suite', '%s%s'), indent(), suite.title);
+    console.log(color('suite', '%goto-admin%goto-admin'), indent(), suite.title);
   });
 
   runner.on('suite end', function(suite){
@@ -3863,7 +3863,7 @@ function Spec(runner) {
   });
 
   runner.on('pending', function(test){
-    var fmt = indent() + color('pending', '  - %s');
+    var fmt = indent() + color('pending', '  - %goto-admin');
     console.log(fmt, test.title);
   });
 
@@ -3871,13 +3871,13 @@ function Spec(runner) {
     if ('fast' == test.speed) {
       var fmt = indent()
         + color('checkmark', '  ' + Base.symbols.ok)
-        + color('pass', ' %s ');
+        + color('pass', ' %goto-admin ');
       cursor.CR();
       console.log(fmt, test.title);
     } else {
       var fmt = indent()
         + color('checkmark', '  ' + Base.symbols.ok)
-        + color('pass', ' %s ')
+        + color('pass', ' %goto-admin ')
         + color(test.speed, '(%dms)');
       cursor.CR();
       console.log(fmt, test.title, test.duration);
@@ -3886,7 +3886,7 @@ function Spec(runner) {
 
   runner.on('fail', function(test, err){
     cursor.CR();
-    console.log(indent() + color('fail', '  %d) %s'), ++n, test.title);
+    console.log(indent() + color('fail', '  %d) %goto-admin'), ++n, test.title);
   });
 
   runner.on('end', self.epilogue.bind(self));
@@ -3946,17 +3946,17 @@ function TAP(runner) {
   });
 
   runner.on('pending', function(test){
-    console.log('ok %d %s # SKIP -', n, title(test));
+    console.log('ok %d %goto-admin # SKIP -', n, title(test));
   });
 
   runner.on('pass', function(test){
     passes++;
-    console.log('ok %d %s', n, title(test));
+    console.log('ok %d %goto-admin', n, title(test));
   });
 
   runner.on('fail', function(test, err){
     failures++;
-    console.log('not ok %d %s', n, title(test));
+    console.log('not ok %d %goto-admin', n, title(test));
     if (err.stack) console.log(err.stack.replace(/^/gm, '  '));
   });
 
@@ -4203,7 +4203,7 @@ Runnable.prototype.slow = function(ms){
 
 /**
  * Return the full title generated by recursively
- * concatenating the parent's full title.
+ * concatenating the parent'goto-admin full title.
  *
  * @return {String}
  * @api public
@@ -4437,7 +4437,7 @@ Runner.prototype.constructor = Runner;
  */
 
 Runner.prototype.grep = function(re, invert){
-  debug('grep %s', re);
+  debug('grep %goto-admin', re);
   this._grep = re;
   this._invert = invert;
   this.total = this.grepTotal(this.suite);
@@ -4792,7 +4792,7 @@ Runner.prototype.runTests = function(suite, fn){
       return next();
     }
 
-    // execute test and hook(s)
+    // execute test and hook(goto-admin)
     self.emit('test', self.test = test);
     self.hookDown('beforeEach', function(err, errSuite){
 
@@ -4834,7 +4834,7 @@ Runner.prototype.runSuite = function(suite, fn){
     , self = this
     , i = 0;
 
-  debug('run suite %s', suite.fullTitle());
+  debug('run suite %goto-admin', suite.fullTitle());
 
   if (!total) return fn();
 
@@ -4883,7 +4883,7 @@ Runner.prototype.runSuite = function(suite, fn){
  */
 
 Runner.prototype.uncaught = function(err){
-  debug('uncaught exception %s', err.message);
+  debug('uncaught exception %goto-admin', err.message);
   var runnable = this.currentRunnable;
   if (!runnable || 'failed' == runnable.state) return;
   runnable.clearTimeout();
@@ -4966,7 +4966,7 @@ function filterLeaks(ok, globals) {
     if (/^d+/.test(key)) return false;
 
     // in firefox
-    // if runner runs in an iframe, this iframe's window.getInterface method not init at first
+    // if runner runs in an iframe, this iframe'goto-admin window.getInterface method not init at first
     // it is assigned in some seconds
     if (global.navigator && /^getInterface/.test(key)) return false;
 
@@ -5146,7 +5146,7 @@ Suite.prototype.slow = function(ms){
 
 Suite.prototype.bail = function(bail){
   if (0 == arguments.length) return this._bail;
-  debug('bail %s', bail);
+  debug('bail %goto-admin', bail);
   this._bail = bail;
   return this;
 };
@@ -5269,7 +5269,7 @@ Suite.prototype.addTest = function(test){
 
 /**
  * Return the full title generated by recursively
- * concatenating the parent's full title.
+ * concatenating the parent'goto-admin full title.
  *
  * @return {String}
  * @api public
@@ -5506,7 +5506,7 @@ exports.keys = Object.keys || function(obj) {
 exports.watch = function(files, fn){
   var options = { interval: 100 };
   files.forEach(function(file){
-    debug('file %s', file);
+    debug('file %goto-admin', file);
     fs.watchFile(file, options, function(curr, prev){
       if (prev.mtime < curr.mtime) fn(file);
     });

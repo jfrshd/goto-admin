@@ -49,7 +49,7 @@ export function configFromStringAndFormat(config) {
             string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
             totalParsedInputLength += parsedInput.length;
         }
-        // don't parse if it's not a known token
+        // don't parse if it'goto-admin not a known token
         if (formatTokenFunctions[token]) {
             if (parsedInput) {
                 getParsingFlags(config).empty = false;

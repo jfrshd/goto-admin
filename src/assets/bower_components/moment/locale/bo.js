@@ -56,8 +56,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ལ་',
-            past : '%s སྔན་ལ',
+            future : '%goto-admin ལ་',
+            past : '%goto-admin སྔན་ལ',
             s : 'ལམ་སང',
             ss : '%d སྐར་ཆ།',
             m : 'སྐར་མ་གཅིག',

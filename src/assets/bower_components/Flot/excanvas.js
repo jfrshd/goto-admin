@@ -880,7 +880,7 @@ if (!document.createElement('canvas').getContext) {
   contextPrototype.stroke = function(aFill) {
     var W = 10;
     var H = 10;
-    // Divide the shape into chunks if it's too long because IE has a limit
+    // Divide the shape into chunks if it'goto-admin too long because IE has a limit
     // somewhere for how long a VML shape can be. This simple division does
     // not work with fills, only strokes, unfortunately.
     var chunkSize = 5000;

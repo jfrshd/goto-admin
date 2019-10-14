@@ -39,8 +39,8 @@ export default moment.defineLocale('mk', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'после %s',
-        past : 'пред %s',
+        future : 'после %goto-admin',
+        past : 'пред %goto-admin',
         s : 'неколку секунди',
         ss : '%d секунди',
         m : 'минута',

@@ -32,8 +32,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s കഴിഞ്ഞ്',
-            past : '%s മുൻപ്',
+            future : '%goto-admin കഴിഞ്ഞ്',
+            past : '%goto-admin മുൻപ്',
             s : 'അൽപ നിമിഷങ്ങൾ',
             ss : '%d സെക്കൻഡ്',
             m : 'ഒരു മിനിറ്റ്',

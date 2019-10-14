@@ -43,7 +43,7 @@ export function toISOString() {
     var total = this.asSeconds();
 
     if (!total) {
-        // this is the same as C#'s (Noda) and python (isodate)...
+        // this is the same as C#'goto-admin (Noda) and python (isodate)...
         // but not other JS (goog.date)
         return 'P0D';
     }

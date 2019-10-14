@@ -78,8 +78,8 @@ export default moment.defineLocale('ku', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'له‌ %s',
-        past : '%s',
+        future : 'له‌ %goto-admin',
+        past : '%goto-admin',
         s : 'چه‌ند چركه‌یه‌ك',
         ss : 'چركه‌ %d',
         m : 'یه‌ك خوله‌ك',

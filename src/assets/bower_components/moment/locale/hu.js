@@ -81,8 +81,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s múlva',
-            past : '%s',
+            future : '%goto-admin múlva',
+            past : '%goto-admin',
             s : translate,
             ss : translate,
             m : translate,

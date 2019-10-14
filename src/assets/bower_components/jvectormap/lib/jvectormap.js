@@ -4,7 +4,7 @@
 var jvm = {
 
   /**
-   * Inherits child's prototype from the parent's one.
+   * Inherits child'goto-admin prototype from the parent'goto-admin one.
    * @param {Function} child
    * @param {Function} parent
    */

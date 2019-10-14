@@ -59,8 +59,8 @@ export default moment.defineLocale('es', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'en %s',
-        past : 'hace %s',
+        future : 'en %goto-admin',
+        past : 'hace %goto-admin',
         s : 'unos segundos',
         ss : '%d segundos',
         m : 'un minuto',

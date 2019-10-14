@@ -103,8 +103,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'eftir %s',
-            past : 'fyrir %s síðan',
+            future : 'eftir %goto-admin',
+            past : 'fyrir %goto-admin síðan',
             s : translate,
             ss : translate,
             m : translate,

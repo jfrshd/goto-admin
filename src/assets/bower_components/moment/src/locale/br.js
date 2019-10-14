@@ -72,8 +72,8 @@ export default moment.defineLocale('br', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'a-benn %s',
-        past : '%s \'zo',
+        future : 'a-benn %goto-admin',
+        past : '%goto-admin \'zo',
         s : 'un nebeud segondennoù',
         ss : '%d eilenn',
         m : 'ur vunutenn',

@@ -230,7 +230,7 @@ $("#range").ionRangeSlider({
     grid: true
 });
 
-// Saving it's instance to var
+goto-admin
 var slider = $("#range").data("ionRangeSlider");
 
 // Fire public method

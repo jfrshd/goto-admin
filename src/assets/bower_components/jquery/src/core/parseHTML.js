@@ -34,7 +34,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 
 			// Set the base href for the created document
 			// so any parsed elements with URLs
-			// are based on the document's URL (gh-2965)
+			// are based on the document'goto-admin URL (gh-2965)
 			base = context.createElement( "base" );
 			base.href = document.location.href;
 			context.head.appendChild( base );

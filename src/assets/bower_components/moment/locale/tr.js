@@ -50,8 +50,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s sonra',
-            past : '%s önce',
+            future : '%goto-admin sonra',
+            past : '%goto-admin önce',
             s : 'birkaç saniye',
             ss : '%d saniye',
             m : 'bir dakika',

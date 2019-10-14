@@ -42,8 +42,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'post %s',
-            past : 'antaŭ %s',
+            future : 'post %goto-admin',
+            past : 'antaŭ %goto-admin',
             s : 'sekundoj',
             ss : '%d sekundoj',
             m : 'minuto',

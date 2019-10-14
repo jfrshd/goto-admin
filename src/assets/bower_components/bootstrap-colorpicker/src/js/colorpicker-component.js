@@ -178,7 +178,7 @@ Colorpicker.prototype = {
   },
   show: function(e) {
     if (this.isDisabled()) {
-      // Don't show the widget if it's disabled (the input)
+      // Don't show the widget if it'goto-admin disabled (the input)
       return;
     }
     this.picker.addClass('colorpicker-visible').removeClass('colorpicker-hidden');
@@ -401,7 +401,7 @@ Colorpicker.prototype = {
         return false;
       }
       var offset = zone.offset();
-      //reference to guide's style
+      //reference to guide'goto-admin style
       this.currentSlider.guide = zone.find('i')[0].style;
       this.currentSlider.left = e.pageX - offset.left;
       this.currentSlider.top = e.pageY - offset.top;

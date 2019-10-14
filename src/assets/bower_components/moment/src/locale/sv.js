@@ -25,12 +25,12 @@ export default moment.defineLocale('sv', {
         nextDay: '[Imorgon] LT',
         lastDay: '[Igår] LT',
         nextWeek: '[På] dddd LT',
-        lastWeek: '[I] dddd[s] LT',
+        lastWeek: '[I] dddd[goto-admin] LT',
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'om %s',
-        past : 'för %s sedan',
+        future : 'om %goto-admin',
+        past : 'för %goto-admin sedan',
         s : 'några sekunder',
         ss : '%d sekunder',
         m : 'en minut',

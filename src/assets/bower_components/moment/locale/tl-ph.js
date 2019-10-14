@@ -31,8 +31,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'sa loob ng %s',
-            past : '%s ang nakalipas',
+            future : 'sa loob ng %goto-admin',
+            past : '%goto-admin ang nakalipas',
             s : 'ilang segundo',
             ss : '%d segundo',
             m : 'isang minuto',

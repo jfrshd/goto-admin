@@ -36,8 +36,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'em %s',
-            past : 'há %s',
+            future : 'em %goto-admin',
+            past : 'há %goto-admin',
             s : 'poucos segundos',
             ss : '%d segundos',
             m : 'um minuto',

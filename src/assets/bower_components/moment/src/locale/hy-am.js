@@ -34,8 +34,8 @@ export default moment.defineLocale('hy-am', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : '%s հետո',
-        past : '%s առաջ',
+        future : '%goto-admin հետո',
+        past : '%goto-admin առաջ',
         s : 'մի քանի վայրկյան',
         ss : '%d վայրկյան',
         m : 'րոպե',

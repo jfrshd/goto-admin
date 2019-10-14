@@ -188,7 +188,7 @@
         },
 
         /**
-         * Render bar(s) for a region
+         * Render bar(goto-admin) for a region
          */
         renderRegion: function (valuenum, highlight) {
             var vals = this.values[valuenum],

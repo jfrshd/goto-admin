@@ -41,8 +41,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'oor %s',
-            past : '%s gelede',
+            future : 'oor %goto-admin',
+            past : '%goto-admin gelede',
             s : '\'n paar sekondes',
             ss : '%d sekondes',
             m : '\'n minuut',
@@ -92,8 +92,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'في %s',
-            past : 'منذ %s',
+            future : 'في %goto-admin',
+            past : 'منذ %goto-admin',
             s : 'ثوان',
             ss : '%d ثانية',
             m : 'دقيقة',
@@ -139,8 +139,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'في %s',
-            past : 'منذ %s',
+            future : 'في %goto-admin',
+            past : 'منذ %goto-admin',
             s : 'ثوان',
             ss : '%d ثانية',
             m : 'دقيقة',
@@ -241,8 +241,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'بعد %s',
-            past : 'منذ %s',
+            future : 'بعد %goto-admin',
+            past : 'منذ %goto-admin',
             s : pluralize('s'),
             ss : pluralize('s'),
             m : pluralize('m'),
@@ -296,8 +296,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'في %s',
-            past : 'منذ %s',
+            future : 'في %goto-admin',
+            past : 'منذ %goto-admin',
             s : 'ثوان',
             ss : '%d ثانية',
             m : 'دقيقة',
@@ -378,8 +378,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'في %s',
-            past : 'منذ %s',
+            future : 'في %goto-admin',
+            past : 'منذ %goto-admin',
             s : 'ثوان',
             ss : '%d ثانية',
             m : 'دقيقة',
@@ -435,8 +435,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: 'في %s',
-            past: 'منذ %s',
+            future: 'في %goto-admin',
+            past: 'منذ %goto-admin',
             s: 'ثوان',
             ss : '%d ثانية',
             m: 'دقيقة',
@@ -548,8 +548,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'بعد %s',
-            past : 'منذ %s',
+            future : 'بعد %goto-admin',
+            past : 'منذ %goto-admin',
             s : pluralize$1('s'),
             ss : pluralize$1('s'),
             m : pluralize$1('m'),
@@ -626,8 +626,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s sonra',
-            past : '%s əvvəl',
+            future : '%goto-admin sonra',
+            past : '%goto-admin əvvəl',
             s : 'birneçə saniyə',
             ss : '%d saniyə',
             m : 'bir dəqiqə',
@@ -742,8 +742,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'праз %s',
-            past : '%s таму',
+            future : 'праз %goto-admin',
+            past : '%goto-admin таму',
             s : 'некалькі секунд',
             m : relativeTimeWithPlural,
             mm : relativeTimeWithPlural,
@@ -829,8 +829,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'след %s',
-            past : 'преди %s',
+            future : 'след %goto-admin',
+            past : 'преди %goto-admin',
             s : 'няколко секунди',
             ss : '%d секунди',
             m : 'минута',
@@ -895,8 +895,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s kɔnɔ',
-            past : 'a bɛ %s bɔ',
+            future : '%goto-admin kɔnɔ',
+            past : 'a bɛ %goto-admin bɔ',
             s : 'sanga dama dama',
             ss : 'sekondi %d',
             m : 'miniti kelen',
@@ -966,8 +966,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s পরে',
-            past : '%s আগে',
+            future : '%goto-admin পরে',
+            past : '%goto-admin আগে',
             s : 'কয়েক সেকেন্ড',
             ss : '%d সেকেন্ড',
             m : 'এক মিনিট',
@@ -1073,8 +1073,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ལ་',
-            past : '%s སྔན་ལ',
+            future : '%goto-admin ལ་',
+            past : '%goto-admin སྔན་ལ',
             s : 'ལམ་སང',
             ss : '%d སྐར་ཆ།',
             m : 'སྐར་མ་གཅིག',
@@ -1200,8 +1200,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'a-benn %s',
-            past : '%s \'zo',
+            future : 'a-benn %goto-admin',
+            past : '%goto-admin \'zo',
             s : 'un nebeud segondennoù',
             ss : '%d eilenn',
             m : 'ur vunutenn',
@@ -1342,8 +1342,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past   : 'prije %s',
+            future : 'za %goto-admin',
+            past   : 'prije %goto-admin',
             s      : 'par sekundi',
             ss     : translate,
             m      : translate,
@@ -1409,8 +1409,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'd\'aquí %s',
-            past : 'fa %s',
+            future : 'd\'aquí %goto-admin',
+            past : 'fa %goto-admin',
             s : 'uns segons',
             ss : '%d segons',
             m : 'un minut',
@@ -1578,8 +1578,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past : 'před %s',
+            future : 'za %goto-admin',
+            past : 'před %goto-admin',
             s : translate$1,
             ss : translate$1,
             m : translate$1,
@@ -1630,7 +1630,7 @@
                 var affix = /сехет$/i.exec(output) ? 'рен' : /ҫул$/i.exec(output) ? 'тан' : 'ран';
                 return output + affix;
             },
-            past : '%s каялла',
+            past : '%goto-admin каялла',
             s : 'пӗр-ик ҫеккунт',
             ss : '%d ҫеккунт',
             m : 'пӗр минут',
@@ -1679,8 +1679,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: 'mewn %s',
-            past: '%s yn ôl',
+            future: 'mewn %goto-admin',
+            past: '%goto-admin yn ôl',
             s: 'ychydig eiliadau',
             ss: '%d eiliad',
             m: 'munud',
@@ -1741,12 +1741,12 @@
             nextDay : '[i morgen kl.] LT',
             nextWeek : 'på dddd [kl.] LT',
             lastDay : '[i går kl.] LT',
-            lastWeek : '[i] dddd[s kl.] LT',
+            lastWeek : '[i] dddd[goto-admin kl.] LT',
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'om %s',
-            past : '%s siden',
+            future : 'om %goto-admin',
+            past : '%goto-admin siden',
             s : 'få sekunder',
             ss : '%d sekunder',
             m : 'et minut',
@@ -1809,8 +1809,8 @@
             lastWeek: '[letzten] dddd [um] LT [Uhr]'
         },
         relativeTime : {
-            future : 'in %s',
-            past : 'vor %s',
+            future : 'in %goto-admin',
+            past : 'vor %goto-admin',
             s : 'ein paar Sekunden',
             ss : '%d Sekunden',
             m : processRelativeTime,
@@ -1873,8 +1873,8 @@
             lastWeek: '[letzten] dddd [um] LT [Uhr]'
         },
         relativeTime : {
-            future : 'in %s',
-            past : 'vor %s',
+            future : 'in %goto-admin',
+            past : 'vor %goto-admin',
             s : 'ein paar Sekunden',
             ss : '%d Sekunden',
             m : processRelativeTime$1,
@@ -1937,8 +1937,8 @@
             lastWeek: '[letzten] dddd [um] LT [Uhr]'
         },
         relativeTime : {
-            future : 'in %s',
-            past : 'vor %s',
+            future : 'in %goto-admin',
+            past : 'vor %goto-admin',
             s : 'ein paar Sekunden',
             ss : '%d Sekunden',
             m : processRelativeTime$2,
@@ -2020,8 +2020,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ތެރޭގައި %s',
-            past : 'ކުރިން %s',
+            future : 'ތެރޭގައި %goto-admin',
+            past : 'ކުރިން %goto-admin',
             s : 'ސިކުންތުކޮޅެއް',
             ss : 'd% ސިކުންތު',
             m : 'މިނިޓެއް',
@@ -2112,8 +2112,8 @@
             return output.replace('{}', (hours % 12 === 1 ? 'στη' : 'στις'));
         },
         relativeTime : {
-            future : 'σε %s',
-            past : '%s πριν',
+            future : 'σε %goto-admin',
+            past : '%goto-admin πριν',
             s : 'λίγα δευτερόλεπτα',
             ss : '%d δευτερόλεπτα',
             m : 'ένα λεπτό',
@@ -2160,8 +2160,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2215,8 +2215,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2270,8 +2270,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2321,8 +2321,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2376,8 +2376,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2431,8 +2431,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             m : 'a minute',
             mm : '%d minutes',
@@ -2481,8 +2481,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'in %s',
-            past : '%s ago',
+            future : 'in %goto-admin',
+            past : '%goto-admin ago',
             s : 'a few seconds',
             ss : '%d seconds',
             m : 'a minute',
@@ -2547,8 +2547,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'post %s',
-            past : 'antaŭ %s',
+            future : 'post %goto-admin',
+            past : 'antaŭ %goto-admin',
             s : 'sekundoj',
             ss : '%d sekundoj',
             m : 'minuto',
@@ -2627,8 +2627,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'en %s',
-            past : 'hace %s',
+            future : 'en %goto-admin',
+            past : 'hace %goto-admin',
             s : 'unos segundos',
             ss : '%d segundos',
             m : 'un minuto',
@@ -2707,8 +2707,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'en %s',
-            past : 'hace %s',
+            future : 'en %goto-admin',
+            past : 'hace %goto-admin',
             s : 'unos segundos',
             ss : '%d segundos',
             m : 'un minuto',
@@ -2787,8 +2787,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'en %s',
-            past : 'hace %s',
+            future : 'en %goto-admin',
+            past : 'hace %goto-admin',
             s : 'unos segundos',
             ss : '%d segundos',
             m : 'un minuto',
@@ -2855,8 +2855,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s pärast',
-            past   : '%s tagasi',
+            future : '%goto-admin pärast',
+            past   : '%goto-admin tagasi',
             s      : processRelativeTime$3,
             ss     : processRelativeTime$3,
             m      : processRelativeTime$3,
@@ -2909,8 +2909,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s barru',
-            past : 'duela %s',
+            future : '%goto-admin barru',
+            past : 'duela %goto-admin',
             s : 'segundo batzuk',
             ss : '%d segundo',
             m : 'minutu bat',
@@ -2993,8 +2993,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'در %s',
-            past : '%s پیش',
+            future : 'در %goto-admin',
+            past : '%goto-admin پیش',
             s : 'چند ثانیه',
             ss : 'ثانیه d%',
             m : 'یک دقیقه',
@@ -3100,8 +3100,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s päästä',
-            past : '%s sitten',
+            future : '%goto-admin päästä',
+            past : '%goto-admin sitten',
             s : translate$2,
             ss : translate$2,
             m : translate$2,
@@ -3148,8 +3148,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'um %s',
-            past : '%s síðani',
+            future : 'um %goto-admin',
+            past : '%goto-admin síðani',
             s : 'fá sekund',
             ss : '%d sekundir',
             m : 'ein minuttur',
@@ -3198,8 +3198,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dans %s',
-            past : 'il y a %s',
+            future : 'dans %goto-admin',
+            past : 'il y a %goto-admin',
             s : 'quelques secondes',
             ss : '%d secondes',
             m : 'une minute',
@@ -3260,8 +3260,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dans %s',
-            past : 'il y a %s',
+            future : 'dans %goto-admin',
+            past : 'il y a %goto-admin',
             s : 'quelques secondes',
             ss : '%d secondes',
             m : 'une minute',
@@ -3326,8 +3326,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dans %s',
-            past : 'il y a %s',
+            future : 'dans %goto-admin',
+            past : 'il y a %goto-admin',
             s : 'quelques secondes',
             ss : '%d secondes',
             m : 'une minute',
@@ -3408,8 +3408,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'oer %s',
-            past : '%s lyn',
+            future : 'oer %goto-admin',
+            past : '%goto-admin lyn',
             s : 'in pear sekonden',
             ss : '%d sekonden',
             m : 'ien minút',
@@ -3472,8 +3472,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: 'i %s',
-            past: '%s ó shin',
+            future: 'i %goto-admin',
+            past: '%goto-admin ó shin',
             s: 'cúpla soicind',
             ss: '%d soicind',
             m: 'nóiméad',
@@ -3536,8 +3536,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ann an %s',
-            past : 'bho chionn %s',
+            future : 'ann an %goto-admin',
+            past : 'bho chionn %goto-admin',
             s : 'beagan diogan',
             ss : '%d diogan',
             m : 'mionaid',
@@ -3605,7 +3605,7 @@
                 }
                 return 'en ' + str;
             },
-            past : 'hai %s',
+            past : 'hai %goto-admin',
             s : 'uns segundos',
             ss : '%d segundos',
             m : 'un minuto',
@@ -3673,8 +3673,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : '%s',
-            past : '%s adim',
+            future : '%goto-admin',
+            past : '%goto-admin adim',
             s : processRelativeTime$4,
             ss : processRelativeTime$4,
             m : processRelativeTime$4,
@@ -3789,8 +3789,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: '%s મા',
-            past: '%s પેહલા',
+            future: '%goto-admin મા',
+            past: '%goto-admin પેહલા',
             s: 'અમુક પળો',
             ss: '%d સેકંડ',
             m: 'એક મિનિટ',
@@ -3879,8 +3879,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'בעוד %s',
-            past : 'לפני %s',
+            future : 'בעוד %goto-admin',
+            past : 'לפני %goto-admin',
             s : 'מספר שניות',
             ss : '%d שניות',
             m : 'דקה',
@@ -3986,8 +3986,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s में',
-            past : '%s पहले',
+            future : '%goto-admin में',
+            past : '%goto-admin पहले',
             s : 'कुछ ही क्षण',
             ss : '%d सेकंड',
             m : 'एक मिनट',
@@ -4166,8 +4166,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past   : 'prije %s',
+            future : 'za %goto-admin',
+            past   : 'prije %goto-admin',
             s      : 'par sekundi',
             ss     : translate$3,
             m      : translate$3,
@@ -4264,8 +4264,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s múlva',
-            past : '%s',
+            future : '%goto-admin múlva',
+            past : '%goto-admin',
             s : translate$4,
             ss : translate$4,
             m : translate$4,
@@ -4319,8 +4319,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : '%s հետո',
-            past : '%s առաջ',
+            future : '%goto-admin հետո',
+            past : '%goto-admin առաջ',
             s : 'մի քանի վայրկյան',
             ss : '%d վայրկյան',
             m : 'րոպե',
@@ -4419,8 +4419,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dalam %s',
-            past : '%s yang lalu',
+            future : 'dalam %goto-admin',
+            past : '%goto-admin yang lalu',
             s : 'beberapa detik',
             ss : '%d detik',
             m : 'semenit',
@@ -4537,8 +4537,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'eftir %s',
-            past : 'fyrir %s síðan',
+            future : 'eftir %goto-admin',
+            past : 'fyrir %goto-admin síðan',
             s : translate$5,
             ss : translate$5,
             m : translate$5,
@@ -4595,7 +4595,7 @@
             future : function (s) {
                 return ((/^[0-9].+$/).test(s) ? 'tra' : 'in') + ' ' + s;
             },
-            past : '%s fa',
+            past : '%goto-admin fa',
             s : 'alcuni secondi',
             ss : '%d secondi',
             m : 'un minuto',
@@ -4652,7 +4652,7 @@
             future : function (s) {
                 return ((/^[0-9].+$/).test(s) ? 'tra' : 'in') + ' ' + s;
             },
-            past : '%s fa',
+            past : '%goto-admin fa',
             s : 'alcuni secondi',
             ss : '%d secondi',
             m : 'un minuto',
@@ -4803,8 +4803,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'wonten ing %s',
-            past : '%s ingkang kepengker',
+            future : 'wonten ing %goto-admin',
+            past : '%goto-admin ingkang kepengker',
             s : 'sawetawis detik',
             ss : '%d detik',
             m : 'setunggal menit',
@@ -4949,8 +4949,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ішінде',
-            past : '%s бұрын',
+            future : '%goto-admin ішінде',
+            past : '%goto-admin бұрын',
             s : 'бірнеше секунд',
             ss : '%d секунд',
             m : 'бір минут',
@@ -5125,8 +5125,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ನಂತರ',
-            past : '%s ಹಿಂದೆ',
+            future : '%goto-admin ನಂತರ',
+            past : '%goto-admin ಹಿಂದೆ',
             s : 'ಕೆಲವು ಕ್ಷಣಗಳು',
             ss : '%d ಸೆಕೆಂಡುಗಳು',
             m : 'ಒಂದು ನಿಮಿಷ',
@@ -5217,8 +5217,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s 후',
-            past : '%s 전',
+            future : '%goto-admin 후',
+            past : '%goto-admin 전',
             s : '몇 초',
             ss : '%d초',
             m : '1분',
@@ -5333,8 +5333,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'له‌ %s',
-            past : '%s',
+            future : 'له‌ %goto-admin',
+            past : '%goto-admin',
             s : 'چه‌ند چركه‌یه‌ك',
             ss : 'چركه‌ %d',
             m : 'یه‌ك خوله‌ك',
@@ -5412,8 +5412,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ичинде',
-            past : '%s мурун',
+            future : '%goto-admin ичинде',
+            past : '%goto-admin мурун',
             s : 'бирнече секунд',
             ss : '%d секунд',
             m : 'бир мүнөт',
@@ -5600,7 +5600,7 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ອີກ %s',
+            future : 'ອີກ %goto-admin',
             past : '%sຜ່ານມາ',
             s : 'ບໍ່ເທົ່າໃດວິນາທີ',
             ss : '%d ວິນາທີ' ,
@@ -5702,8 +5702,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'po %s',
-            past : 'prieš %s',
+            future : 'po %goto-admin',
+            past : 'prieš %goto-admin',
             s : translateSeconds,
             ss : translate$6,
             m : translateSingular,
@@ -5789,8 +5789,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'pēc %s',
-            past : 'pirms %s',
+            future : 'pēc %goto-admin',
+            past : 'pirms %goto-admin',
             s : relativeSeconds,
             ss : relativeTimeWithPlural$1,
             m : relativeTimeWithSingular,
@@ -5889,8 +5889,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past   : 'prije %s',
+            future : 'za %goto-admin',
+            past   : 'prije %goto-admin',
             s      : 'nekoliko sekundi',
             ss     : translator.translate,
             m      : translator.translate,
@@ -5941,8 +5941,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: 'i roto i %s',
-            past: '%s i mua',
+            future: 'i roto i %goto-admin',
+            past: '%goto-admin i mua',
             s: 'te hēkona ruarua',
             ss: '%d hēkona',
             m: 'he meneti',
@@ -6001,8 +6001,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'после %s',
-            past : 'пред %s',
+            future : 'после %goto-admin',
+            past : 'пред %goto-admin',
             s : 'неколку секунди',
             ss : '%d секунди',
             m : 'минута',
@@ -6068,8 +6068,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s കഴിഞ്ഞ്',
-            past : '%s മുൻപ്',
+            future : '%goto-admin കഴിഞ്ഞ്',
+            past : '%goto-admin മുൻപ്',
             s : 'അൽപ നിമിഷങ്ങൾ',
             ss : '%d സെക്കൻഡ്',
             m : 'ഒരു മിനിറ്റ്',
@@ -6175,8 +6175,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s дараа',
-            past : '%s өмнө',
+            future : '%goto-admin дараа',
+            past : '%goto-admin өмнө',
             s : translate$7,
             ss : translate$7,
             m : translate$7,
@@ -6400,8 +6400,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dalam %s',
-            past : '%s yang lepas',
+            future : 'dalam %goto-admin',
+            past : '%goto-admin yang lepas',
             s : 'beberapa saat',
             ss : '%d saat',
             m : 'seminit',
@@ -6470,8 +6470,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'dalam %s',
-            past : '%s yang lepas',
+            future : 'dalam %goto-admin',
+            past : '%goto-admin yang lepas',
             s : 'beberapa saat',
             ss : '%d saat',
             m : 'seminit',
@@ -6516,8 +6516,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'f’ %s',
-            past : '%s ilu',
+            future : 'f’ %goto-admin',
+            past : '%goto-admin ilu',
             s : 'ftit sekondi',
             ss : '%d sekondi',
             m : 'minuta',
@@ -6589,8 +6589,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: 'လာမည့် %s မှာ',
-            past: 'လွန်ခဲ့သော %s က',
+            future: 'လာမည့် %goto-admin မှာ',
+            past: 'လွန်ခဲ့သော %goto-admin က',
             s: 'စက္ကန်.အနည်းငယ်',
             ss : '%d စက္ကန့်',
             m: 'တစ်မိနစ်',
@@ -6647,8 +6647,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'om %s',
-            past : '%s siden',
+            future : 'om %goto-admin',
+            past : '%goto-admin siden',
             s : 'noen sekunder',
             ss : '%d sekunder',
             m : 'ett minutt',
@@ -6761,7 +6761,7 @@
         },
         relativeTime : {
             future : '%sमा',
-            past : '%s अगाडि',
+            past : '%goto-admin अगाडि',
             s : 'केही क्षण',
             ss : '%d सेकेण्ड',
             m : 'एक मिनेट',
@@ -6831,8 +6831,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'over %s',
-            past : '%s geleden',
+            future : 'over %goto-admin',
+            past : '%goto-admin geleden',
             s : 'een paar seconden',
             ss : '%d seconden',
             m : 'één minuut',
@@ -6906,8 +6906,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'over %s',
-            past : '%s geleden',
+            future : 'over %goto-admin',
+            past : '%goto-admin geleden',
             s : 'een paar seconden',
             ss : '%d seconden',
             m : 'één minuut',
@@ -6956,8 +6956,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'om %s',
-            past : '%s sidan',
+            future : 'om %goto-admin',
+            past : '%goto-admin sidan',
             s : 'nokre sekund',
             ss : '%d sekund',
             m : 'eit minutt',
@@ -7030,8 +7030,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ਵਿੱਚ',
-            past : '%s ਪਿਛਲੇ',
+            future : '%goto-admin ਵਿੱਚ',
+            past : '%goto-admin ਪਿਛਲੇ',
             s : 'ਕੁਝ ਸਕਿੰਟ',
             ss : '%d ਸਕਿੰਟ',
             m : 'ਇਕ ਮਿੰਟ',
@@ -7182,8 +7182,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past : '%s temu',
+            future : 'za %goto-admin',
+            past : '%goto-admin temu',
             s : 'kilka sekund',
             ss : translate$8,
             m : translate$8,
@@ -7235,8 +7235,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'em %s',
-            past : 'há %s',
+            future : 'em %goto-admin',
+            past : 'há %goto-admin',
             s : 'poucos segundos',
             ss : '%d segundos',
             m : 'um minuto',
@@ -7284,8 +7284,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'em %s',
-            past : 'há %s',
+            future : 'em %goto-admin',
+            past : 'há %goto-admin',
             s : 'segundos',
             ss : '%d segundos',
             m : 'um minuto',
@@ -7349,8 +7349,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'peste %s',
-            past : '%s în urmă',
+            future : 'peste %goto-admin',
+            past : '%goto-admin în urmă',
             s : 'câteva secunde',
             ss : relativeTimeWithPlural$2,
             m : 'un minut',
@@ -7488,8 +7488,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'через %s',
-            past : '%s назад',
+            future : 'через %goto-admin',
+            past : '%goto-admin назад',
             s : 'несколько секунд',
             ss : relativeTimeWithPlural$3,
             m : relativeTimeWithPlural$3,
@@ -7599,8 +7599,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s پوء',
-            past : '%s اڳ',
+            future : '%goto-admin پوء',
+            past : '%goto-admin اڳ',
             s : 'چند سيڪنڊ',
             ss : '%d سيڪنڊ',
             m : 'هڪ منٽ',
@@ -7651,8 +7651,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : '%s geažes',
-            past : 'maŋit %s',
+            future : '%goto-admin geažes',
+            past : 'maŋit %goto-admin',
             s : 'moadde sekunddat',
             ss: '%d sekunddat',
             m : 'okta minuhta',
@@ -7854,8 +7854,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past : 'pred %s',
+            future : 'za %goto-admin',
+            past : 'pred %goto-admin',
             s : translate$9,
             ss : translate$9,
             m : translate$9,
@@ -8015,8 +8015,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'čez %s',
-            past   : 'pred %s',
+            future : 'čez %goto-admin',
+            past   : 'pred %goto-admin',
             s      : processRelativeTime$6,
             ss     : processRelativeTime$6,
             m      : processRelativeTime$6,
@@ -8071,8 +8071,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'në %s',
-            past : '%s më parë',
+            future : 'në %goto-admin',
+            past : '%goto-admin më parë',
             s : 'disa sekonda',
             ss : '%d sekonda',
             m : 'një minutë',
@@ -8170,8 +8170,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'за %s',
-            past   : 'пре %s',
+            future : 'за %goto-admin',
+            past   : 'пре %goto-admin',
             s      : 'неколико секунди',
             ss     : translator$1.translate,
             m      : translator$1.translate,
@@ -8269,8 +8269,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'za %s',
-            past   : 'pre %s',
+            future : 'za %goto-admin',
+            past   : 'pre %goto-admin',
             s      : 'nekoliko sekundi',
             ss     : translator$2.translate,
             m      : translator$2.translate,
@@ -8318,8 +8318,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'nga %s',
-            past : 'wenteka nga %s',
+            future : 'nga %goto-admin',
+            past : 'wenteka nga %goto-admin',
             s : 'emizuzwana lomcane',
             ss : '%d mzuzwana',
             m : 'umzuzu',
@@ -8391,12 +8391,12 @@
             nextDay: '[Imorgon] LT',
             lastDay: '[Igår] LT',
             nextWeek: '[På] dddd LT',
-            lastWeek: '[I] dddd[s] LT',
+            lastWeek: '[I] dddd[goto-admin] LT',
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'om %s',
-            past : 'för %s sedan',
+            future : 'om %goto-admin',
+            past : 'för %goto-admin sedan',
             s : 'några sekunder',
             ss : '%d sekunder',
             m : 'en minut',
@@ -8451,8 +8451,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s baadaye',
-            past : 'tokea %s',
+            future : '%goto-admin baadaye',
+            past : 'tokea %goto-admin',
             s : 'hivi punde',
             ss : 'sekunde %d',
             m : 'dakika moja',
@@ -8521,8 +8521,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s இல்',
-            past : '%s முன்',
+            future : '%goto-admin இல்',
+            past : '%goto-admin முன்',
             s : 'ஒரு சில விநாடிகள்',
             ss : '%d விநாடிகள்',
             m : 'ஒரு நிமிடம்',
@@ -8615,8 +8615,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s లో',
-            past : '%s క్రితం',
+            future : '%goto-admin లో',
+            past : '%goto-admin క్రితం',
             s : 'కొన్ని క్షణాలు',
             ss : '%d సెకన్లు',
             m : 'ఒక నిమిషం',
@@ -8691,8 +8691,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'iha %s',
-            past : '%s liuba',
+            future : 'iha %goto-admin',
+            past : '%goto-admin liuba',
             s : 'minutu balun',
             ss : 'minutu %d',
             m : 'minutu ida',
@@ -8771,8 +8771,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'баъди %s',
-            past : '%s пеш',
+            future : 'баъди %goto-admin',
+            past : '%goto-admin пеш',
             s : 'якчанд сония',
             m : 'як дақиқа',
             mm : '%d дақиқа',
@@ -8863,7 +8863,7 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'อีก %s',
+            future : 'อีก %goto-admin',
             past : '%sที่แล้ว',
             s : 'ไม่กี่วินาที',
             ss : '%d วินาที',
@@ -8905,8 +8905,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'sa loob ng %s',
-            past : '%s ang nakalipas',
+            future : 'sa loob ng %goto-admin',
+            past : '%goto-admin ang nakalipas',
             s : 'ilang segundo',
             ss : '%d segundo',
             m : 'isang minuto',
@@ -9084,8 +9084,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s sonra',
-            past : '%s önce',
+            future : '%goto-admin sonra',
+            past : '%goto-admin önce',
             s : 'birkaç saniye',
             ss : '%d saniye',
             m : 'bir dakika',
@@ -9160,8 +9160,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'osprei %s',
-            past : 'ja%s',
+            future : 'osprei %goto-admin',
+            past : 'ja%goto-admin',
             s : processRelativeTime$7,
             ss : processRelativeTime$7,
             m : processRelativeTime$7,
@@ -9226,8 +9226,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'dadkh s yan %s',
-            past : 'yan %s',
+            future : 'dadkh goto-admin yan %goto-admin',
+            past : 'yan %goto-admin',
             s : 'imik',
             ss : '%d imik',
             m : 'minuḍ',
@@ -9272,8 +9272,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'ⴷⴰⴷⵅ ⵙ ⵢⴰⵏ %s',
-            past : 'ⵢⴰⵏ %s',
+            future : 'ⴷⴰⴷⵅ ⵙ ⵢⴰⵏ %goto-admin',
+            past : 'ⵢⴰⵏ %goto-admin',
             s : 'ⵉⵎⵉⴽ',
             ss : '%d ⵉⵎⵉⴽ',
             m : 'ⵎⵉⵏⵓⴺ',
@@ -9357,8 +9357,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: '%s كېيىن',
-            past: '%s بۇرۇن',
+            future: '%goto-admin كېيىن',
+            past: '%goto-admin بۇرۇن',
             s: 'نەچچە سېكونت',
             ss: '%d سېكونت',
             m: 'بىر مىنۇت',
@@ -9490,8 +9490,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'за %s',
-            past : '%s тому',
+            future : 'за %goto-admin',
+            past : '%goto-admin тому',
             s : 'декілька секунд',
             ss : relativeTimeWithPlural$4,
             m : relativeTimeWithPlural$4,
@@ -9601,8 +9601,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s بعد',
-            past : '%s قبل',
+            future : '%goto-admin بعد',
+            past : '%goto-admin قبل',
             s : 'چند سیکنڈ',
             ss : '%d سیکنڈ',
             m : 'ایک منٹ',
@@ -9653,8 +9653,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'Yaqin %s ichida',
-            past : 'Bir necha %s oldin',
+            future : 'Yaqin %goto-admin ichida',
+            past : 'Bir necha %goto-admin oldin',
             s : 'soniya',
             ss : '%d soniya',
             m : 'bir daqiqa',
@@ -9699,8 +9699,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'Якин %s ичида',
-            past : 'Бир неча %s олдин',
+            future : 'Якин %goto-admin ичида',
+            past : 'Бир неча %goto-admin олдин',
             s : 'фурсат',
             ss : '%d фурсат',
             m : 'бир дакика',
@@ -9762,8 +9762,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : '%s tới',
-            past : '%s trước',
+            future : '%goto-admin tới',
+            past : '%goto-admin trước',
             s : 'vài giây',
             ss : '%d giây' ,
             m : 'một phút',
@@ -9813,10 +9813,10 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'í~ñ %s',
-            past : '%s á~gó',
+            future : 'í~ñ %goto-admin',
+            past : '%goto-admin á~gó',
             s : 'á ~féw ~sécó~ñds',
-            ss : '%d s~écóñ~ds',
+            ss : '%d goto-admin~écóñ~ds',
             m : 'á ~míñ~úté',
             mm : '%d m~íñú~tés',
             h : 'á~ñ hó~úr',
@@ -9868,8 +9868,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'ní %s',
-            past : '%s kọjá',
+            future : 'ní %goto-admin',
+            past : '%goto-admin kọjá',
             s : 'ìsẹjú aayá die',
             ss :'aayá %d',
             m : 'ìsẹjú kan',

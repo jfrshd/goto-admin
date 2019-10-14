@@ -44,7 +44,7 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'อีก %s',
+            future : 'อีก %goto-admin',
             past : '%sที่แล้ว',
             s : 'ไม่กี่วินาที',
             ss : '%d วินาที',

@@ -43,8 +43,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'след %s',
-            past : 'преди %s',
+            future : 'след %goto-admin',
+            past : 'преди %goto-admin',
             s : 'няколко секунди',
             ss : '%d секунди',
             m : 'минута',

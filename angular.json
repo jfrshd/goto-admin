@@ -95,18 +95,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "s:build"
+            "browserTarget": "goto-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "s:build:production"
+              "browserTarget": "goto-admin:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "s:build"
+            "browserTarget": "goto-admin:build"
           }
         },
         "test": {
@@ -144,16 +144,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "s:serve"
+            "devServerTarget": "goto-admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "s:serve:production"
+              "devServerTarget": "goto-admin:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "s"
+  "defaultProject": "goto-admin"
 }

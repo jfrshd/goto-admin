@@ -27,8 +27,8 @@ export default moment.defineLocale('nn', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'om %s',
-        past : '%s sidan',
+        future : 'om %goto-admin',
+        past : '%goto-admin sidan',
         s : 'nokre sekund',
         ss : '%d sekund',
         m : 'eit minutt',

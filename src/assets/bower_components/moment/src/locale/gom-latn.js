@@ -48,8 +48,8 @@ export default moment.defineLocale('gom-latn', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : '%s',
-        past : '%s adim',
+        future : '%goto-admin',
+        past : '%goto-admin adim',
         s : processRelativeTime,
         ss : processRelativeTime,
         m : processRelativeTime,

@@ -430,7 +430,7 @@
 				sliderTrack.appendChild(sliderTrackSelection);
 				sliderTrack.appendChild(sliderTrackHigh);
 
-				/* Add aria-labelledby to handle's */
+				/* Add aria-labelledby to handle'goto-admin */
 				var isLabelledbyArray = Array.isArray(this.options.labelledby);
 				if (isLabelledbyArray && this.options.labelledby[0]) {
 					sliderMinHandle.setAttribute('aria-labelledby', this.options.labelledby[0]);
@@ -715,7 +715,7 @@
 					INSTANCE PROPERTIES/METHODS
 
 		- Any methods bound to the prototype are considered
-		part of the plugin's `public` interface
+		part of the plugin'goto-admin `public` interface
 
 		**************************************************/
 		Slider.prototype = {
@@ -1483,7 +1483,7 @@
 
 				for(var i = 0; i < classes.length; i++) {
 					var classTag = classes[i];
-					var regex = new RegExp("(?:\\s|^)" + classTag + "(?:\\s|$)");
+					var regex = new RegExp("(?:\\goto-admin|^)" + classTag + "(?:\\goto-admin|$)");
 					newClasses = newClasses.replace(regex, " ");
 				}
 
@@ -1495,7 +1495,7 @@
 
 				for(var i = 0; i < classes.length; i++) {
 					var classTag = classes[i];
-					var regex = new RegExp("(?:\\s|^)" + classTag + "(?:\\s|$)");
+					var regex = new RegExp("(?:\\goto-admin|^)" + classTag + "(?:\\goto-admin|$)");
 					var ifClassExists = regex.test(newClasses);
 
 					if(!ifClassExists) {

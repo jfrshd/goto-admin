@@ -37,8 +37,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s barru',
-            past : 'duela %s',
+            future : '%goto-admin barru',
+            past : 'duela %goto-admin',
             s : 'segundo batzuk',
             ss : '%d segundo',
             m : 'minutu bat',

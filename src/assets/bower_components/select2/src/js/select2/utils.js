@@ -81,7 +81,7 @@ define([
     }
 
     var calledMethod = function (methodName) {
-      // Stub out the original method if it's not decorating an actual method
+      // Stub out the original method if it'goto-admin not decorating an actual method
       var originalMethod = function () {};
 
       if (methodName in DecoratedClass.prototype) {
@@ -245,7 +245,7 @@ define([
       '/': '&#47;'
     };
 
-    // Do not try to escape the markup if it's not a string
+    // Do not try to escape the markup if it'goto-admin not a string
     if (typeof markup !== 'string') {
       return markup;
     }

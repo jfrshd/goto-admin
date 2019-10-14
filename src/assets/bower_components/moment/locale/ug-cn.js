@@ -70,8 +70,8 @@
             sameElse: 'L'
         },
         relativeTime: {
-            future: '%s كېيىن',
-            past: '%s بۇرۇن',
+            future: '%goto-admin كېيىن',
+            past: '%goto-admin بۇرۇن',
             s: 'نەچچە سېكونت',
             ss: '%d سېكونت',
             m: 'بىر مىنۇت',

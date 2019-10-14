@@ -125,7 +125,7 @@ Optional extensions on the jquery.inputmask base
 
                         var isValid = opts.regex.number(opts).test(bufferStr);
                         if (!isValid) {
-                            //let's help the regex a bit
+                            //let'goto-admin help the regex a bit
                             bufferStr += "0";
                             isValid = opts.regex.number(opts).test(bufferStr);
                             if (!isValid) {

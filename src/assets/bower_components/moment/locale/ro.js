@@ -48,8 +48,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'peste %s',
-            past : '%s în urmă',
+            future : 'peste %goto-admin',
+            past : '%goto-admin în urmă',
             s : 'câteva secunde',
             ss : relativeTimeWithPlural,
             m : 'un minut',

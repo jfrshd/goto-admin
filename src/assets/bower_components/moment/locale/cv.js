@@ -35,7 +35,7 @@
                 var affix = /сехет$/i.exec(output) ? 'рен' : /ҫул$/i.exec(output) ? 'тан' : 'ран';
                 return output + affix;
             },
-            past : '%s каялла',
+            past : '%goto-admin каялла',
             s : 'пӗр-ик ҫеккунт',
             ss : '%d ҫеккунт',
             m : 'пӗр минут',

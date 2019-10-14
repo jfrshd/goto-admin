@@ -26,7 +26,7 @@ API.txt for details.
 	}
 
 	// Returns a string with the date d formatted according to fmt.
-	// A subset of the Open Group's strftime format is supported.
+	// A subset of the Open Group'goto-admin strftime format is supported.
 
 	function formatDate(d, fmt, monthNames, dayNames) {
 
@@ -79,7 +79,7 @@ API.txt for details.
 					case 'l': c = leftPad(hours12, " "); break;
 					case 'm': c = leftPad(d.getMonth() + 1); break;
 					case 'M': c = leftPad(d.getMinutes()); break;
-					// quarters not in Open Group's strftime specification
+					// quarters not in Open Group'goto-admin strftime specification
 					case 'q':
 						c = "" + (Math.floor(d.getMonth() / 3) + 1); break;
 					case 'S': c = leftPad(d.getSeconds()); break;
@@ -186,7 +186,7 @@ API.txt for details.
 		[2, "month"]
 	];
 
-	// we don't know which variant(s) we'll need yet, but generating both is
+	// we don't know which variant(goto-admin) we'll need yet, but generating both is
 	// cheap
 
 	var specMonths = baseSpec.concat([[3, "month"], [6, "month"],
@@ -239,7 +239,7 @@ API.txt for details.
 						if (unit == "year") {
 
 							// if given a minTickSize in years, just use it,
-							// ensuring that it's an integer
+							// ensuring that it'goto-admin an integer
 
 							if (opts.minTickSize != null && opts.minTickSize[1] == "year") {
 								size = Math.floor(opts.minTickSize[0]);

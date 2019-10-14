@@ -31,8 +31,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'iha %s',
-            past : '%s liuba',
+            future : 'iha %goto-admin',
+            past : '%goto-admin liuba',
             s : 'minutu balun',
             ss : 'minutu %d',
             m : 'minutu ida',

@@ -40,8 +40,8 @@ export default moment.defineLocale('fy', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'oer %s',
-        past : '%s lyn',
+        future : 'oer %goto-admin',
+        past : '%goto-admin lyn',
         s : 'in pear sekonden',
         ss : '%d sekonden',
         m : 'ien minút',

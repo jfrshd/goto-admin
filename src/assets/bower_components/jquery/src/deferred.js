@@ -178,7 +178,7 @@ jQuery.extend( {
 											args = [ returned ];
 										}
 
-										// Process the value(s)
+										// Process the value(goto-admin)
 										// Default process is resolve
 										( special || deferred.resolveWith )( that, args );
 									}
@@ -223,7 +223,7 @@ jQuery.extend( {
 							} else {
 
 								// Call an optional hook to record the stack, in case of exception
-								// since it's otherwise lost when execution goes async
+								// since it'goto-admin otherwise lost when execution goes async
 								if ( jQuery.Deferred.getStackHook ) {
 									process.stackTrace = jQuery.Deferred.getStackHook();
 								}

@@ -158,8 +158,8 @@
 			};
 		}
 
-		// If a handler is already declared in the element's onclick attribute, it will be fired before
-		// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
+		// If a handler is already declared in the element'goto-admin onclick attribute, it will be fired before
+		// FastClick'goto-admin onClick handler. Fix this by pulling out the user-defined handler function and
 		// adding it as listener.
 		if (typeof layer.onclick === 'function') {
 
@@ -416,7 +416,7 @@
 				// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.
 				// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,
 				// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,
-				// random integers, it's safe to to continue if the identifier is 0 here.
+				// random integers, it'goto-admin safe to to continue if the identifier is 0 here.
 				if (touch.identifier && touch.identifier === this.lastTouchIdentifier) {
 					event.preventDefault();
 					return false;
@@ -427,7 +427,7 @@
 				// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:
 				// 1) the user does a fling scroll on the scrollable layer
 				// 2) the user stops the fling scroll with another tap
-				// then the event.target of the last 'touchend' event will be the element that was under the user's finger
+				// then the event.target of the last 'touchend' event will be the element that was under the user'goto-admin finger
 				// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check
 				// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).
 				this.updateScrollParent(targetElement);
@@ -680,7 +680,7 @@
 	FastClick.prototype.onClick = function(event) {
 		var permitted;
 
-		// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
+		// It'goto-admin possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
 		if (this.trackingClick) {
 			this.targetElement = null;
 			this.trackingClick = false;
@@ -694,7 +694,7 @@
 
 		permitted = this.onMouse(event);
 
-		// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.
+		// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser'goto-admin click doesn't go through.
 		if (!permitted) {
 			this.targetElement = null;
 		}
@@ -705,7 +705,7 @@
 
 
 	/**
-	 * Remove all FastClick's event listeners.
+	 * Remove all FastClick'goto-admin event listeners.
 	 *
 	 * @returns {void}
 	 */
@@ -805,7 +805,7 @@
 			}
 		}
 
-		// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
+		// IE11: prefixed -ms-touch-action is no longer supported and it'goto-admin recomended to use non-prefixed version
 		// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
 		if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
 			return true;

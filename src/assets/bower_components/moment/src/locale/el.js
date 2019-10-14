@@ -64,8 +64,8 @@ export default moment.defineLocale('el', {
         return output.replace('{}', (hours % 12 === 1 ? 'στη' : 'στις'));
     },
     relativeTime : {
-        future : 'σε %s',
-        past : '%s πριν',
+        future : 'σε %goto-admin',
+        past : '%goto-admin πριν',
         s : 'λίγα δευτερόλεπτα',
         ss : '%d δευτερόλεπτα',
         m : 'ένα λεπτό',

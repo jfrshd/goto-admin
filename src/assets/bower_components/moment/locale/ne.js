@@ -97,7 +97,7 @@
         },
         relativeTime : {
             future : '%sमा',
-            past : '%s अगाडि',
+            past : '%goto-admin अगाडि',
             s : 'केही क्षण',
             ss : '%d सेकेण्ड',
             m : 'एक मिनेट',

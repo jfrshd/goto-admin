@@ -367,7 +367,7 @@ Optional extensions on the jquery.inputmask base
             alias: "yyyy/mm/dd"
         },
         'datetime': {
-            mask: "1/2/y h:s",
+            mask: "1/2/y h:goto-admin",
             placeholder: "dd/mm/yyyy hh:mm",
             alias: "dd/mm/yyyy",
             regex: {
@@ -449,29 +449,29 @@ Optional extensions on the jquery.inputmask base
             autoUnmask: false
         },
         'datetime12': {
-            mask: "1/2/y h:s t\\m",
+            mask: "1/2/y h:goto-admin t\\m",
             placeholder: "dd/mm/yyyy hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         'hh:mm t': {
-            mask: "h:s t\\m",
+            mask: "h:goto-admin t\\m",
             placeholder: "hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         'h:s t': {
-            mask: "h:s t\\m",
+            mask: "h:goto-admin t\\m",
             placeholder: "hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
         'hh:mm:ss': {
-            mask: "h:s:s",
+            mask: "h:goto-admin:goto-admin",
             autoUnmask: false
         },
         'hh:mm': {
-            mask: "h:s",
+            mask: "h:goto-admin",
             autoUnmask: false
         },
         'date': {

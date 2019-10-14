@@ -139,7 +139,7 @@ jQuery.fn = jQuery.prototype = {
 					context = context instanceof jQuery ? context[0] : context;
 					doc = ( context ? context.ownerDocument || context : document );
 
-					// If a single string is passed in and it's a single tag
+					// If a single string is passed in and it'goto-admin a single tag
 					// just do a createElement and skip the rest
 					ret = rsingleTag.exec( selector );
 
@@ -312,7 +312,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	// For internal use only.
-	// Behaves like an Array's method, not like a jQuery method.
+	// Behaves like an Array'goto-admin method, not like a jQuery method.
 	push: push,
 	sort: [].sort,
 	splice: [].splice
@@ -823,7 +823,7 @@ jQuery.extend({
 	},
 
 	// Mutifunctional method to get and set values to a collection
-	// The value/s can optionally be executed if it's a function
+	// The value/goto-admin can optionally be executed if it'goto-admin a function
 	access: function( elems, fn, key, value, chainable, emptyGet, pass ) {
 		var exec,
 			bulk = key == null,
@@ -933,7 +933,7 @@ if ( jQuery.browser.webkit ) {
 	jQuery.browser.safari = true;
 }
 
-// IE doesn't match non-breaking spaces with \s
+// IE doesn't match non-breaking spaces with \goto-admin
 if ( rnotwhite.test( "\xA0" ) ) {
 	trimLeft = /^[\s\xA0]+/;
 	trimRight = /[\s\xA0]+$/;
@@ -1426,7 +1426,7 @@ jQuery.support = (function() {
 		checkOn: ( input.value === "on" ),
 
 		// Make sure that a selected-by-default option has a working selected property.
-		// (WebKit defaults to false instead of true, IE too, if it's in an optgroup)
+		// (WebKit defaults to false instead of true, IE too, if it'goto-admin in an optgroup)
 		optSelected: opt.selected,
 
 		// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
@@ -1463,7 +1463,7 @@ jQuery.support = (function() {
 	select.disabled = true;
 	support.optDisabled = !opt.disabled;
 
-	// Test to see if it's possible to delete an expando from an element
+	// Test to see if it'goto-admin possible to delete an expando from an element
 	// Fails in Internet Explorer
 	try {
 		delete div.test;
@@ -1750,7 +1750,7 @@ jQuery.extend({
 
 		privateCache = thisCache = cache[ id ];
 
-		// jQuery data() is stored in a separate object inside the object's internal data
+		// jQuery data() is stored in a separate object inside the object'goto-admin internal data
 		// cache in order to avoid key collisions between internal data and user-defined
 		// data.
 		if ( !pvt ) {
@@ -2602,7 +2602,7 @@ jQuery.extend({
 					jQuery.error( "type property can't be changed" );
 				} else if ( !jQuery.support.radioValue && value === "radio" && jQuery.nodeName(elem, "input") ) {
 					// Setting the type on a radio button after the value resets the value in IE6-9
-					// Reset value to it's default in case type is set after value
+					// Reset value to it'goto-admin default in case type is set after value
 					// This is for element creation
 					var val = elem.value;
 					elem.setAttribute( "type", value );
@@ -2721,7 +2721,7 @@ boolHook = {
 			// Remove boolean attributes when set to false
 			jQuery.removeAttr( elem, name );
 		} else {
-			// value is true since we know at this point it's type boolean and not false
+			// value is true since we know at this point it'goto-admin type boolean and not false
 			// Set boolean attributes to the same name and set the DOM property
 			propName = jQuery.propFix[ name ] || name;
 			if ( propName in elem ) {
@@ -2821,7 +2821,7 @@ if ( !jQuery.support.style ) {
 }
 
 // Safari mis-reports the default selected property of an option
-// Accessing the parent's selectedIndex property fixes it
+// Accessing the parent'goto-admin selectedIndex property fixes it
 if ( !jQuery.support.optSelected ) {
 	jQuery.propHooks.selected = jQuery.extend( jQuery.propHooks.selected, {
 		get: function( elem ) {
@@ -2882,7 +2882,7 @@ var rformElems = /^(?:textarea|input|select)$/i,
 			//   0  1    2   3
 			// [ _, tag, id, class ]
 			quick[1] = ( quick[1] || "" ).toLowerCase();
-			quick[3] = quick[3] && new RegExp( "(?:^|\\s)" + quick[3] + "(?:\\s|$)" );
+			quick[3] = quick[3] && new RegExp( "(?:^|\\goto-admin)" + quick[3] + "(?:\\goto-admin|$)" );
 		}
 		return quick;
 	},
@@ -2927,7 +2927,7 @@ jQuery.event = {
 			handler.guid = jQuery.guid++;
 		}
 
-		// Init the element's event structure and main handler, if this is the first
+		// Init the element'goto-admin event structure and main handler, if this is the first
 		events = elemData.events;
 		if ( !events ) {
 			elemData.events = events = {};
@@ -3001,7 +3001,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add to the element's handler list, delegates in front
+			// Add to the element'goto-admin handler list, delegates in front
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
@@ -3080,7 +3080,7 @@ jQuery.event = {
 			}
 		}
 
-		// Remove the expando if it's no longer used
+		// Remove the expando if it'goto-admin no longer used
 		if ( jQuery.isEmptyObject( events ) ) {
 			handle = elemData.handle;
 			if ( handle ) {
@@ -3225,7 +3225,7 @@ jQuery.event = {
 
 				// Call a native DOM method on the target with the same name name as the event.
 				// Can't use an .isFunction() check here because IE6/7 fails that test.
-				// Don't do default actions on window, that's where global variables be (#6170)
+				// Don't do default actions on window, that'goto-admin where global variables be (#6170)
 				// IE<9 dies on focus/blur to hidden element (#1486)
 				if ( ontype && elem[ type ] && ((type !== "focus" && type !== "blur") || event.target.offsetWidth !== 0) && !jQuery.isWindow( elem ) ) {
 
@@ -3322,7 +3322,7 @@ jQuery.event = {
 				handleObj = matched.matches[ j ];
 
 				// Triggered event must either 1) be non-exclusive and have no namespace, or
-				// 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
+				// 2) have namespace(goto-admin) a subset or equal to those in the bound event (both can have no namespace).
 				if ( run_all || (!event.namespace && !handleObj.namespace) || event.namespace_re && event.namespace_re.test( handleObj.namespace ) ) {
 
 					event.data = handleObj.data;
@@ -3429,7 +3429,7 @@ jQuery.event = {
 			event.target = event.target.parentNode;
 		}
 
-		// For mouse/key events; add metaKey if it's not there (#3368, IE6/7/8)
+		// For mouse/key events; add metaKey if it'goto-admin not there (#3368, IE6/7/8)
 		if ( event.metaKey === undefined ) {
 			event.metaKey = event.ctrlKey;
 		}
@@ -3473,7 +3473,7 @@ jQuery.event = {
 
 	simulate: function( type, elem, event, bubble ) {
 		// Piggyback on a donor event to simulate a different one.
-		// Fake originalEvent to avoid donor's stopPropagation, but if the
+		// Fake originalEvent to avoid donor'goto-admin stopPropagation, but if the
 		// simulated event prevents default then we do the same on the donor.
 		var e = jQuery.extend(
 			new jQuery.Event(),
@@ -3494,7 +3494,7 @@ jQuery.event = {
 	}
 };
 
-// Some plugins are using, but it's undocumented/deprecated and will be removed.
+// Some plugins are using, but it'goto-admin undocumented/deprecated and will be removed.
 // The 1.7 special event interface should provide all the hooks needed now.
 jQuery.event.handle = jQuery.event.dispatch;
 
@@ -4282,10 +4282,10 @@ var getText = Sizzle.getText = function( elem ) {
 			if ( typeof elem.textContent === 'string' ) {
 				return elem.textContent;
 			} else if ( typeof elem.innerText === 'string' ) {
-				// Replace IE's carriage returns
+				// Replace IE'goto-admin carriage returns
 				return elem.innerText.replace( rReturn, '' );
 			} else {
-				// Traverse it's children
+				// Traverse it'goto-admin children
 				for ( elem = elem.firstChild; elem; elem = elem.nextSibling) {
 					ret += getText( elem );
 				}
@@ -4917,7 +4917,7 @@ if ( document.documentElement.compareDocumentPosition ) {
 			hasDuplicate = true;
 			return 0;
 
-		// Fallback to using sourceIndex (in IE) if it's available on both nodes
+		// Fallback to using sourceIndex (in IE) if it'goto-admin available on both nodes
 		} else if ( a.sourceIndex && b.sourceIndex ) {
 			return a.sourceIndex - b.sourceIndex;
 		}
@@ -5189,7 +5189,7 @@ if ( document.querySelectorAll ) {
 		matches = html.matchesSelector || html.mozMatchesSelector || html.webkitMatchesSelector || html.msMatchesSelector;
 
 	if ( matches ) {
-		// Check to see if it's possible to do matchesSelector
+		// Check to see if it'goto-admin possible to do matchesSelector
 		// on a disconnected node (IE 9 fails this)
 		var disconnectedMatch = !matches.call( document.createElement( "div" ), "div" ),
 			pseudoWorks = false;
@@ -5212,7 +5212,7 @@ if ( document.querySelectorAll ) {
 					if ( pseudoWorks || !Expr.match.PSEUDO.test( expr ) && !/!=/.test( expr ) ) {
 						var ret = matches.call( node, expr );
 
-						// IE 9's matchesSelector returns false on disconnected nodes
+						// IE 9'goto-admin matchesSelector returns false on disconnected nodes
 						if ( ret || !disconnectedMatch ||
 								// As well, disconnected nodes are said to be in a document
 								// fragment in IE 9, so check for that
@@ -5741,7 +5741,7 @@ var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|details|figca
 	rhtml = /<|&#?\w+;/,
 	rnoInnerhtml = /<(?:script|style)/i,
 	rnocache = /<(?:script|object|embed|option|style)/i,
-	rnoshimcache = new RegExp("<(?:" + nodeNames + ")[\\s/>]", "i"),
+	rnoshimcache = new RegExp("<(?:" + nodeNames + ")[\\goto-admin/>]", "i"),
 	// checked="checked" or checked
 	rchecked = /checked\s*(?:[^=]|=\s*.checked.)/i,
 	rscriptType = /\/(java|ecma)script/i,
@@ -6415,7 +6415,7 @@ jQuery.extend({
 						div = div.lastChild;
 					}
 
-					// Remove IE's autoinserted <tbody> from table fragments
+					// Remove IE'goto-admin autoinserted <tbody> from table fragments
 					if ( !jQuery.support.tbody ) {
 
 						// String was a <table>, *may* have spurious <tbody>
@@ -6523,7 +6523,7 @@ jQuery.extend({
 						if ( special[ type ] ) {
 							jQuery.event.remove( elem, type );
 
-						// This is a shortcut to avoid jQuery.event.remove's overhead
+						// This is a shortcut to avoid jQuery.event.remove'goto-admin overhead
 						} else {
 							jQuery.removeEvent( elem, type, data.handle );
 						}
@@ -6992,7 +6992,7 @@ var r20 = /%20/g,
 	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
-	 *    - AFTER param serialization (s.data is a string if s.processData is true)
+	 *    - AFTER param serialization (goto-admin.data is a string if goto-admin.processData is true)
 	 * 3) key is the dataType
 	 * 4) the catchall symbol "*" can be used
 	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
@@ -7143,9 +7143,9 @@ jQuery.fn.extend({
 
 		// If the second parameter was provided
 		if ( params ) {
-			// If it's a function
+			// If it'goto-admin a function
 			if ( jQuery.isFunction( params ) ) {
-				// We assume that it's the callback
+				// We assume that it'goto-admin the callback
 				callback = params;
 				params = undefined;
 
@@ -7364,8 +7364,8 @@ jQuery.extend({
 			// Callbacks context
 			callbackContext = s.context || s,
 			// Context for global events
-			// It's the callbackContext if one was provided in the options
-			// and if it's a DOM node or a jQuery collection
+			// It'goto-admin the callbackContext if one was provided in the options
+			// and if it'goto-admin a DOM node or a jQuery collection
 			globalEventContext = callbackContext !== s &&
 				( callbackContext.nodeType || callbackContext instanceof jQuery ) ?
 						jQuery( callbackContext ) : jQuery.event,
@@ -7634,7 +7634,7 @@ jQuery.extend({
 			// If data is available, append data to url
 			if ( s.data ) {
 				s.url += ( rquery.test( s.url ) ? "&" : "?" ) + s.data;
-				// #9682: remove data so that it's not used in an eventual retry
+				// #9682: remove data so that it'goto-admin not used in an eventual retry
 				delete s.data;
 			}
 
@@ -7779,7 +7779,7 @@ function buildParams( prefix, obj, traditional, add ) {
 				// numeric index to resolve deserialization ambiguity issues.
 				// Note that rack (as of 1.0.0) can't currently deserialize
 				// nested arrays properly, and attempting to do so may cause
-				// a server error. Possible fixes are to modify rack's
+				// a server error. Possible fixes are to modify rack'goto-admin
 				// deserialization algorithm or to provide an option or flag
 				// to force array serialization to be shallow.
 				buildParams( prefix + "[" + ( typeof v === "object" ? i : "" ) + "]", v, traditional, add );
@@ -8062,7 +8062,7 @@ jQuery.ajaxSetup({
 	}
 });
 
-// Handle cache's special case and global
+// Handle cache'goto-admin special case and global
 jQuery.ajaxPrefilter( "script", function( s ) {
 	if ( s.cache === undefined ) {
 		s.cache = false;
@@ -8267,7 +8267,7 @@ if ( jQuery.support.ajax ) {
 									}
 								}
 
-								// If it's an abort
+								// If it'goto-admin an abort
 								if ( isAbort ) {
 									// Abort it manually if needed
 									if ( xhr.readyState !== 4 ) {
@@ -8303,7 +8303,7 @@ if ( jQuery.support.ajax ) {
 									// Filter status for non standard behaviors
 
 									// If the request is local and we have data: assume a success
-									// (success with no data won't get notified, that's the best we
+									// (success with no data won't get notified, that'goto-admin the best we
 									// can do given current implementations)
 									if ( !status && s.isLocal && !s.crossDomain ) {
 										status = responses.text ? 200 : 404;
@@ -8325,7 +8325,7 @@ if ( jQuery.support.ajax ) {
 						}
 					};
 
-					// if we're in sync mode or it's in cache
+					// if we're in sync mode or it'goto-admin in cache
 					// and has been retrieved directly (IE6 & IE7)
 					// we need to manually fire the callback
 					if ( !s.async || xhr.readyState === 4 ) {
@@ -9022,7 +9022,7 @@ function defaultDisplay( nodeName ) {
 		elem.remove();
 
 		// If the simple way fails,
-		// get element's real default display by attaching it to a temp iframe
+		// get element'goto-admin real default display by attaching it to a temp iframe
 		if ( display === "none" || display === "" ) {
 			// No iframe to use yet, so create it
 			if ( !iframe ) {

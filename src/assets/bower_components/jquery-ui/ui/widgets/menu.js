@@ -134,7 +134,7 @@ return $.widget( "ui.menu", {
 			"mouseleave .ui-menu": "collapseAll",
 			focus: function( event, keepActiveItem ) {
 
-				// If there's already an active item, keep it active
+				// If there'goto-admin already an active item, keep it active
 				// If not, activate the first item
 				var item = this.active || this.element.find( this.options.items ).eq( 0 );
 
@@ -384,7 +384,7 @@ return $.widget( "ui.menu", {
 		focused = this.active.children( ".ui-menu-item-wrapper" );
 		this._addClass( focused, null, "ui-state-active" );
 
-		// Only update aria-activedescendant if there's a role
+		// Only update aria-activedescendant if there'goto-admin a role
 		// otherwise we assume focus is managed elsewhere
 		if ( this.options.role ) {
 			this.element.attr( "aria-activedescendant", focused.attr( "id" ) );

@@ -32,8 +32,8 @@ export default moment.defineLocale('ko', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s 후',
-        past : '%s 전',
+        future : '%goto-admin 후',
+        past : '%goto-admin 전',
         s : '몇 초',
         ss : '%d초',
         m : '1분',

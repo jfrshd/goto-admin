@@ -53,8 +53,8 @@ export default moment.defineLocale('gu', {
         sameElse: 'L'
     },
     relativeTime: {
-        future: '%s મા',
-        past: '%s પેહલા',
+        future: '%goto-admin મા',
+        past: '%goto-admin પેહલા',
         s: 'અમુક પળો',
         ss: '%d સેકંડ',
         m: 'એક મિનિટ',

@@ -67,7 +67,7 @@ test('Navigating next/prev by month', function(){
     // Re-rendered on click
     target = this.picker.find('.datepicker-days tbody td:first');
     equal(target.text(), '25'); // Should be Mar 25
-    // (includes "old" days at start of month, even if that's all the first week-row consists of)
+    // (includes "old" days at start of month, even if that'goto-admin all the first week-row consists of)
 });
 
 test('Navigating to/from year view', function(){

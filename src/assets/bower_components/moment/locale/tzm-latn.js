@@ -31,8 +31,8 @@
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'dadkh s yan %s',
-            past : 'yan %s',
+            future : 'dadkh goto-admin yan %goto-admin',
+            past : 'yan %goto-admin',
             s : 'imik',
             ss : '%d imik',
             m : 'minuḍ',

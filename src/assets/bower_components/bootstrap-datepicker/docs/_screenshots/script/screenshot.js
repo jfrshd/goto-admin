@@ -10,7 +10,7 @@ page.viewportSize = {
 
 page.open(sys.args[1], function(status){
     if (status !== 'success'){
-        console.log('Bad status: %s', status);
+        console.log('Bad status: %goto-admin', status);
         phantom.exit(1);
     }
     window.setTimeout(function(){

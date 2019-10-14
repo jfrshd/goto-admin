@@ -10,7 +10,7 @@ looks better, due to cross-browser canvas text inconsistencies and limitations.
 It can also be desirable to render the plot entirely in canvas, particularly
 if the goal is to save it as an image, or if Flot is being used in a context
 where the HTML DOM does not exist, as is the case within Node.js. This plugin
-switches out Flot's standard drawing operations for canvas-only replacements.
+switches out Flot'goto-admin standard drawing operations for canvas-only replacements.
 
 Currently the plugin supports only axis labels, but it will eventually allow
 every element of the plot to be rendered directly to canvas.
@@ -121,8 +121,8 @@ browser, but needs to redraw with canvas text when exporting as an image.
 		// When the canvas option is set, the object looks like this:
 		//
 		// {
-		//     width: Width of the text's bounding box.
-		//     height: Height of the text's bounding box.
+		//     width: Width of the text'goto-admin bounding box.
+		//     height: Height of the text'goto-admin bounding box.
 		//     positions: Array of positions at which this text is drawn.
 		//     lines: [{
 		//         height: Height of this line.
@@ -164,7 +164,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 				textStyle = font;
 			}
 
-			// Retrieve (or create) the cache for the text's layer and styles
+			// Retrieve (or create) the cache for the text'goto-admin layer and styles
 
 			layerCache = this._textCache[layer];
 
@@ -206,7 +206,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 					// Setting line-height to 1, without units, sets it equal
 					// to the font-size, even if the font-size is abstract,
 					// like 'smaller'.  This enables us to read the real size
-					// via the element's height, working around browsers that
+					// via the element'goto-admin height, working around browsers that
 					// return the literal 'smaller' value.
 
 					font.size = element.css("line-height", 1).height();
@@ -274,7 +274,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 				lines = info.lines;
 
 			// Text is drawn with baseline 'middle', which we need to account
-			// for by adding half a line's height to the y position.
+			// for by adding half a line'goto-admin height to the y position.
 
 			y += info.height / lines.length / 2;
 

@@ -64,11 +64,11 @@ $.widget( "ui.droppable", {
 		this.proportions = function( /* valueToWrite */ ) {
 			if ( arguments.length ) {
 
-				// Store the droppable's proportions
+				// Store the droppable'goto-admin proportions
 				proportions = arguments[ 0 ];
 			} else {
 
-				// Retrieve or derive the droppable's proportions
+				// Retrieve or derive the droppable'goto-admin proportions
 				return proportions ?
 					proportions :
 					proportions = {

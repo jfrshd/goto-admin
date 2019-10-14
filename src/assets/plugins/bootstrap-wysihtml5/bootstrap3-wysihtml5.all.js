@@ -101,13 +101,13 @@ var wysihtml5 = {
 
     var textRangeProperties = ["boundingHeight", "boundingLeft", "boundingTop", "boundingWidth", "htmlText", "text"];
 
-    // Subset of TextRange's full set of methods that we're interested in
+    // Subset of TextRange'goto-admin full set of methods that we're interested in
     var textRangeMethods = ["collapse", "compareEndPoints", "duplicate", "moveToElementText", "parentElement", "select",
         "setEndPoint", "getBoundingClientRect"];
 
     /*----------------------------------------------------------------------------------------------------------------*/
 
-    // Trio of functions taken from Peter Michaux's article:
+    // Trio of functions taken from Peter Michaux'goto-admin article:
     // http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting
     function isHostMethod(o, p) {
         var t = typeof o[p];
@@ -340,7 +340,7 @@ var wysihtml5 = {
         }
     }
 
-    // Allow external scripts to initialize this library in case it's loaded after the document has loaded
+    // Allow external scripts to initialize this library in case it'goto-admin loaded after the document has loaded
     api.init = init;
 
     // Execute listener immediately if already initialized
@@ -524,7 +524,7 @@ var wysihtml5 = {
             module.fail("Incomplete Element implementation");
         }
 
-        // innerHTML is required for Range's createContextualFragment method
+        // innerHTML is required for Range'goto-admin createContextualFragment method
         if (!util.isHostProperty(el, "innerHTML")) {
             module.fail("Element is missing innerHTML property");
         }
@@ -669,7 +669,7 @@ var wysihtml5 = {
                         position.node = newNode;
                         position.offset -= index;
                     }
-                    // Handle the case where the position is a node offset within node's parent
+                    // Handle the case where the position is a node offset within node'goto-admin parent
                     else if (position.node == node.parentNode && position.offset > getNodeIndex(node)) {
                         ++position.offset;
                     }
@@ -802,7 +802,7 @@ var wysihtml5 = {
 
         /*----------------------------------------------------------------------------------------------------------------*/
 
-        // Test for IE's crash (IE 6/7) or exception (IE >= 8) when a reference to garbage-collected text node is queried
+        // Test for IE'goto-admin crash (IE 6/7) or exception (IE >= 8) when a reference to garbage-collected text node is queried
         var crashyTextNodes = false;
 
         function isBrokenNode(node) {
@@ -1374,7 +1374,7 @@ var wysihtml5 = {
 
         /*----------------------------------------------------------------------------------------------------------------*/
 
-        // Test the browser's innerHTML support to decide how to implement createContextualFragment
+        // Test the browser'goto-admin innerHTML support to decide how to implement createContextualFragment
         var styleEl = document.createElement("style");
         var htmlParsingConforms = false;
         try {
@@ -1388,22 +1388,22 @@ var wysihtml5 = {
 
         var createContextualFragment = htmlParsingConforms ?
 
-            // Implementation as per HTML parsing spec, trusting in the browser's implementation of innerHTML. See
+            // Implementation as per HTML parsing spec, trusting in the browser'goto-admin implementation of innerHTML. See
             // discussion and base code for this implementation at issue 67.
             // Spec: http://html5.org/specs/dom-parsing.html#extensions-to-the-range-interface
             // Thanks to Aleks Williams.
             function(fragmentStr) {
-                // "Let node the context object's start's node."
+                // "Let node the context object'goto-admin start'goto-admin node."
                 var node = this.startContainer;
                 var doc = getDocument(node);
 
-                // "If the context object's start's node is null, raise an INVALID_STATE_ERR
+                // "If the context object'goto-admin start'goto-admin node is null, raise an INVALID_STATE_ERR
                 // exception and abort these steps."
                 if (!node) {
                     throw new DOMException("INVALID_STATE_ERR");
                 }
 
-                // "Let element be as follows, depending on node's interface:"
+                // "Let element be as follows, depending on node'goto-admin interface:"
                 // Document, Document Fragment: null
                 var el = null;
 
@@ -1411,13 +1411,13 @@ var wysihtml5 = {
                 if (node.nodeType == 1) {
                     el = node;
 
-                // "Text, Comment: node's parentElement"
+                // "Text, Comment: node'goto-admin parentElement"
                 } else if (isCharacterDataNode(node)) {
                     el = dom.parentElement(node);
                 }
 
-                // "If either element is null or element's ownerDocument is an HTML document
-                // and element's local name is "html" and element's namespace is the HTML
+                // "If either element is null or element'goto-admin ownerDocument is an HTML document
+                // and element'goto-admin local name is "html" and element'goto-admin namespace is the HTML
                 // namespace"
                 if (el === null || (
                     el.nodeName == "HTML" &&
@@ -1432,8 +1432,8 @@ var wysihtml5 = {
                     el = el.cloneNode(false);
                 }
 
-                // "If the node's document is an HTML document: Invoke the HTML fragment parsing algorithm."
-                // "If the node's document is an XML document: Invoke the XML fragment parsing algorithm."
+                // "If the node'goto-admin document is an HTML document: Invoke the HTML fragment parsing algorithm."
+                // "If the node'goto-admin document is an XML document: Invoke the XML fragment parsing algorithm."
                 // "In either case, the algorithm must be invoked with fragment as the input
                 // and element as the context element."
                 el.innerHTML = fragmentStr;
@@ -1520,7 +1520,7 @@ var wysihtml5 = {
                 }
 
                 // No check for whether the container of the start of the Range is of a type that does not allow
-                // children of the type of node: the browser's DOM implementation should do this for us when we attempt
+                // children of the type of node: the browser'goto-admin DOM implementation should do this for us when we attempt
                 // to add the node
 
                 var firstNodeInserted = insertNodeAtPosition(node, this.startContainer, this.startOffset);
@@ -1958,7 +1958,7 @@ var wysihtml5 = {
                 },
 
                 /**
-                 * Convenience method to set a range's start and end boundaries. Overloaded as follows:
+                 * Convenience method to set a range'goto-admin start and end boundaries. Overloaded as follows:
                  * - Two parameters (node, offset) creates a collapsed range at that position
                  * - Three parameters (node, startOffset, endOffset) creates a range contained with node starting at
                  *   startOffset and ending at endOffset
@@ -2176,7 +2176,7 @@ var wysihtml5 = {
 
     /*----------------------------------------------------------------------------------------------------------------*/
 
-    // Wrappers for the browser's native DOM Range and/or TextRange implementation 
+    // Wrappers for the browser'goto-admin native DOM Range and/or TextRange implementation 
     api.createCoreModule("WrappedRange", ["DomRange"], function(api, module) {
         var WrappedRange, WrappedTextRange;
         var dom = api.dom;
@@ -2191,9 +2191,9 @@ var wysihtml5 = {
         /*----------------------------------------------------------------------------------------------------------------*/
 
         if (api.features.implementsDomRange) {
-            // This is a wrapper around the browser's native DOM Range. It has two aims:
+            // This is a wrapper around the browser'goto-admin native DOM Range. It has two aims:
             // - Provide workarounds for specific browser bugs
-            // - provide convenient extensions, which are inherited from Rangy's DomRange
+            // - provide convenient extensions, which are inherited from Rangy'goto-admin DomRange
 
             (function() {
                 var rangeProto;
@@ -2345,7 +2345,7 @@ var wysihtml5 = {
 
                 /*--------------------------------------------------------------------------------------------------------*/
 
-                // Always use DOM4-compliant selectNodeContents implementation: it's simpler and less code than testing
+                // Always use DOM4-compliant selectNodeContents implementation: it'goto-admin simpler and less code than testing
                 // whether the native implementation can be trusted
                 rangeProto.selectNodeContents = function(node) {
                     this.setStartAndEnd(node, 0, dom.getNodeLength(node));
@@ -2398,7 +2398,7 @@ var wysihtml5 = {
                 range.deleteContents();
 
                 if (textNode.data == "13") {
-                    // Behaviour is correct per DOM4 Range so wrap the browser's implementation of deleteContents() and
+                    // Behaviour is correct per DOM4 Range so wrap the browser'goto-admin implementation of deleteContents() and
                     // extractContents()
                     rangeProto.deleteContents = function() {
                         this.nativeRange.deleteContents();
@@ -2445,7 +2445,7 @@ var wysihtml5 = {
         
         if (api.features.implementsTextRange) {
             /*
-            This is a workaround for a bug where IE returns the wrong container element from the TextRange's parentElement()
+            This is a workaround for a bug where IE returns the wrong container element from the TextRange'goto-admin parentElement()
             method. For example, in the following (where pipes denote the selection boundaries):
 
             <ul id="ul"><li id="a">| a </li><li id="b"> b |</li></ul>
@@ -2476,7 +2476,7 @@ var wysihtml5 = {
             };
 
             // Gets the boundary of a TextRange expressed as a node and an offset within that node. This function started
-            // out as an improved version of code found in Tim Cameron Ryan's IERange (http://code.google.com/p/ierange/)
+            // out as an improved version of code found in Tim Cameron Ryan'goto-admin IERange (http://code.google.com/p/ierange/)
             // but has grown, fixing problems with line breaks in preformatted text, adding workaround for IE TextRange
             // bugs, handling for inputs and images, plus optimizations.
             var getTextRangeBoundaryPosition = function(textRange, wholeRangeContainerElement, isStart, isCollapsed, startInfo) {
@@ -2484,7 +2484,7 @@ var wysihtml5 = {
                 workingRange.collapse(isStart);
                 var containerElement = workingRange.parentElement();
 
-                // Sometimes collapsing a TextRange that's at the start of a text node can move it into the previous node, so
+                // Sometimes collapsing a TextRange that'goto-admin at the start of a text node can move it into the previous node, so
                 // check for that
                 if (!dom.isOrIsAncestorOf(wholeRangeContainerElement, containerElement)) {
                     containerElement = wholeRangeContainerElement;
@@ -2506,7 +2506,7 @@ var wysihtml5 = {
 
                 var workingNode = dom.getDocument(containerElement).createElement("span");
 
-                // Workaround for HTML5 Shiv's insane violation of document.createElement(). See Rangy issue 104 and HTML5
+                // Workaround for HTML5 Shiv'goto-admin insane violation of document.createElement(). See Rangy issue 104 and HTML5
                 // Shiv issue 64: https://github.com/aFarkas/html5shiv/issues/64
                 if (workingNode.parentNode) {
                     workingNode.parentNode.removeChild(workingNode);
@@ -2553,8 +2553,8 @@ var wysihtml5 = {
 
                 if (comparison == -1 && boundaryNode && isCharacterDataNode(boundaryNode)) {
                     // This is a character data node (text, comment, cdata). The working range is collapsed at the start of
-                    // the node containing the text range's boundary, so we move the end of the working range to the
-                    // boundary point and measure the length of its text to get the boundary's offset within the node.
+                    // the node containing the text range'goto-admin boundary, so we move the end of the working range to the
+                    // boundary point and measure the length of its text to get the boundary'goto-admin offset within the node.
                     workingRange.setEndPoint(isStart ? "EndToStart" : "EndToEnd", textRange);
 
                     var offset;
@@ -2562,14 +2562,14 @@ var wysihtml5 = {
                     if (/[\r\n]/.test(boundaryNode.data)) {
                         /*
                         For the particular case of a boundary within a text node containing rendered line breaks (within a
-                        <pre> element, for example), we need a slightly complicated approach to get the boundary's offset in
+                        <pre> element, for example), we need a slightly complicated approach to get the boundary'goto-admin offset in
                         IE. The facts:
                         
-                        - Each line break is represented as \r in the text node's data/nodeValue properties
-                        - Each line break is represented as \r\n in the TextRange's 'text' property
+                        - Each line break is represented as \r in the text node'goto-admin data/nodeValue properties
+                        - Each line break is represented as \r\n in the TextRange'goto-admin 'text' property
                         - The 'text' property of the TextRange does not contain trailing line breaks
                         
-                        To get round the problem presented by the final fact above, we can use the fact that TextRange's
+                        To get round the problem presented by the final fact above, we can use the fact that TextRange'goto-admin
                         moveStart() and moveEnd() methods return the actual number of characters moved, which is not
                         necessarily the same as the number of characters it was instructed to move. The simplest approach is
                         to use this to store the characters moved when moving both the start and end of the range to the
@@ -2585,7 +2585,7 @@ var wysihtml5 = {
                         by the location of the range within the document).
                         
                         The approach used below is a hybrid of the two methods above. It uses the fact that a string
-                        containing the TextRange's 'text' property with each \r\n converted to a single \r character cannot
+                        containing the TextRange'goto-admin 'text' property with each \r\n converted to a single \r character cannot
                         be longer than the text of the TextRange, so the start of the range is moved that length initially
                         and then a character at a time to make up for any trailing line breaks not contained in the 'text'
                         property. This has good performance in most situations compared to the previous two methods.
@@ -2630,7 +2630,7 @@ var wysihtml5 = {
             };
 
             // Returns a TextRange representing the boundary of a TextRange expressed as a node and an offset within that
-            // node. This function started out as an optimized version of code found in Tim Cameron Ryan's IERange
+            // node. This function started out as an optimized version of code found in Tim Cameron Ryan'goto-admin IERange
             // (http://code.google.com/p/ierange/)
             var createBoundaryTextRange = function(boundaryPosition, isStart) {
                 var boundaryNode, boundaryParent, boundaryOffset = boundaryPosition.offset;
@@ -2678,7 +2678,7 @@ var wysihtml5 = {
 
             /*------------------------------------------------------------------------------------------------------------*/
 
-            // This is a wrapper around a TextRange, providing full DOM Range functionality using rangy's DomRange as a
+            // This is a wrapper around a TextRange, providing full DOM Range functionality using rangy'goto-admin DomRange as a
             // prototype
 
             WrappedTextRange = function(textRange) {
@@ -2691,7 +2691,7 @@ var wysihtml5 = {
             WrappedTextRange.prototype.refresh = function() {
                 var start, end, startBoundary;
 
-                // TextRange's parentElement() method cannot be trusted. getTextRangeContainerElement() works around that.
+                // TextRange'goto-admin parentElement() method cannot be trusted. getTextRangeContainerElement() works around that.
                 var rangeContainerElement = getTextRangeContainerElement(this.textRange);
 
                 if (textRangeIsCollapsed(this.textRange)) {
@@ -2912,7 +2912,7 @@ var wysihtml5 = {
 
             (function() {
                 // Previously an iframe was used but this caused problems in some circumstances in IE, so tests are
-                // performed on the current document's selection. See issue 109.
+                // performed on the current document'goto-admin selection. See issue 109.
 
                 // Note also that if a selection previously existed, it is wiped by these tests. This should usually be fine
                 // because initialization usually happens when the document loads, but could be a problem for a script that
@@ -2947,7 +2947,7 @@ var wysihtml5 = {
                     // Test whether the native selection is capable of supporting multiple ranges.
                     if (!selectionHasMultipleRanges) {
                         // Doing the original feature test here in Chrome 36 (and presumably later versions) prints a
-                        // console error of "Discontiguous selection is not supported." that cannot be suppressed. There's
+                        // console error of "Discontiguous selection is not supported." that cannot be suppressed. There'goto-admin
                         // nothing we can do about this while retaining the feature test so we have to resort to a browser
                         // sniff. I'm not happy about it. See
                         // https://code.google.com/p/chromium/issues/detail?id=399791
@@ -3084,7 +3084,7 @@ var wysihtml5 = {
         }
 
         function updateControlSelection(sel) {
-            // Update the wrapped selection based on what's now in the native selection
+            // Update the wrapped selection based on what'goto-admin now in the native selection
             sel._ranges.length = 0;
             if (sel.docSelection.type == "None") {
                 updateEmptySelection(sel);
@@ -3127,7 +3127,7 @@ var wysihtml5 = {
             }
             newControlRange.select();
 
-            // Update the wrapped selection based on what's now in the native selection
+            // Update the wrapped selection based on what'goto-admin now in the native selection
             updateControlSelection(sel);
         }
 
@@ -3245,7 +3245,7 @@ var wysihtml5 = {
             }
             controlRange.select();
 
-            // Update the wrapped selection based on what's now in the native selection
+            // Update the wrapped selection based on what'goto-admin now in the native selection
             updateControlSelection(sel);
         }
 
@@ -3444,7 +3444,7 @@ var wysihtml5 = {
                 }
             };
         } else {
-            module.fail("No means of obtaining a Range or TextRange from the user's selection was found");
+            module.fail("No means of obtaining a Range or TextRange from the user'goto-admin selection was found");
             return false;
         }
 
@@ -3511,7 +3511,7 @@ var wysihtml5 = {
                     }
                     newControlRange.select();
 
-                    // Update the wrapped selection based on what's now in the native selection
+                    // Update the wrapped selection based on what'goto-admin now in the native selection
                     updateControlSelection(this);
                 } else {
                     removeRangeManually(this, range);
@@ -3541,7 +3541,7 @@ var wysihtml5 = {
         selProto.isBackwards = selProto.isBackward;
 
         // Selection stringifier
-        // This is conformant to the old HTML5 selections draft spec but differs from WebKit and Mozilla's implementation.
+        // This is conformant to the old HTML5 selections draft spec but differs from WebKit and Mozilla'goto-admin implementation.
         // The current spec does not yet define this method.
         selProto.toString = function() {
             var rangeTexts = [];
@@ -3557,7 +3557,7 @@ var wysihtml5 = {
             }
         }
 
-        // No current browser conforms fully to the spec for this method, so Rangy's own method is always used
+        // No current browser conforms fully to the spec for this method, so Rangy'goto-admin own method is always used
         selProto.collapse = function(node, offset) {
             assertNodeInSameDocument(this, node);
             var range = api.createRange(node);
@@ -3594,7 +3594,7 @@ var wysihtml5 = {
         };
 
         selProto.deleteFromDocument = function() {
-            // Sepcial behaviour required for IE's control selections
+            // Sepcial behaviour required for IE'goto-admin control selections
             if (implementsControlRange && implementsDocSelection && this.docSelection.type == CONTROL) {
                 var controlRange = this.docSelection.createRange();
                 var element;
@@ -3938,7 +3938,7 @@ var wysihtml5 = {
                 rangeInfos[i] = saveRange(ranges[i], backward);
             }
 
-            // Now that all the markers are in place and DOM manipulation over, adjust each range's boundaries to lie
+            // Now that all the markers are in place and DOM manipulation over, adjust each range'goto-admin boundaries to lie
             // between its markers
             for (i = len - 1; i >= 0; --i) {
                 range = ranges[i];
@@ -4060,7 +4060,7 @@ Base.extend = function(_instance, _static) { // subclass
 	var proto = new this;
 	extend.call(proto, _instance);
   proto.base = function() {
-    // call this method from any other method to invoke that method's ancestor
+    // call this method from any other method to invoke that method'goto-admin ancestor
   };
 	delete Base._prototyping;
 	
@@ -4138,7 +4138,7 @@ Base.prototype = {
 
 				}
 			}
-			// copy each of the source object's properties to this object
+			// copy each of the source object'goto-admin properties to this object
 			for (var key in source) {
 				if (!proto[key]) extend.call(this, key, source[key]);
 			}
@@ -4167,7 +4167,7 @@ Base = Base.extend({
 	implement: function() {
 		for (var i = 0; i < arguments.length; i++) {
 			if (typeof arguments[i] == "function") {
-				// if it's a function, call it
+				// if it'goto-admin a function, call it
 				arguments[i](this.prototype);
 			} else {
 				// add the interface using the extend method
@@ -4351,7 +4351,7 @@ wysihtml5.browser = (function() {
 
     /**
      * Checks whether a document supports a certain queryCommand
-     * In particular, Opera needs a reference to a document that has a contentEditable in it's dom tree
+     * In particular, Opera needs a reference to a document that has a contentEditable in it'goto-admin dom tree
      * in oder to report correct results
      *
      * @param {Object} doc Document object on which to check for a query command
@@ -4412,7 +4412,7 @@ wysihtml5.browser = (function() {
 
     /**
      * As stated above, IE auto links urls typed into contentEditable elements
-     * Since IE9 it's possible to prevent this behavior
+     * Since IE9 it'goto-admin possible to prevent this behavior
      */
     canDisableAutoLinking: function() {
       return this.supportsCommand(document, "AutoUrlDetect");
@@ -4521,7 +4521,7 @@ wysihtml5.browser = (function() {
     },
 
     /**
-     * In IE it's impssible for the user and for the selection library to set the caret after an <img> when it's the lastChild in the document
+     * In IE it'goto-admin impssible for the user and for the selection library to set the caret after an <img> when it'goto-admin the lastChild in the document
      */
     hasProblemsSettingCaretAfterImg: function() {
       return isIE();
@@ -4901,13 +4901,13 @@ wysihtml5.browser = (function() {
       IGNORE_URLS_IN        = wysihtml5.lang.array(["CODE", "PRE", "A", "SCRIPT", "HEAD", "TITLE", "STYLE"]),
       /**
        * revision 1:
-       *    /(\S+\.{1}[^\s\,\.\!]+)/g
+       *    /(\S+\.{1}[^\goto-admin\,\.\!]+)/g
        *
        * revision 2:
        *    /(\b(((https?|ftp):\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;\[\]]*[-A-Z0-9+&@#\/%=~_|])/gim
        *
        * put this in the beginning if you don't wan't to match within a word
-       *    (^|[\>\(\{\[\s\>])
+       *    (^|[\>\(\{\[\goto-admin\>])
        */
       URL_REG_EXP           = /((https?:\/\/|www\.)[^\s<]{3,})/gi,
       TRAILING_CHAR_REG_EXP = /([^\w\/\-](,?))$/i,
@@ -5053,7 +5053,7 @@ wysihtml5.browser = (function() {
       return classList.remove(className);
     }
 
-    element.className = element.className.replace(new RegExp("(^|\\s+)" + className + "(\\s+|$)"), " ");
+    element.className = element.className.replace(new RegExp("(^|\\goto-admin+)" + className + "(\\goto-admin+|$)"), " ");
   };
 
   api.hasClass = function(element, className) {
@@ -5063,7 +5063,7 @@ wysihtml5.browser = (function() {
     }
 
     var elementClassName = element.className;
-    return (elementClassName.length > 0 && (elementClassName == className || new RegExp("(^|\\s)" + className + "(\\s|$)").test(elementClassName)));
+    return (elementClassName.length > 0 && (elementClassName == className || new RegExp("(^|\\goto-admin)" + className + "(\\goto-admin|$)").test(elementClassName)));
   };
 })(wysihtml5);
 ;wysihtml5.dom.contains = (function() {
@@ -5378,7 +5378,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
 })(wysihtml5);;/**
  * Returns the given html wrapped in a div element
  *
- * Fixing IE's inability to treat unknown elements (HTML5 section, article, ...) correctly
+ * Fixing IE'goto-admin inability to treat unknown elements (HTML5 section, article, ...) correctly
  * when inserted via innerHTML
  *
  * @param {String} html The html which should be wrapped in a dom element
@@ -5446,7 +5446,7 @@ wysihtml5.dom.getAsDom = (function() {
  * @param {Element} node The from which to check the parent nodes
  * @param {Object} matchingSet Object to match against (possible properties: nodeName, className, classRegExp)
  * @param {Number} [levels] How many parents should the function check up from the current node (defaults to 50)
- * @return {null|Element} Returns the first element that matched the desiredNodeName(s)
+ * @return {null|Element} Returns the first element that matched the desiredNodeName(goto-admin)
  * @example
  *    var listElement = wysihtml5.dom.getParentElement(document.querySelector("li"), { nodeName: ["MENU", "UL", "OL"] });
  *    // ... or ...
@@ -5507,7 +5507,7 @@ wysihtml5.dom.getParentElement = (function() {
   };
 })();
 ;/**
- * Get element's style for a specific css property
+ * Get element'goto-admin style for a specific css property
  *
  * @param {Element} element The element on which to retrieve the style
  * @param {String} property The CSS property to retrieve ("float", "display", "text-align", ...)
@@ -5546,9 +5546,9 @@ wysihtml5.dom.getStyle = (function() {
 
         // currentStyle is no standard and only supported by Opera and IE but it has one important advantage over the standard-compliant
         // window.getComputedStyle, since it returns css property values in their original unit:
-        // If you set an elements width to "50%", window.getComputedStyle will give you it's current width in px while currentStyle
+        // If you set an elements width to "50%", window.getComputedStyle will give you it'goto-admin current width in px while currentStyle
         // gives you the original "50%".
-        // Opera supports both, currentStyle and window.getComputedStyle, that's why checking for currentStyle should have higher prio
+        // Opera supports both, currentStyle and window.getComputedStyle, that'goto-admin why checking for currentStyle should have higher prio
         if (currentStyle) {
           try {
             return currentStyle[camelizedProperty];
@@ -5812,7 +5812,7 @@ wysihtml5.dom.observe = function(element, eventNames, handler) {
  * Rewrites the HTML based on given rules
  *
  * @param {Element|String} elementOrHtml HTML String to be sanitized OR element whose content should be sanitized
- * @param {Object} [rules] List of rules for rewriting the HTML, if there's no rule for an element it will
+ * @param {Object} [rules] List of rules for rewriting the HTML, if there'goto-admin no rule for an element it will
  *    be converted to a "span". Each rule is a key/value pair where key is the tag to convert, and value the
  *    desired substitution.
  * @param {Object} context Document object in which to parse the html, needed to sandbox the parsing
@@ -5864,11 +5864,11 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
    * Refactor whole code as this method while workind is kind of awkward too */
 
   /**
-   * It's not possible to use a XMLParser/DOMParser as HTML5 is not always well-formed XML
+   * It'goto-admin not possible to use a XMLParser/DOMParser as HTML5 is not always well-formed XML
    * new DOMParser().parseFromString('<img src="foo.gif">') will cause a parseError since the
    * node isn't closed
    *
-   * Therefore we've to use the browser's ordinary HTML parser invoked by setting innerHTML.
+   * Therefore we've to use the browser'goto-admin ordinary HTML parser invoked by setting innerHTML.
    */
   var NODE_TYPE_MAPPING = {
         "1": _handleElement,
@@ -6079,7 +6079,7 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
 
     /**
      * IE is the only browser who doesn't include the namespace in the
-     * nodeName, that's why we have to prepend it by ourselves
+     * nodeName, that'goto-admin why we have to prepend it by ourselves
      * scopeName is a proprietary IE feature
      * read more here http://msdn.microsoft.com/en-us/library/ms534388(v=vs.85).aspx
      */
@@ -6430,7 +6430,7 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
     // set attributes on newNode
     for (attributeName in attributes) {
       // Setting attributes can cause a js error in IE under certain circumstances
-      // eg. on a <img> under https when it's new attribute value is non-https
+      // eg. on a <img> under https when it'goto-admin new attribute value is non-https
       // TODO: Investigate this further and check for smarter handling
       try {
         newNode.setAttribute(attributeName, attributes[attributeName]);
@@ -6700,15 +6700,15 @@ wysihtml5.dom.renameElement = function(element, newNodeName) {
   return newElement;
 };
 ;/**
- * Takes an element, removes it and replaces it with it's childs
+ * Takes an element, removes it and replaces it with it'goto-admin childs
  *
- * @param {Object} node The node which to replace with it's child nodes
+ * @param {Object} node The node which to replace with it'goto-admin child nodes
  * @example
  *    <div id="foo">
  *      <span>hello</span>
  *    </div>
  *    <script>
- *      // Remove #foo and replace with it's children
+ *      // Remove #foo and replace with it'goto-admin children
  *      wysihtml5.dom.replaceWithChildNodes(document.getElementById("foo"));
  *    </script>
  */
@@ -6916,12 +6916,12 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
      *
      * Some important notes:
      *  - We can't use HTML5 sandbox for now:
-     *    setting it causes that the iframe's dom can't be accessed from the outside
-     *    Therefore we need to set the "allow-same-origin" flag which enables accessing the iframe's dom
-     *    But then there's another problem, DOM events (focus, blur, change, keypress, ...) aren't fired.
+     *    setting it causes that the iframe'goto-admin dom can't be accessed from the outside
+     *    Therefore we need to set the "allow-same-origin" flag which enables accessing the iframe'goto-admin dom
+     *    But then there'goto-admin another problem, DOM events (focus, blur, change, keypress, ...) aren't fired.
      *    In order to make this happen we need to set the "allow-scripts" flag.
      *    A combination of allow-scripts and allow-same-origin is almost the same as setting no sandbox attribute at all.
-     *  - Chrome & Safari, doesn't seem to support sandboxing correctly when the iframe's html is inlined (no physical document)
+     *  - Chrome & Safari, doesn't seem to support sandboxing correctly when the iframe'goto-admin html is inlined (no physical document)
      *  - IE needs to have the security="restricted" attribute set before the iframe is
      *    inserted into the dom tree
      *  - Believe it or not but in IE "security" in document.createElement("iframe") is false, even
@@ -6990,7 +6990,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
       this.getWindow = function() { return iframe.contentWindow; };
       this.getDocument = function() { return iframe.contentWindow.document; };
 
-      // Catch js errors and pass them to the parent's onerror event
+      // Catch js errors and pass them to the parent'goto-admin onerror event
       // addEventListener("error") doesn't work properly in some browsers
       // TODO: apparently this doesn't work in IE9!
       iframeWindow.onerror = function(errorMessage, fileName, lineNumber) {
@@ -7124,7 +7124,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
         this.getWindow = function() { return element.ownerDocument.defaultView; };
         this.getDocument = function() { return element.ownerDocument; };
 
-        // Catch js errors and pass them to the parent's onerror event
+        // Catch js errors and pass them to the parent'goto-admin onerror event
         // addEventListener("error") doesn't work properly in some browsers
         // TODO: apparently this doesn't work in IE9!
         // TODO: figure out and bind the errors logic for contenteditble mode
@@ -7264,7 +7264,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
  *    var td = document.createElement("td");
  *    td.getAttribute("rowspan"); // => "1" in IE
  *
- * Therefore we have to check the element's outerHTML for the attribute
+ * Therefore we have to check the element'goto-admin outerHTML for the attribute
 */
 
 wysihtml5.dom.getAttribute = function(node, attributeName) {
@@ -7278,7 +7278,7 @@ wysihtml5.dom.getAttribute = function(node, attributeName) {
     // will have relative paths, which the sanitizer strips out (see attributeCheckMethods.url)
     return node.src;
   } else if (HAS_GET_ATTRIBUTE_BUG && "outerHTML" in node) {
-    // Don't trust getAttribute/hasAttribute in IE 6-8, instead check the element's outerHTML
+    // Don't trust getAttribute/hasAttribute in IE 6-8, instead check the element'goto-admin outerHTML
     var outerHTML      = node.outerHTML.toLowerCase(),
         // TODO: This might not work for attributes without value: <input disabled>
         hasAttribute   = outerHTML.indexOf(" " + attributeName +  "=") != -1;
@@ -7295,7 +7295,7 @@ wysihtml5.dom.getAttribute = function(node, attributeName) {
  *    var td = document.createElement("td");
  *    td.getAttribute("rowspan"); // => "1" in IE
  *
- * Therefore we have to check the element's outerHTML for the attribute
+ * Therefore we have to check the element'goto-admin outerHTML for the attribute
 */
 
 wysihtml5.dom.getAttributes = function(node) {
@@ -8617,7 +8617,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
       HEX3_REGEX     = /^#([0-9a-f])([0-9a-f])([0-9a-f])/i;
 
   var param_REGX = function (p) {
-    return new RegExp("(^|\\s|;)" + p + "\\s*:\\s*[^;$]+" , "gi");
+    return new RegExp("(^|\\goto-admin|;)" + p + "\\goto-admin*:\\goto-admin*[^;$]+" , "gi");
   };
 
   wysihtml5.quirks.styleParser = {
@@ -9275,7 +9275,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
           hasScrollBars = doc.documentElement.scrollHeight > doc.documentElement.offsetHeight,
           tempElement   = doc._wysihtml5ScrollIntoViewElement = doc._wysihtml5ScrollIntoViewElement || (function() {
             var element = doc.createElement("span");
-            // The element needs content in order to be able to calculate it's position properly
+            // The element needs content in order to be able to calculate it'goto-admin position properly
             element.innerHTML = wysihtml5.INVISIBLE_SPACE;
             return element;
           })(),
@@ -9627,11 +9627,11 @@ wysihtml5.quirks.ensureProperClearing = (function() {
 
     if (elStyle) {
       elStyle = elStyle.replace(/\s/gi, '').toLowerCase();
-      regexes.push(new RegExp("(^|\\s|;)" + style.replace(/\s/gi, '').replace(/([\(\)])/gi, "\\$1").toLowerCase().replace(";", ";?").replace(/rgb\\\((\d+),(\d+),(\d+)\\\)/gi, "\\s?rgb\\($1,\\s?$2,\\s?$3\\)"), "gi"));
+      regexes.push(new RegExp("(^|\\goto-admin|;)" + style.replace(/\s/gi, '').replace(/([\(\)])/gi, "\\$1").toLowerCase().replace(";", ";?").replace(/rgb\\\((\d+),(\d+),(\d+)\\\)/gi, "\\goto-admin?rgb\\($1,\\goto-admin?$2,\\goto-admin?$3\\)"), "gi"));
 
       for (var i = sSplit.length; i-- > 0;) {
         if (!(/^\s*$/).test(sSplit[i])) {
-          regexes.push(new RegExp("(^|\\s|;)" + sSplit[i].replace(/\s/gi, '').replace(/([\(\)])/gi, "\\$1").toLowerCase().replace(";", ";?").replace(/rgb\\\((\d+),(\d+),(\d+)\\\)/gi, "\\s?rgb\\($1,\\s?$2,\\s?$3\\)"), "gi"));
+          regexes.push(new RegExp("(^|\\goto-admin|;)" + sSplit[i].replace(/\s/gi, '').replace(/([\(\)])/gi, "\\$1").toLowerCase().replace(";", ";?").replace(/rgb\\\((\d+),(\d+),(\d+)\\\)/gi, "\\goto-admin?rgb\\($1,\\goto-admin?$2,\\goto-admin?$3\\)"), "gi"));
         }
       }
       for (var j = 0, jmax = regexes.length; j < jmax; j++) {
@@ -9917,7 +9917,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
         var adjacentNode;
         var propName = forward ? "nextSibling" : "previousSibling";
         if (isTextNode) {
-          // Can merge if the node's previous/next sibling is a text node
+          // Can merge if the node'goto-admin previous/next sibling is a text node
           adjacentNode = node[propName];
           if (adjacentNode && adjacentNode.nodeType == wysihtml5.TEXT_NODE) {
             return adjacentNode;
@@ -10669,7 +10669,7 @@ wysihtml5.Commands = Base.extend(
 
   /**
    * Execute native query command
-   * and if necessary modify the inserted node's className
+   * and if necessary modify the inserted node'goto-admin className
    */
   function _execCommand(doc, composer, command, nodeName, className) {
     var ranges = composer.selection.getOwnRanges();
@@ -11109,7 +11109,7 @@ wysihtml5.commands.formatCode = {
         parent = image.parentNode;
         parent.removeChild(image);
 
-        // and it's parent <a> too if it hasn't got any other relevant child nodes
+        // and it'goto-admin parent <a> too if it hasn't got any other relevant child nodes
         wysihtml5.dom.removeEmptyTextNodes(parent);
         if (parent.nodeName === "A" && !parent.firstChild) {
           composer.selection.setAfter(parent);
@@ -12308,7 +12308,7 @@ wysihtml5.views.View = Base.extend(
       // Assuming we have the following:
       //  <a href="http://www.google.de">http://www.google.de</a>
       // If a user now changes the url in the innerHTML we want to make sure that
-      // it's synchronized with the href attribute (as long as the innerHTML is still a url)
+      // it'goto-admin synchronized with the href attribute (as long as the innerHTML is still a url)
       var // Use a live NodeList to check whether there are any links in the document
           links           = this.sandbox.getDocument().getElementsByTagName("a"),
           // The autoLink helper method reveals a reg exp to detect correct urls
@@ -12528,7 +12528,7 @@ wysihtml5.views.View = Base.extend(
         wysihtml5.browser.isGecko ?
           "body.placeholder { color: graytext !important; }" :
           "body.placeholder { color: #a9a9a9 !important; }",
-        // Ensure that user see's broken images and can delete them
+        // Ensure that user see'goto-admin broken images and can delete them
         "img:-moz-broken      { -moz-force-broken-image-icon: 1; height: 24px; width: 24px; }"
       ];
 
@@ -12538,7 +12538,7 @@ wysihtml5.views.View = Base.extend(
    *
    * Other browsers need a more hacky way: (pssst don't tell my mama)
    * In order to prevent the element being scrolled into view when focusing it, we simply
-   * move it out of the scrollable area, focus it, and reset it's position
+   * move it out of the scrollable area, focus it, and reset it'goto-admin position
    */
   var focusWithoutScrolling = function(element) {
     if (element.setActive) {
@@ -12963,7 +12963,7 @@ wysihtml5.views.View = Base.extend(
       }
     });
 
-    // --------- Make sure that when pressing backspace/delete on selected images deletes the image and it's anchor ---------
+    // --------- Make sure that when pressing backspace/delete on selected images deletes the image and it'goto-admin anchor ---------
     dom.observe(element, "keydown", function(event) {
       var target  = that.selection.getSelectedNode(true),
           keyCode = event.keyCode,
@@ -12972,7 +12972,7 @@ wysihtml5.views.View = Base.extend(
         parent = target.parentNode;
         // delete the <img>
         parent.removeChild(target);
-        // and it's parent <a> too if it hasn't got any other child nodes
+        // and it'goto-admin parent <a> too if it hasn't got any other child nodes
         if (parent.nodeName === "A" && !parent.firstChild) {
           parent.parentNode.removeChild(parent);
         }
@@ -13075,7 +13075,7 @@ wysihtml5.views.View = Base.extend(
 
     /**
      * Initializes interval-based syncing
-     * also makes sure that on-submit the composer's content is synced with the textarea
+     * also makes sure that on-submit the composer'goto-admin content is synced with the textarea
      * immediately when the form gets submitted
      */
     _observe: function() {
@@ -13172,7 +13172,7 @@ wysihtml5.views.View = Base.extend(
         },
         /**
          * Calling focus() or blur() on an element doesn't synchronously trigger the attached focus/blur events
-         * This is the case for focusin and focusout, so let's use them whenever possible, kkthxbai
+         * This is the case for focusin and focusout, so let'goto-admin use them whenever possible, kkthxbai
          */
         events = wysihtml5.browser.supportsEvent("focusin") ? ["focusin", "focusout", "change"] : ["focus", "blur", "change"];
 
@@ -13223,7 +13223,7 @@ wysihtml5.views.View = Base.extend(
   var undef;
 
   var defaultConfig = {
-    // Give the editor a name, the name will also be set as class name on the iframe and on the iframe's body
+    // Give the editor a name, the name will also be set as class name on the iframe and on the iframe'goto-admin body
     name:                 undef,
     // Whether the editor should look like the textarea (by adopting styles)
     style:                true,
@@ -13251,7 +13251,7 @@ wysihtml5.views.View = Base.extend(
     bodyClassName:        "wysihtml5-supported",
     // By default wysihtml5 will insert a <br> for line breaks, set this to false to use <p>
     useLineBreaks:        true,
-    // Array (or single string) of stylesheet urls to be loaded in the editor's iframe
+    // Array (or single string) of stylesheet urls to be loaded in the editor'goto-admin iframe
     stylesheets:          [],
     // Placeholder text to use, defaults to the placeholder attribute on the textarea element
     placeholderText:      undef,

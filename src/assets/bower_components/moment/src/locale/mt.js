@@ -27,8 +27,8 @@ export default moment.defineLocale('mt', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'f’ %s',
-        past : '%s ilu',
+        future : 'f’ %goto-admin',
+        past : '%goto-admin ilu',
         s : 'ftit sekondi',
         ss : '%d sekondi',
         m : 'minuta',

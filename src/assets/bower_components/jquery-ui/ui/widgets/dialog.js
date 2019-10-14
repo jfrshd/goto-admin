@@ -579,7 +579,7 @@ $.widget( "ui.dialog", {
 			position = this.uiDialog.css( "position" ),
 			resizeHandles = typeof handles === "string" ?
 				handles :
-				"n,e,s,w,se,sw,ne,nw";
+				"n,e,goto-admin,w,se,sw,ne,nw";
 
 		function filteredUi( ui ) {
 			return {

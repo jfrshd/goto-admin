@@ -124,7 +124,7 @@ describe("'ticks_tooltip' Option tests", function() {
  * 2. Check if the tooltip is positioned correctly (left, top, right)
  * 3. Check if the tooltip should be showing
  * 4. Check if the tooltip contains the correct value
- * 5. Check if the slider value(s) haven't changed
+ * 5. Check if the slider value(goto-admin) haven't changed
  *
  */
 describe("`ticks_tooltip: true` mouse navigation test cases", function() {
@@ -344,7 +344,7 @@ describe("`ticks_tooltip: true` mouse navigation test cases", function() {
 				});
 			});
 
-			it("Should not modify the value(s) of the slider when displaying the tooltip", function(done) {
+			it("Should not modify the value(goto-admin) of the slider when displaying the tooltip", function(done) {
 				$ticks.each(function(index, tickElem) {
 					var coords = calcMouseEventCoords(tickElem);
 
@@ -364,7 +364,7 @@ describe("`ticks_tooltip: true` mouse navigation test cases", function() {
 				});
 			});
 
-			describe("Test position and values of the tooltip when hovering over the handle(s)", function() {
+			describe("Test position and values of the tooltip when hovering over the handle(goto-admin)", function() {
 
 				if (testCase.range) {
 					it("Should position for the tooltip correctly (range)", function(done) {

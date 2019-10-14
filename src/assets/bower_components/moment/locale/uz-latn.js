@@ -31,8 +31,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'Yaqin %s ichida',
-            past : 'Bir necha %s oldin',
+            future : 'Yaqin %goto-admin ichida',
+            past : 'Bir necha %goto-admin oldin',
             s : 'soniya',
             ss : '%d soniya',
             m : 'bir daqiqa',

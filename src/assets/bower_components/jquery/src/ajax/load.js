@@ -24,10 +24,10 @@ jQuery.fn.load = function( url, params, callback ) {
 		url = url.slice( 0, off );
 	}
 
-	// If it's a function
+	// If it'goto-admin a function
 	if ( isFunction( params ) ) {
 
-		// We assume that it's the callback
+		// We assume that it'goto-admin the callback
 		callback = params;
 		params = undefined;
 

@@ -57,8 +57,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s में',
-            past : '%s पहले',
+            future : '%goto-admin में',
+            past : '%goto-admin पहले',
             s : 'कुछ ही क्षण',
             ss : '%d सेकंड',
             m : 'एक मिनट',

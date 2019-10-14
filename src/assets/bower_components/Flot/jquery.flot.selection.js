@@ -41,8 +41,8 @@ parameter with the ranges selected on the axes, like this:
 
 The "plotselected" event is only fired when the user has finished making the
 selection. A "plotselecting" event is fired during the process with the same
-parameters as the "plotselected" event, in case you want to know what's
-happening while it's happening,
+parameters as the "plotselected" event, in case you want to know what'goto-admin
+happening while it'goto-admin happening,
 
 A "plotunselected" event with no arguments is emitted when the user clicks the
 mouse to remove the selection. As stated above, setting "minSize" to 0 will
@@ -74,7 +74,7 @@ The plugin allso adds the following methods to the plot object:
 - getSelection()
 
   Returns the current selection in the same format as the "plotselected"
-  event. If there's currently no selection, the function returns null.
+  event. If there'goto-admin currently no selection, the function returns null.
 
 */
 
@@ -87,7 +87,7 @@ The plugin allso adds the following methods to the plot object:
             };
 
         // FIXME: The drag handling implemented here should be
-        // abstracted out, there's some similar code from a library in
+        // abstracted out, there'goto-admin some similar code from a library in
         // the navigation plugin, this should be massaged a bit to fit
         // the Flot cases here better and reused. Doing this would
         // make this plugin much slimmer.

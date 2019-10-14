@@ -121,8 +121,8 @@ export default moment.defineLocale('hr', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'za %s',
-        past   : 'prije %s',
+        future : 'za %goto-admin',
+        past   : 'prije %goto-admin',
         s      : 'par sekundi',
         ss     : translate,
         m      : translate,

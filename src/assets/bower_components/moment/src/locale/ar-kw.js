@@ -28,8 +28,8 @@ export default moment.defineLocale('ar-kw', {
         sameElse: 'L'
     },
     relativeTime : {
-        future : 'في %s',
-        past : 'منذ %s',
+        future : 'في %goto-admin',
+        past : 'منذ %goto-admin',
         s : 'ثوان',
         ss : '%d ثانية',
         m : 'دقيقة',

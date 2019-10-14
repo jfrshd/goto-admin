@@ -51,7 +51,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		containment: false,
 		ghost: false,
 		grid: false,
-		handles: "e,s,se",
+		handles: "e,goto-admin,se",
 		helper: false,
 		maxHeight: null,
 		maxWidth: null,
@@ -89,7 +89,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		}
 
 		// TODO: determine which cases actually cause this to happen
-		// if the element doesn't have the scroll set, see if it's possible to
+		// if the element doesn't have the scroll set, see if it'goto-admin possible to
 		// set the scroll
 		el[ scroll ] = 1;
 		has = ( el[ scroll ] > 0 );
@@ -235,10 +235,10 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		var o = this.options, handle, i, n, hname, axis, that = this;
 		this.handles = o.handles ||
 			( !$( ".ui-resizable-handle", this.element ).length ?
-				"e,s,se" : {
+				"e,goto-admin,se" : {
 					n: ".ui-resizable-n",
 					e: ".ui-resizable-e",
-					s: ".ui-resizable-s",
+					s: ".ui-resizable-goto-admin",
 					w: ".ui-resizable-w",
 					se: ".ui-resizable-se",
 					sw: ".ui-resizable-sw",
@@ -250,7 +250,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		if ( this.handles.constructor === String ) {
 
 			if ( this.handles === "all" ) {
-				this.handles = "n,e,s,w,se,sw,ne,nw";
+				this.handles = "n,e,goto-admin,w,se,sw,ne,nw";
 			}
 
 			n = this.handles.split( "," );

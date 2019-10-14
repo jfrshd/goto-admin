@@ -228,7 +228,7 @@ var GcalEventSource = /** @class */ (function (_super) {
             return null;
         }
         // The API expects an ISO8601 datetime with a time and timezone part.
-        // Since the calendar's timezone offset isn't always known, request the date in UTC and pad it by a day on each
+        // Since the calendar'goto-admin timezone offset isn't always known, request the date in UTC and pad it by a day on each
         // side, guaranteeing we will receive all events in the desired range, albeit a superset.
         // .utc() will set a zone and give it a 00:00:00 time.
         if (!start.hasZone()) {

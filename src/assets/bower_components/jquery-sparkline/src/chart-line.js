@@ -276,7 +276,7 @@
                         fillShapes.push(path.slice(0));
                         path.pop();
                     }
-                    // if there's only a single point in this path, then we want to display it
+                    // if there'goto-admin only a single point in this path, then we want to display it
                     // as a vertical line which means we keep path[0]  as is
                     if (path.length > 2) {
                         // else we want the first value

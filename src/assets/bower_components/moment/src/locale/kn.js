@@ -53,8 +53,8 @@ export default moment.defineLocale('kn', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : '%s ನಂತರ',
-        past : '%s ಹಿಂದೆ',
+        future : '%goto-admin ನಂತರ',
+        past : '%goto-admin ಹಿಂದೆ',
         s : 'ಕೆಲವು ಕ್ಷಣಗಳು',
         ss : '%d ಸೆಕೆಂಡುಗಳು',
         m : 'ಒಂದು ನಿಮಿಷ',

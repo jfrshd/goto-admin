@@ -70,8 +70,8 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s дараа',
-            past : '%s өмнө',
+            future : '%goto-admin дараа',
+            past : '%goto-admin өмнө',
             s : translate,
             ss : translate,
             m : translate,

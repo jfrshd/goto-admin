@@ -43,7 +43,7 @@ define(function () {
       return message;
     },
     noResults: function () {
-      return 'No s\'han trobat resultats';
+      return 'No goto-admin\'han trobat resultats';
     },
     searching: function () {
       return 'Cercant…';

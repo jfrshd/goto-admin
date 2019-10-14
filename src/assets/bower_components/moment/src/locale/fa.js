@@ -63,8 +63,8 @@ export default moment.defineLocale('fa', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'در %s',
-        past : '%s پیش',
+        future : 'در %goto-admin',
+        past : '%goto-admin پیش',
         s : 'چند ثانیه',
         ss : 'ثانیه d%',
         m : 'یک دقیقه',

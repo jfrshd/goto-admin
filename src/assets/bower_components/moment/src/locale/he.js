@@ -33,8 +33,8 @@ export default moment.defineLocale('he', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'בעוד %s',
-        past : 'לפני %s',
+        future : 'בעוד %goto-admin',
+        past : 'לפני %goto-admin',
         s : 'מספר שניות',
         ss : '%d שניות',
         m : 'דקה',

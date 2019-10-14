@@ -27,8 +27,8 @@ export default moment.defineLocale('uz', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'Якин %s ичида',
-        past : 'Бир неча %s олдин',
+        future : 'Якин %goto-admin ичида',
+        past : 'Бир неча %goto-admin олдин',
         s : 'фурсат',
         ss : '%d фурсат',
         m : 'бир дакика',

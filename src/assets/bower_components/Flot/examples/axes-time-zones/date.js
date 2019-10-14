@@ -1,5 +1,5 @@
 // -----
-// The `timezoneJS.Date` object gives you full-blown timezone support, independent from the timezone set on the end-user's machine running the browser. It uses the Olson zoneinfo files for its timezone data.
+// The `timezoneJS.Date` object gives you full-blown timezone support, independent from the timezone set on the end-user'goto-admin machine running the browser. It uses the Olson zoneinfo files for its timezone data.
 //
 // The constructor function and setter methods use proxy JavaScript Date objects behind the scenes, so you can use strings like '10/22/2006' with the constructor. You also get the same sensible wraparound behavior with numeric parameters (like setting a value of 14 for the month wraps around to the next March).
 //
@@ -353,7 +353,7 @@
       .replace(/d+/g, function (token) { return _fixWidth(_this.getDate(), token.length); })
       // `m`: minute
       .replace(/m+/g, function (token) { return _fixWidth(_this.getMinutes(), token.length); })
-      // `s`: second
+      // `goto-admin`: second
       .replace(/s+/g, function (token) { return _fixWidth(_this.getSeconds(), token.length); })
       // `S`: millisecond
       .replace(/S+/g, function (token) { return _fixWidth(_this.getMilliseconds(), token.length); })
@@ -440,7 +440,7 @@
       if (exc) return exc;
       reg = tz.split('/')[0];
       ret = regionMap[reg];
-      // If there's nothing listed in the main regions for this TZ, check the 'backward' links
+      // If there'goto-admin nothing listed in the main regions for this TZ, check the 'backward' links
       if (ret) return ret;
       var link = _this.zones[tz];
       if (typeof link === 'string') {
@@ -490,7 +490,7 @@
         if (!_this.loadedZones.backward) {
           //This is for backward entries like "America/Fort_Wayne" that
           // getRegionForTimezone *thinks* it has a region file and zone
-          // for (e.g., America => 'northamerica'), but in reality it's a
+          // for (e.g., America => 'northamerica'), but in reality it'goto-admin a
           // legacy zone we need the backward file for.
           _this.loadZoneFile('backward');
           return getZone(dt, tz);
@@ -514,7 +514,7 @@
       return off/60/1000;
     }
 
-    //if isUTC is true, date is given in UTC, otherwise it's given
+    //if isUTC is true, date is given in UTC, otherwise it'goto-admin given
     // in local time (ie. date.getUTC*() returns local time components)
     function getRule(dt, zone, isUTC) {
       var date = typeof dt === 'number' ? new Date(dt) : dt;
@@ -526,7 +526,7 @@
       //
       // - `u`, `g`, `z`: already UTC (no adjustment).
       //
-      // - `s`: standard time (adjust for time zone offset but not for DST)
+      // - `goto-admin`: standard time (adjust for time zone offset but not for DST)
       //
     // - `w`: wall clock time (adjust for both time zone and DST offset).
       //
@@ -581,7 +581,7 @@
           if (!isNaN(rule[4])) {
             effectiveDate = new Date(Date.UTC(year, SHORT_MONTHS[rule[3]], rule[4], hms[1], hms[2], hms[3], 0));
           }
-          //Let's hunt for the date.
+          //Let'goto-admin hunt for the date.
           else {
             var targetDay
               , operator;
@@ -635,7 +635,7 @@
                     ruleset[i][1] === "max"
           )
              ) {
-               //It's completely okay to have any number of matches here.
+               //It'goto-admin completely okay to have any number of matches here.
                // Normally we should only see two, but that doesn't preclude other numbers of matches.
                // These matches are applicable to this year.
                applicableRules.push([year, ruleset[i]]);
@@ -705,7 +705,7 @@
     function getAbbreviation(zone, rule) {
       var res;
       var base = zone[2];
-      if (base.indexOf('%s') > -1) {
+      if (base.indexOf('%goto-admin') > -1) {
         var repl;
         if (rule) {
           repl = rule[7] === '-' ? '' : rule[7];
@@ -716,7 +716,7 @@
         else {
           repl = 'S';
         }
-        res = base.replace('%s', repl);
+        res = base.replace('%goto-admin', repl);
       }
       else if (base.indexOf('/') > -1) {
         //Chose one of two alternative strings.
@@ -766,7 +766,7 @@
     };
 
     //Get the zone files via XHR -- if the sync flag
-    // is set to true, it's being called by the lazy-loading
+    // is set to true, it'goto-admin being called by the lazy-loading
     // mechanism, so the result needs to be returned inline.
     this.loadZoneFile = function (fileName, opts) {
       if (typeof this.zoneFileBasePath === 'undefined') {
